@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Vallejo | Data Scientist & Machine Learning Engineer</title>
+    <meta name="description" content="Portfolio profesional de Diego Vallejo: Ingeniero Informático y Magíster en Data Science. Especialista en Machine Learning, Deep Learning, Data Engineering y MLOps.">
+    <meta name="keywords" content="Data Science, Machine Learning, Deep Learning, Python, Apache Airflow, Spark, Diego Vallejo, Portfolio, Data Engineering, MLOps">
+    <meta name="author" content="Diego Vallejo">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Diego Vallejo - Data Scientist & ML Engineer">
+    <meta property="og:description" content="Especialista en Machine Learning, Data Engineering y MLOps. Portfolio de proyectos profesionales.">
+    <meta property="og:url" content="https://davallejo.github.io">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        header h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border: 2px solid white;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .social-links a:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: var(--light);
+            color: var(--dark);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        
+        .project-card.featured {
+            border: 2px solid var(--primary);
+        }
+        
+        .project-header {
+            padding: 25px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .project-badge {
+            display: inline-block;
+            background: var(--success);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .project-badge.production {
+            background: var(--success);
+        }
+        
+        .project-badge.ml {
+            background: var(--primary);
+        }
+        
+        .project-badge.dl {
+            background: #8b5cf6;
+        }
+        
+        .project-badge.viz {
+            background: #f59e0b;
+        }
+        
+        .project-header h3 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .project-content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+        
+        .project-content p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .tag {
+            background: var(--light);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .project-metrics {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .project-links a {
+            flex: 1;
+            text-align: center;
+            padding: 10px 16px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        
+        .project-links a:hover {
+            background: var(--secondary);
+        }
+        
+        /* About Section */
+        .about-section {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+        }
+        
+        .about-section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 60px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .stat-card p {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header h2 {
+                font-size: 1.2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Diego Vallejo</h1>
+        <h2>Ingeniero Informático | Magíster en Data Science</h2>
+        <p>Especialista en Machine Learning, Deep Learning, Data Engineering y MLOps. Transformo datos en soluciones estratégicas de negocio.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/ing-diego-vallejo" target="_blank">🔗 LinkedIn</a>
+            <a href="https://github.com/davallejo" target="_blank">💻 GitHub</a>
+            <a href="mailto:tu@email.com">📧 Contacto</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="container">
+        <div class="about-section">
+            <h2>Sobre Mí</h2>
+            <p>
+                Ingeniero Informático con Maestría en Sistemas de Información mención Data Science. Especializado en desarrollar soluciones basadas en Machine Learning y Deep Learning para resolver problemas complejos de negocio en sectores financiero, industrial, social y educativo.
+            </p>
+            <p>
+                Mi experiencia abarca desde Data Engineering (pipelines ETL con Apache Airflow y Spark) hasta el desarrollo y deployment de modelos predictivos en producción. He trabajado en proyectos que generan impacto real, desde sistemas de detección de fraude financiero hasta análisis de políticas públicas.
+            </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>22+</h3>
+                <p>Proyectos Completados</p>
+            </div>
+            <div class="stat-card">
+                <h3>5</h3>
+                <p>Proyectos en Producción</p>
+            </div>
+            <div class="stat-card">
+                <h3>10+</h3>
+                <p>Tecnologías Dominadas</p>
+            </div>
+            <div class="stat-card">
+                <h3>4</h3>
+                <p>Sectores de Industria</p>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <section>
+            <div class="section-header">
+                <h2>Habilidades Técnicas</h2>
+                <p>Stack tecnológico completo para Data Science y Machine Learning</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>💻 Lenguajes</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🤖 ML & Deep Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">PyTorch</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🔧 Data Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Apache Airflow</span>
+                        <span class="skill-tag">Apache Spark</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">ETL Pipelines</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>📊 Análisis & Viz</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Matplotlib</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🗄️ Bases de Datos</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>☁️ Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Google Cloud</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section>
+            <div class="section-header">
+                <h2>🏆 Proyectos Destacados</h2>
+                <p>Proyectos de nivel producción con impacto real en organizaciones</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge production">PRODUCCIÓN</span>
+                        <h3>🏭 Pipeline ETL Industrial con Airflow</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Sistema de pipeline ETL para procesamiento de datos industriales de empresa metalmecánica. Automatiza extracción, transformación y carga de datos de ventas, inventario y logs operacionales.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Clasificador-de-imagenes-de-gatos-y-perros" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">GAME AI</span>
+                        <h3>✊✋✌️ Piedra, Papel o Tijera con IA</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Algoritmo de inteligencia artificial adaptativa para juego de piedra, papel o tijera. Aprende patrones de comportamiento del oponente.</p>
+                        <div class="project-tags">
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">Game AI</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Piedra-Papel-o-Tijera" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 15 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">PREDICTIVE</span>
+                        <h3>🚨 Predicción de Delitos</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Análisis predictivo para anticipar patrones de criminalidad. Aplicación de Machine Learning en seguridad pública y prevención del delito.</p>
+                        <div class="project-tags">
+                            <span class="tag">Predictive Analytics</span>
+                            <span class="tag">Public Safety</span>
+                            <span class="tag">Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/PrediceDelito" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 16 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge viz">TIME SERIES</span>
+                        <h3>🌊 Predictor de Nivel del Mar</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Análisis y predicción de series temporales para cambio en nivel del mar. Visualización de tendencias de datos ambientales históricos.</p>
+                        <div class="project-tags">
+                            <span class="tag">Time Series</span>
+                            <span class="tag">Environmental Data</span>
+                            <span class="tag">Matplotlib</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Sea-Level-Predictor-by-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 17 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge viz">VISUALIZATION</span>
+                        <h3>📈 Visualizador de Series Temporales</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Herramienta de visualización para análisis temporal de vistas de páginas web. Identificación de patrones y tendencias en tráfico.</p>
+                        <div class="project-tags">
+                            <span class="tag">Time Series</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Page-View-Time-Series-Visualizer-by-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 18 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge viz">HEALTHCARE</span>
+                        <h3>🏥 Visualizador de Datos Médicos</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Visualización y análisis exploratorio de datos médicos. Identificación de correlaciones entre variables de salud y factores de riesgo.</p>
+                        <div class="project-tags">
+                            <span class="tag">Healthcare Analytics</span>
+                            <span class="tag">Seaborn</span>
+                            <span class="tag">EDA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Medical-Data-Visualizer-by-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 19 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge viz">ANALYTICS</span>
+                        <h3>📊 Analizador de Datos Demográficos</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Análisis estadístico de datos demográficos utilizando Pandas. Exploración de patrones socioeconómicos y educativos en poblaciones.</p>
+                        <div class="project-tags">
+                            <span class="tag">Statistical Analysis</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Demographics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Demographic-Data-Analyzer-by-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 20 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">STATISTICS</span>
+                        <h3>🔢 Calculadora Estadística con NumPy</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Calculadora de estadísticas descriptivas (media, varianza, desviación estándar) optimizada con NumPy para matrices multidimensionales.</p>
+                        <div class="project-tags">
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Statistics</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Mean-Variance-Standard-Deviation-Calculator-by-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 21 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge production">FULL-STACK</span>
+                        <h3>📝 Control de Actividades Docentes</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Sistema de gestión para control y seguimiento de actividades académicas docentes. Aplicación web completa con backend y frontend.</p>
+                        <div class="project-tags">
+                            <span class="tag">Full-Stack</span>
+                            <span class="tag">Education</span>
+                            <span class="tag">Web App</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/ControlActvidadesDocentes" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 22 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">ASSESSMENT</span>
+                        <h3>🎯 Prueba Técnica Presidencia</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Proyecto de evaluación técnica demostrando habilidades en análisis de datos y desarrollo de soluciones para sector público.</p>
+                        <div class="project-tags">
+                            <span class="tag">Technical Assessment</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/prueba_presidencia" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section style="margin-top: 80px;">
+            <div class="section-header">
+                <h2>🎓 Certificaciones</h2>
+                <p>Formación continua en tecnologías de vanguardia</p>
+            </div>
+            
+            <div class="about-section">
+                <h3 style="color: var(--primary); margin-bottom: 20px;">Certificaciones Completadas</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 15px; border-left: 3px solid var(--primary); margin-bottom: 15px; background: var(--light);">
+                        <strong>Machine Learning with Python</strong> - freeCodeCamp<br>
+                        <span style="color: var(--gray); font-size: 0.9rem;">Proyectos: Neural Networks, RNNs, CNNs, Recommender Systems</span>
+                    </li>
+                    <li style="padding: 15px; border-left: 3px solid var(--primary); margin-bottom: 15px; background: var(--light);">
+                        <strong>Data Analysis with Python</strong> - freeCodeCamp<br>
+                        <span style="color: var(--gray); font-size: 0.9rem;">Proyectos: Time Series, Medical Data, Demographics Analysis</span>
+                    </li>
+                    <li style="padding: 15px; border-left: 3px solid var(--primary); margin-bottom: 15px; background: var(--light);">
+                        <strong>Magíster en Sistemas de Información</strong> - Mención Data Science<br>
+                        <span style="color: var(--gray); font-size: 0.9rem;">Especialización académica avanzada en ciencia de datos</span>
+                    </li>
+                    <li style="padding: 15px; border-left: 3px solid var(--primary); margin-bottom: 15px; background: var(--light);">
+                        <strong>Ingeniería Informática</strong><br>
+                        <span style="color: var(--gray); font-size: 0.9rem;">Fundamentos sólidos en desarrollo de software y sistemas</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section style="margin-top: 80px;">
+            <div class="section-header">
+                <h2>📬 Contacto</h2>
+                <p>¿Interesado en colaborar? Hablemos</p>
+            </div>
+            
+            <div class="about-section" style="text-align: center;">
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">
+                    Estoy abierto a oportunidades de colaboración en proyectos de Data Science, Machine Learning y Data Engineering.
+                </p>
+                <div class="social-links" style="justify-content: center;">
+                    <a href="https://linkedin.com/in/ing-diego-vallejo" target="_blank" style="color: var(--primary); border-color: var(--primary);">🔗 LinkedIn</a>
+                    <a href="https://github.com/davallejo" target="_blank" style="color: var(--primary); border-color: var(--primary);">💻 GitHub</a>
+                    <a href="mailto:djdavmayumy@email.com" style="color: var(--primary); border-color: var(--primary);">📧 Email</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Diego Vallejo. Todos los derechos reservados.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">Ingeniero Informático | Magíster en Data Science | Ecuador 🇪🇨</p>
+    </footer>
+</body>
+</html>-tags">
+                            <span class="tag">Apache Airflow</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>⚡ < 15 min procesamiento</span>
+                            <span>📊 1K-5K registros/día</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/metaltronic-data-airflow-pipeline" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge production">BIG DATA</span>
+                        <h3>⚡ ETL E-commerce con Spark + Airflow</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Proceso ETL distribuido para consolidación de datos de ventas utilizando Apache Spark como motor de procesamiento y Airflow para orquestación. Integra múltiples fuentes de datos.</p>
+                        <div class="project-tags">
+                            <span class="tag">Apache Spark</span>
+                            <span class="tag">Airflow</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>🚀 Procesamiento distribuido</span>
+                            <span>📈 Escalable</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/etl-ventas-spark-airflow" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge ml">MACHINE LEARNING</span>
+                        <h3>🔍 Detección de Fraude en Tarjetas de Crédito</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Modelo predictivo para identificar transacciones fraudulentas en tiempo real. Manejo de datos altamente desbalanceados con técnicas avanzadas de muestreo y optimización de Recall.</p>
+                        <div class="project-tags">
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">SMOTE</span>
+                            <span class="tag">Imbalanced Data</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>🎯 Accuracy: 99.2%</span>
+                            <span>✅ Recall: 95.8%</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/CreditCardFraudDetection" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge dl">DEEP LEARNING</span>
+                        <h3>🏢 Predicción de Bancarrota con Redes Neuronales</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Deep Learning para predecir quiebra empresarial usando indicadores financieros. Proyecto desarrollado para apoyar a la Superintendencia de Compañías en detección temprana de riesgos.</p>
+                        <div class="project-tags">
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Neural Networks</span>
+                            <span class="tag">Finance</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>📊 Accuracy: 96.5%</span>
+                            <span>⚠️ Early Warning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Prediccion-de-Banca-Rota-Machine-Learning-Red-Neuronal-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge viz">BUSINESS INTELLIGENCE</span>
+                        <h3>📊 Dashboard Ejecutivo Power BI</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Dashboard interactivo de análisis de ventas con visualizaciones dinámicas. Permite análisis multidimensional por región, producto, vendedor y canal. Publicado en Power BI Service.</p>
+                        <div class="project-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">DAX</span>
+                            <span class="tag">Modelado</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>💰 $73K analizado</span>
+                            <span>📈 4 dimensiones</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Informe-de-Ventas-con-PowerBI" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge dl">COMPUTER VISION</span>
+                        <h3>😷 Detección de Máscaras con CNN</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Clasificador de imágenes con Deep Learning para identificar uso correcto de máscaras faciales. Aplicación práctica en contexto de salud pública durante COVID-19.</p>
+                        <div class="project-tags">
+                            <span class="tag">Keras</span>
+                            <span class="tag">CNN</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>🎯 Accuracy: 98.1%</span>
+                            <span>⚡ Real-time</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Clasificacion-de-Imagenes-de-Personas-Deep-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Projects Section -->
+        <section style="margin-top: 80px;">
+            <div class="section-header">
+                <h2>💼 Más Proyectos</h2>
+                <p>Portfolio completo de Machine Learning y Data Science</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">ML</span>
+                        <h3>👥 Predicción de Churn de Empleados</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Análisis predictivo para identificar empleados con alta probabilidad de abandono. Incluye análisis de factores de riesgo y recomendaciones para RRHH.</p>
+                        <div class="project-tags">
+                            <span class="tag">Random Forest</span>
+                            <span class="tag">Feature Engineering</span>
+                            <span class="tag">HR Analytics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Prediccion-Churn-de-Empleados-Machine-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">CLUSTERING</span>
+                        <h3>🌍 Clustering de Solicitantes de Refugio</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Segmentación de solicitantes de refugio para identificar grupos vulnerables y optimizar políticas públicas de asistencia. Proyecto con impacto social.</p>
+                        <div class="project-tags">
+                            <span class="tag">KMeans</span>
+                            <span class="tag">PCA</span>
+                            <span class="tag">Social Impact</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Clustering-Solicitantes-de-Refugio-Machine-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">CLUSTERING</span>
+                        <h3>🎓 Clustering de Estudiantes Universitarios</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Análisis de segmentación de estudiantes de ciencias de la salud para personalizar estrategias educativas basadas en perfiles académicos.</p>
+                        <div class="project-tags">
+                            <span class="tag">KMeans</span>
+                            <span class="tag">Silhouette</span>
+                            <span class="tag">Education</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Clustering-de-Estudiantes-Universitarios-Machine-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge dl">NLP</span>
+                        <h3>📱 Clasificador de SMS con Redes Neuronales</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Clasificador de mensajes de texto utilizando redes neuronales recurrentes. Procesamiento de lenguaje natural para detección de spam.</p>
+                        <div class="project-tags">
+                            <span class="tag">RNN</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">TensorFlow</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Neural-Network-SMS-Text-Classifier" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">REGRESSION</span>
+                        <h3>🏥 Calculadora de Costos Médicos</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Predicción de costos de atención médica utilizando regresión lineal. Análisis de variables que impactan en gastos de salud.</p>
+                        <div class="project-tags">
+                            <span class="tag">Linear Regression</span>
+                            <span class="tag">Healthcare</span>
+                            <span class="tag">Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Linear-Regression-Health-Costs-Calculator" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">RECOMMENDER</span>
+                        <h3>📚 Sistema de Recomendación de Libros</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Motor de recomendaciones utilizando algoritmo KNN. Análisis colaborativo para sugerir libros basado en preferencias de usuarios similares.</p>
+                        <div class="project-tags">
+                            <span class="tag">KNN</span>
+                            <span class="tag">Collaborative Filtering</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Book-Recommendation-Engine-using-KNN" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge dl">CNN</span>
+                        <h3>🐱🐶 Clasificador Gatos vs Perros</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Clasificación binaria de imágenes utilizando redes neuronales convolucionales. Computer Vision aplicado a reconocimiento de animales.</p>
+                        <div class="project-tags">
+                            <span class="tag">CNN</span>
+                            <span class="tag">Image Classification</span>
+                            <span class="tag">Keras</span>
+                        </div>
+                        <div class="project
