@@ -420,7 +420,7 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ing-diego-vallejo/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/davallejo)
 [![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://davallejo.github.io)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tu-email@ejemplo.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:djdavmayumy@hotmail.com)
 
 </div>
 
@@ -462,22 +462,22 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 ## 🌟 Filosofía de Trabajo
 
-```python
-class DataScientist:
-    def __init__(self):
-        self.passion = "Resolver problemas con datos"
-        self.focus = "Valor de negocio"
-        self.methodology = "Ágil y colaborativa"
-        
-    def solve_problem(self, business_need):
-        data = self.extract_and_transform(business_need)
-        insights = self.analyze_and_model(data)
-        solution = self.deploy_and_monitor(insights)
-        return self.continuous_improvement(solution)
-        
-    def philosophy(self):
-        return "Los datos cuentan historias, mi trabajo es escucharlas y traducirlas en acciones"
-```
+> ### 🎯 Mi Enfoque
+> 
+> **Pasión:** Resolver problemas complejos con datos  
+> **Foco:** Generar valor de negocio tangible  
+> **Metodología:** Trabajo ágil y colaborativo
+> 
+> ### 💭 Mi Visión
+> 
+> *"Los datos cuentan historias. Mi trabajo es escucharlas, comprenderlas y traducirlas en acciones estratégicas que impulsen el crecimiento y la innovación."*
+> 
+> ### 🔄 Mi Proceso
+> 
+> 1. **Extraer y Transformar:** Convertir datos crudos en información estructurada
+> 2. **Analizar y Modelar:** Descubrir insights y patrones ocultos
+> 3. **Desplegar y Monitorear:** Implementar soluciones en producción
+> 4. **Mejora Continua:** Iterar y optimizar constantemente
 
 ---
 
