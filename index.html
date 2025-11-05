@@ -207,6 +207,10 @@
             background: #f59e0b;
         }
         
+        .project-badge.fullstack {
+            background: #ec4899;
+        }
+        
         .project-header h3 {
             font-size: 1.3rem;
             color: var(--dark);
@@ -246,6 +250,7 @@
             margin-bottom: 15px;
             font-size: 0.9rem;
             color: var(--gray);
+            flex-wrap: wrap;
         }
         
         .project-links {
@@ -346,6 +351,10 @@
             .section-header h2 {
                 font-size: 2rem;
             }
+            
+            .about-section {
+                padding: 30px 20px;
+            }
         }
     </style>
 </head>
@@ -358,7 +367,8 @@
         <div class="social-links">
             <a href="https://linkedin.com/in/ing-diego-vallejo" target="_blank">🔗 LinkedIn</a>
             <a href="https://github.com/davallejo" target="_blank">💻 GitHub</a>
-            <a href="mailto:tu@email.com">📧 Contacto</a>
+            <a href="https://davallejo.github.io" target="_blank">💼 Portafolio</a>
+            <a href="mailto:djdavmayumy@hotmail.com">📧 Contacto</a>
         </div>
     </header>
 
@@ -367,29 +377,29 @@
         <div class="about-section">
             <h2>Sobre Mí</h2>
             <p>
-                Ingeniero Informático con Maestría en Sistemas de Información mención Data Science. Especializado en desarrollar soluciones basadas en Machine Learning y Deep Learning para resolver problemas complejos de negocio en sectores financiero, industrial, social y educativo.
+                Ingeniero Informático con Maestría en Sistemas de Información mención Data Science. Especializado en desarrollar soluciones basadas en Machine Learning y Deep Learning para resolver problemas complejos de negocio en sectores financiero, industrial, telecomunicaciones, social y educativo.
             </p>
             <p>
-                Mi experiencia abarca desde Data Engineering (pipelines ETL con Apache Airflow y Spark) hasta el desarrollo y deployment de modelos predictivos en producción. He trabajado en proyectos que generan impacto real, desde sistemas de detección de fraude financiero hasta análisis de políticas públicas.
+                Mi experiencia abarca desde Data Engineering (pipelines ETL con Apache Airflow y Spark) hasta el desarrollo y deployment de modelos predictivos en producción, pasando por dashboards ejecutivos interactivos con React y Power BI. He trabajado en proyectos que generan impacto real, desde sistemas de detección de fraude financiero hasta análisis de customer churn en telecomunicaciones.
             </p>
         </div>
 
         <!-- Stats -->
         <div class="stats-grid">
             <div class="stat-card">
-                <h3>22+</h3>
+                <h3>23+</h3>
                 <p>Proyectos Completados</p>
             </div>
             <div class="stat-card">
-                <h3>5</h3>
+                <h3>7</h3>
                 <p>Proyectos en Producción</p>
             </div>
             <div class="stat-card">
-                <h3>10+</h3>
+                <h3>12+</h3>
                 <p>Tecnologías Dominadas</p>
             </div>
             <div class="stat-card">
-                <h3>4</h3>
+                <h3>5</h3>
                 <p>Sectores de Industria</p>
             </div>
         </div>
@@ -433,12 +443,22 @@
                 </div>
                 
                 <div class="skill-category">
+                    <h3>⚛️ Frontend & Dashboards</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Recharts</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
                     <h3>📊 Análisis & Viz</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Pandas</span>
                         <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Power BI</span>
                         <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
                     </div>
                 </div>
                 
@@ -471,7 +491,33 @@
             </div>
             
             <div class="projects-grid">
-                <!-- Project 1 -->
+                <!-- NEW PROJECT 1 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge fullstack">FULL-STACK</span>
+                        <h3>📱 Dashboard Telco Churn Analytics</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Dashboard ejecutivo en React para análisis de fuga de clientes en telecomunicaciones. Carga CSV, KPIs ejecutivos, filtros avanzados, visualizaciones interactivas y exportación de datos.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Vite</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Recharts</span>
+                            <span class="tag">PapaParse</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>📊 KPIs en tiempo real</span>
+                            <span>🎨 Diseño corporativo</span>
+                            <span>📱 Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/telco-churn-dashboard" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
                 <div class="project-card featured">
                     <div class="project-header">
                         <span class="project-badge production">PRODUCCIÓN</span>
@@ -479,13 +525,281 @@
                     </div>
                     <div class="project-content">
                         <p>Sistema de pipeline ETL para procesamiento de datos industriales de empresa metalmecánica. Automatiza extracción, transformación y carga de datos de ventas, inventario y logs operacionales.</p>
+                        <div class="project-tags">
+                            <span class="tag">Apache Airflow</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>⚡ < 15 min procesamiento</span>
+                            <span>📊 1K-5K registros/día</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/metaltronic-data-airflow-pipeline" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge production">BIG DATA</span>
+                        <h3>⚡ ETL E-commerce con Spark + Airflow</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Proceso ETL distribuido para consolidación de datos de ventas utilizando Apache Spark como motor de procesamiento y Airflow para orquestación. Integra múltiples fuentes de datos.</p>
+                        <div class="project-tags">
+                            <span class="tag">Apache Spark</span>
+                            <span class="tag">Airflow</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>🚀 Procesamiento distribuido</span>
+                            <span>📈 Escalable</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/etl-ventas-spark-airflow" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge ml">MACHINE LEARNING</span>
+                        <h3>🔍 Detección de Fraude en Tarjetas de Crédito</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Modelo predictivo para identificar transacciones fraudulentas en tiempo real. Manejo de datos altamente desbalanceados con técnicas avanzadas de muestreo y optimización de Recall.</p>
+                        <div class="project-tags">
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">SMOTE</span>
+                            <span class="tag">Imbalanced Data</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>🎯 Accuracy: 99.2%</span>
+                            <span>✅ Recall: 95.8%</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/CreditCardFraudDetection" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge dl">DEEP LEARNING</span>
+                        <h3>🏢 Predicción de Bancarrota con Redes Neuronales</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Deep Learning para predecir quiebra empresarial usando indicadores financieros. Proyecto desarrollado para apoyar a la Superintendencia de Compañías en detección temprana de riesgos.</p>
+                        <div class="project-tags">
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Neural Networks</span>
+                            <span class="tag">Finance</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>📊 Accuracy: 96.5%</span>
+                            <span>⚠️ Early Warning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Prediccion-de-Banca-Rota-Machine-Learning-Red-Neuronal-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge viz">BUSINESS INTELLIGENCE</span>
+                        <h3>📊 Dashboard Ejecutivo Power BI</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Dashboard interactivo de análisis de ventas con visualizaciones dinámicas. Permite análisis multidimensional por región, producto, vendedor y canal. Publicado en Power BI Service.</p>
+                        <div class="project-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">DAX</span>
+                            <span class="tag">Modelado</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>💰 $73K analizado</span>
+                            <span>📈 4 dimensiones</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Informe-de-Ventas-con-PowerBI" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge dl">COMPUTER VISION</span>
+                        <h3>😷 Detección de Máscaras con CNN</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Clasificador de imágenes con Deep Learning para identificar uso correcto de máscaras faciales. Aplicación práctica en contexto de salud pública durante COVID-19.</p>
+                        <div class="project-tags">
+                            <span class="tag">Keras</span>
+                            <span class="tag">CNN</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>🎯 Accuracy: 98.1%</span>
+                            <span>⚡ Real-time</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Clasificacion-de-Imagenes-de-Personas-Deep-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Projects Section -->
+        <section style="margin-top: 80px;">
+            <div class="section-header">
+                <h2>💼 Más Proyectos</h2>
+                <p>Portfolio completo de Machine Learning y Data Science</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">ML</span>
+                        <h3>👥 Predicción de Churn de Empleados</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Análisis predictivo para identificar empleados con alta probabilidad de abandono. Incluye análisis de factores de riesgo y recomendaciones para RRHH.</p>
+                        <div class="project-tags">
+                            <span class="tag">Random Forest</span>
+                            <span class="tag">Feature Engineering</span>
+                            <span class="tag">HR Analytics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Prediccion-Churn-de-Empleados-Machine-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">CLUSTERING</span>
+                        <h3>🌍 Clustering de Solicitantes de Refugio</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Segmentación de solicitantes de refugio para identificar grupos vulnerables y optimizar políticas públicas de asistencia. Proyecto con impacto social.</p>
+                        <div class="project-tags">
+                            <span class="tag">KMeans</span>
+                            <span class="tag">PCA</span>
+                            <span class="tag">Social Impact</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Clustering-Solicitantes-de-Refugio-Machine-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">CLUSTERING</span>
+                        <h3>🎓 Clustering de Estudiantes Universitarios</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Análisis de segmentación de estudiantes de ciencias de la salud para personalizar estrategias educativas basadas en perfiles académicos.</p>
+                        <div class="project-tags">
+                            <span class="tag">KMeans</span>
+                            <span class="tag">Silhouette</span>
+                            <span class="tag">Education</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Clustering-de-Estudiantes-Universitarios-Machine-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge dl">NLP</span>
+                        <h3>📱 Clasificador de SMS con Redes Neuronales</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Clasificador de mensajes de texto utilizando redes neuronales recurrentes. Procesamiento de lenguaje natural para detección de spam.</p>
+                        <div class="project-tags">
+                            <span class="tag">RNN</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">TensorFlow</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Neural-Network-SMS-Text-Classifier" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">REGRESSION</span>
+                        <h3>🏥 Calculadora de Costos Médicos</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Predicción de costos de atención médica utilizando regresión lineal. Análisis de variables que impactan en gastos de salud.</p>
+                        <div class="project-tags">
+                            <span class="tag">Linear Regression</span>
+                            <span class="tag">Healthcare</span>
+                            <span class="tag">Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Linear-Regression-Health-Costs-Calculator" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge ml">RECOMMENDER</span>
+                        <h3>📚 Sistema de Recomendación de Libros</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Motor de recomendaciones utilizando algoritmo KNN. Análisis colaborativo para sugerir libros basado en preferencias de usuarios similares.</p>
+                        <div class="project-tags">
+                            <span class="tag">KNN</span>
+                            <span class="tag">Collaborative Filtering</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/davallejo/Book-Recommendation-Engine-using-KNN" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge dl">CNN</span>
+                        <h3>🐱🐶 Clasificador Gatos vs Perros</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Clasificación binaria de imágenes utilizando redes neuronales convolucionales. Computer Vision aplicado a reconocimiento de animales.</p>
+                        <div class="project-tags">
+                            <span class="tag">CNN</span>
+                            <span class="tag">Image Classification</span>
+                            <span class="tag">Keras</span>
+                        </div>
                         <div class="project-links">
                             <a href="https://github.com/davallejo/Clasificador-de-imagenes-de-gatos-y-perros" target="_blank">Ver Código</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 14 -->
+                <!-- Project 15 -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-badge ml">GAME AI</span>
@@ -504,7 +818,7 @@
                     </div>
                 </div>
 
-                <!-- Project 15 -->
+                <!-- Project 16 -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-badge ml">PREDICTIVE</span>
@@ -523,7 +837,7 @@
                     </div>
                 </div>
 
-                <!-- Project 16 -->
+                <!-- Project 17 -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-badge viz">TIME SERIES</span>
@@ -542,7 +856,7 @@
                     </div>
                 </div>
 
-                <!-- Project 17 -->
+                <!-- Project 18 -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-badge viz">VISUALIZATION</span>
@@ -561,7 +875,7 @@
                     </div>
                 </div>
 
-                <!-- Project 18 -->
+                <!-- Project 19 -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-badge viz">HEALTHCARE</span>
@@ -580,7 +894,7 @@
                     </div>
                 </div>
 
-                <!-- Project 19 -->
+                <!-- Project 20 -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-badge viz">ANALYTICS</span>
@@ -599,7 +913,7 @@
                     </div>
                 </div>
 
-                <!-- Project 20 -->
+                <!-- Project 21 -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-badge ml">STATISTICS</span>
@@ -618,7 +932,7 @@
                     </div>
                 </div>
 
-                <!-- Project 21 -->
+                <!-- Project 22 -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-badge production">FULL-STACK</span>
@@ -637,7 +951,7 @@
                     </div>
                 </div>
 
-                <!-- Project 22 -->
+                <!-- Project 23 -->
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-badge ml">ASSESSMENT</span>
@@ -702,7 +1016,7 @@
                 <div class="social-links" style="justify-content: center;">
                     <a href="https://linkedin.com/in/ing-diego-vallejo" target="_blank" style="color: var(--primary); border-color: var(--primary);">🔗 LinkedIn</a>
                     <a href="https://github.com/davallejo" target="_blank" style="color: var(--primary); border-color: var(--primary);">💻 GitHub</a>
-                    <a href="mailto:djdavmayumy@email.com" style="color: var(--primary); border-color: var(--primary);">📧 Email</a>
+                    <a href="mailto:tu@email.com" style="color: var(--primary); border-color: var(--primary);">📧 Email</a>
                 </div>
             </div>
         </section>
@@ -714,272 +1028,4 @@
         <p style="margin-top: 10px; font-size: 0.9rem;">Ingeniero Informático | Magíster en Data Science | Ecuador 🇪🇨</p>
     </footer>
 </body>
-</html>-tags">
-                            <span class="tag">Apache Airflow</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
-                        <div class="project-metrics">
-                            <span>⚡ < 15 min procesamiento</span>
-                            <span>📊 1K-5K registros/día</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/metaltronic-data-airflow-pipeline" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <span class="project-badge production">BIG DATA</span>
-                        <h3>⚡ ETL E-commerce con Spark + Airflow</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Proceso ETL distribuido para consolidación de datos de ventas utilizando Apache Spark como motor de procesamiento y Airflow para orquestación. Integra múltiples fuentes de datos.</p>
-                        <div class="project-tags">
-                            <span class="tag">Apache Spark</span>
-                            <span class="tag">Airflow</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Docker</span>
-                        </div>
-                        <div class="project-metrics">
-                            <span>🚀 Procesamiento distribuido</span>
-                            <span>📈 Escalable</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/etl-ventas-spark-airflow" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <span class="project-badge ml">MACHINE LEARNING</span>
-                        <h3>🔍 Detección de Fraude en Tarjetas de Crédito</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Modelo predictivo para identificar transacciones fraudulentas en tiempo real. Manejo de datos altamente desbalanceados con técnicas avanzadas de muestreo y optimización de Recall.</p>
-                        <div class="project-tags">
-                            <span class="tag">Scikit-learn</span>
-                            <span class="tag">SMOTE</span>
-                            <span class="tag">Imbalanced Data</span>
-                        </div>
-                        <div class="project-metrics">
-                            <span>🎯 Accuracy: 99.2%</span>
-                            <span>✅ Recall: 95.8%</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/CreditCardFraudDetection" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <span class="project-badge dl">DEEP LEARNING</span>
-                        <h3>🏢 Predicción de Bancarrota con Redes Neuronales</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Deep Learning para predecir quiebra empresarial usando indicadores financieros. Proyecto desarrollado para apoyar a la Superintendencia de Compañías en detección temprana de riesgos.</p>
-                        <div class="project-tags">
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">Neural Networks</span>
-                            <span class="tag">Finance</span>
-                        </div>
-                        <div class="project-metrics">
-                            <span>📊 Accuracy: 96.5%</span>
-                            <span>⚠️ Early Warning</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/Prediccion-de-Banca-Rota-Machine-Learning-Red-Neuronal-Diego-Vallejo" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <span class="project-badge viz">BUSINESS INTELLIGENCE</span>
-                        <h3>📊 Dashboard Ejecutivo Power BI</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Dashboard interactivo de análisis de ventas con visualizaciones dinámicas. Permite análisis multidimensional por región, producto, vendedor y canal. Publicado en Power BI Service.</p>
-                        <div class="project-tags">
-                            <span class="tag">Power BI</span>
-                            <span class="tag">DAX</span>
-                            <span class="tag">Modelado</span>
-                        </div>
-                        <div class="project-metrics">
-                            <span>💰 $73K analizado</span>
-                            <span>📈 4 dimensiones</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/Informe-de-Ventas-con-PowerBI" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <span class="project-badge dl">COMPUTER VISION</span>
-                        <h3>😷 Detección de Máscaras con CNN</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Clasificador de imágenes con Deep Learning para identificar uso correcto de máscaras faciales. Aplicación práctica en contexto de salud pública durante COVID-19.</p>
-                        <div class="project-tags">
-                            <span class="tag">Keras</span>
-                            <span class="tag">CNN</span>
-                            <span class="tag">Computer Vision</span>
-                        </div>
-                        <div class="project-metrics">
-                            <span>🎯 Accuracy: 98.1%</span>
-                            <span>⚡ Real-time</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/Clasificacion-de-Imagenes-de-Personas-Deep-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- More Projects Section -->
-        <section style="margin-top: 80px;">
-            <div class="section-header">
-                <h2>💼 Más Proyectos</h2>
-                <p>Portfolio completo de Machine Learning y Data Science</p>
-            </div>
-            
-            <div class="projects-grid">
-                <!-- Project 7 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-badge ml">ML</span>
-                        <h3>👥 Predicción de Churn de Empleados</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Análisis predictivo para identificar empleados con alta probabilidad de abandono. Incluye análisis de factores de riesgo y recomendaciones para RRHH.</p>
-                        <div class="project-tags">
-                            <span class="tag">Random Forest</span>
-                            <span class="tag">Feature Engineering</span>
-                            <span class="tag">HR Analytics</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/Prediccion-Churn-de-Empleados-Machine-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 8 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-badge ml">CLUSTERING</span>
-                        <h3>🌍 Clustering de Solicitantes de Refugio</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Segmentación de solicitantes de refugio para identificar grupos vulnerables y optimizar políticas públicas de asistencia. Proyecto con impacto social.</p>
-                        <div class="project-tags">
-                            <span class="tag">KMeans</span>
-                            <span class="tag">PCA</span>
-                            <span class="tag">Social Impact</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/Clustering-Solicitantes-de-Refugio-Machine-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 9 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-badge ml">CLUSTERING</span>
-                        <h3>🎓 Clustering de Estudiantes Universitarios</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Análisis de segmentación de estudiantes de ciencias de la salud para personalizar estrategias educativas basadas en perfiles académicos.</p>
-                        <div class="project-tags">
-                            <span class="tag">KMeans</span>
-                            <span class="tag">Silhouette</span>
-                            <span class="tag">Education</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/Clustering-de-Estudiantes-Universitarios-Machine-Learning-Diego-Vallejo" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 10 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-badge dl">NLP</span>
-                        <h3>📱 Clasificador de SMS con Redes Neuronales</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Clasificador de mensajes de texto utilizando redes neuronales recurrentes. Procesamiento de lenguaje natural para detección de spam.</p>
-                        <div class="project-tags">
-                            <span class="tag">RNN</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">TensorFlow</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/Neural-Network-SMS-Text-Classifier" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 11 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-badge ml">REGRESSION</span>
-                        <h3>🏥 Calculadora de Costos Médicos</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Predicción de costos de atención médica utilizando regresión lineal. Análisis de variables que impactan en gastos de salud.</p>
-                        <div class="project-tags">
-                            <span class="tag">Linear Regression</span>
-                            <span class="tag">Healthcare</span>
-                            <span class="tag">Scikit-learn</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/Linear-Regression-Health-Costs-Calculator" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 12 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-badge ml">RECOMMENDER</span>
-                        <h3>📚 Sistema de Recomendación de Libros</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Motor de recomendaciones utilizando algoritmo KNN. Análisis colaborativo para sugerir libros basado en preferencias de usuarios similares.</p>
-                        <div class="project-tags">
-                            <span class="tag">KNN</span>
-                            <span class="tag">Collaborative Filtering</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/davallejo/Book-Recommendation-Engine-using-KNN" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 13 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-badge dl">CNN</span>
-                        <h3>🐱🐶 Clasificador Gatos vs Perros</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Clasificación binaria de imágenes utilizando redes neuronales convolucionales. Computer Vision aplicado a reconocimiento de animales.</p>
-                        <div class="project-tags">
-                            <span class="tag">CNN</span>
-                            <span class="tag">Image Classification</span>
-                            <span class="tag">Keras</span>
-                        </div>
-                        <div class="project
+</html>
