@@ -4,550 +4,265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Vallejo | Data Scientist & Machine Learning Engineer</title>
-    <meta name="description" content="Portfolio profesional de Diego Vallejo: Ingeniero Informático y Magíster en Data Science. Especialista en Machine Learning, Deep Learning, Data Engineering y MLOps.">
-    <meta name="keywords" content="Data Science, Machine Learning, Deep Learning, Python, Apache Airflow, Spark, Diego Vallejo, Portfolio, Data Engineering, MLOps">
-    <meta name="author" content="Diego Vallejo">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Diego Vallejo - Data Scientist & ML Engineer">
-    <meta property="og:description" content="Especialista en Machine Learning, Data Engineering y MLOps. Portfolio de proyectos profesionales.">
-    <meta property="og:url" content="https://davallejo.github.io">
-
+    <meta name="description" content="Portfolio profesional de Diego Vallejo: Ingeniero Informático y Magíster en Data Science.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
         :root {
-            --navy:    #0a0f1e;
-            --navy-2:  #111827;
-            --navy-3:  #1a2235;
+            --navy:    #080c18;
+            --navy-2:  #0e1526;
+            --navy-3:  #141e33;
             --blue:    #1d6ce8;
-            --blue-lt: #3b82f6;
-            --cyan:    #22d3ee;
-            --orange:  #f97316;
-            --green:   #10b981;
-            --purple:  #8b5cf6;
-            --amber:   #f59e0b;
-            --pink:    #ec4899;
-            --white:   #f8fafc;
-            --gray-1:  #e2e8f0;
-            --gray-2:  #94a3b8;
-            --gray-3:  #475569;
-            --card-bg: #131d30;
-            --card-border: rgba(255,255,255,0.07);
+            --blue-lt: #4a9eff;
+            --cyan:    #00d4ff;
+            --cyan-d:  #00a8cc;
+            --orange:  #ff6b35;
+            --green:   #00d48a;
+            --purple:  #9d7cff;
+            --amber:   #f5b731;
+            --pink:    #ff4d8d;
+            --white:   #f0f4ff;
+            --g1:      #d4dff5;
+            --g2:      #8899bb;
+            --g3:      #445577;
+            --card:    #0f1829;
+            --card2:   #131e30;
+            --border:  rgba(100,140,220,0.1);
         }
-
         html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--white); line-height: 1.65; overflow-x: hidden; }
 
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--navy);
-            color: var(--white);
-            line-height: 1.65;
-            overflow-x: hidden;
-        }
-
-        /* ─── NAV ─── */
+        /* NAV */
         nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            padding: 16px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: rgba(10,15,30,0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--card-border);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 0 48px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(8,12,24,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,212,255,0.08);
         }
-        .nav-logo {
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: var(--cyan);
-            letter-spacing: -0.02em;
+        nav::after {
+            content: ''; position: absolute; bottom: 0; left: 10%; right: 10%;
+            height: 1px; background: linear-gradient(90deg,transparent,rgba(0,212,255,0.25),transparent);
         }
-        .nav-links { display: flex; gap: 32px; list-style: none; }
-        .nav-links a {
-            color: var(--gray-2);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover { color: var(--white); }
+        .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--white); display: flex; align-items: center; gap: 10px; }
+        .logo-dot { width: 8px; height: 8px; background: var(--cyan); border-radius: 50%; box-shadow: 0 0 10px var(--cyan); animation: blink 2s infinite; }
+        @keyframes blink { 0%,100%{opacity:1}50%{opacity:.3} }
+        .nav-links { display: flex; gap: 36px; list-style: none; }
+        .nav-links a { color: var(--g2); text-decoration: none; font-size: .88rem; font-weight: 500; transition: color .2s; }
+        .nav-links a:hover { color: var(--cyan); }
 
-        /* ─── HERO ─── */
+        /* HERO */
         header {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 120px 24px 80px;
-            position: relative;
-            overflow: hidden;
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 120px 24px 80px; position: relative; overflow: hidden;
         }
         .hero-bg {
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse 80% 60% at 50% 0%, rgba(29,108,232,0.22) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 40% at 20% 80%, rgba(34,211,238,0.1) 0%, transparent 60%),
-                radial-gradient(ellipse 40% 40% at 80% 60%, rgba(139,92,246,0.1) 0%, transparent 60%);
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 70% 50% at 50% -10%,rgba(0,212,255,.18),transparent 70%),
+                        radial-gradient(ellipse 50% 40% at 15% 85%,rgba(157,124,255,.1),transparent 60%),
+                        radial-gradient(ellipse 45% 35% at 85% 70%,rgba(29,108,232,.12),transparent 60%);
         }
         .hero-grid {
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
+            position: absolute; inset: 0;
+            background-image: linear-gradient(rgba(0,212,255,.04) 1px,transparent 1px),
+                              linear-gradient(90deg,rgba(0,212,255,.04) 1px,transparent 1px);
+            background-size: 64px 64px;
+            mask-image: radial-gradient(ellipse 80% 80% at center,black,transparent);
         }
-        .hero-content { position: relative; max-width: 800px; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .1; animation: float 8s ease-in-out infinite; }
+        .o1 { width: 400px; height: 400px; background: var(--cyan);   top: -100px; left: -80px;  animation-delay: 0s; }
+        .o2 { width: 300px; height: 300px; background: var(--purple); bottom: 0;   right: -60px; animation-delay: -3s; }
+        .o3 { width: 200px; height: 200px; background: var(--blue);   top: 55%;   left: 55%;   animation-delay: -5s; }
+        @keyframes float { 0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-28px) scale(1.05)} }
+        .hero-content { position: relative; max-width: 820px; z-index: 1; }
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(29,108,232,0.15);
-            border: 1px solid rgba(29,108,232,0.35);
-            color: var(--cyan);
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 0.82rem;
-            font-weight: 500;
-            margin-bottom: 28px;
-            letter-spacing: 0.04em;
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(0,212,255,.08); border: 1px solid rgba(0,212,255,.25);
+            color: var(--cyan); padding: 7px 18px; border-radius: 100px;
+            font-size: .78rem; font-weight: 600; margin-bottom: 32px; letter-spacing: .07em; text-transform: uppercase;
         }
-        .hero-badge .dot {
-            width: 7px; height: 7px;
-            background: var(--cyan);
-            border-radius: 50%;
-            animation: pulse-dot 1.8s infinite;
-        }
-        @keyframes pulse-dot {
-            0%,100% { opacity: 1; transform: scale(1); }
-            50%      { opacity: 0.5; transform: scale(0.75); }
-        }
-        header h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2.8rem, 7vw, 5.5rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.05;
-            margin-bottom: 12px;
-        }
-        .name-accent { color: var(--cyan); }
-        header h2 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(1rem, 2.5vw, 1.4rem);
-            font-weight: 600;
-            color: var(--gray-2);
-            margin-bottom: 24px;
-            letter-spacing: 0.01em;
-        }
-        header p {
-            font-size: 1.05rem;
-            color: var(--gray-2);
-            max-width: 580px;
-            margin: 0 auto 40px;
-            font-weight: 300;
-        }
-        .hero-cta {
-            display: flex;
-            gap: 14px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .btn-primary {
-            background: var(--blue);
-            color: white;
-            padding: 13px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.25s;
-            border: 1px solid var(--blue);
-        }
-        .btn-primary:hover { background: var(--blue-lt); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(29,108,232,0.35); }
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            padding: 13px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            border: 1px solid var(--card-border);
-            transition: all 0.25s;
-        }
-        .btn-outline:hover { border-color: var(--gray-2); transform: translateY(-2px); }
+        .hero-badge .dot { width: 7px; height: 7px; background: var(--cyan); border-radius: 50%; box-shadow: 0 0 8px var(--cyan); animation: blink 1.8s infinite; }
+        header h1 { font-family: 'Syne',sans-serif; font-size: clamp(3rem,8vw,6rem); font-weight: 800; letter-spacing: -.04em; line-height: .95; margin-bottom: 16px; }
+        .name-accent { display: block; background: linear-gradient(135deg,var(--cyan),var(--blue-lt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        header h2 { font-family: 'JetBrains Mono',monospace; font-size: clamp(.8rem,2vw,.97rem); color: var(--cyan-d); margin-bottom: 24px; letter-spacing: .03em; }
+        header h2 .br { color: var(--g3); }
+        header p { font-size: 1.05rem; color: var(--g2); max-width: 570px; margin: 0 auto 44px; font-weight: 300; line-height: 1.8; }
+        .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-p { background: var(--cyan); color: var(--navy); padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: .92rem; transition: all .25s; border: 1px solid var(--cyan); }
+        .btn-p:hover { background: transparent; color: var(--cyan); box-shadow: 0 0 28px rgba(0,212,255,.3); transform: translateY(-2px); }
+        .btn-o { background: transparent; color: var(--g1); padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: .92rem; border: 1px solid var(--border); transition: all .25s; }
+        .btn-o:hover { border-color: rgba(0,212,255,.3); color: var(--cyan); transform: translateY(-2px); }
 
-        /* ─── SECTIONS ─── */
-        section { padding: 100px 24px; }
+        /* SECTIONS */
+        section { padding: 110px 24px; }
         .container { max-width: 1200px; margin: 0 auto; }
-        .section-label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            color: var(--cyan);
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-        .section-title {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 14px;
-        }
-        .section-sub {
-            color: var(--gray-2);
-            font-size: 1.05rem;
-            font-weight: 300;
-            max-width: 560px;
-            margin-bottom: 60px;
-        }
+        .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+        .s-label { font-family: 'JetBrains Mono',monospace; font-size: .7rem; font-weight: 500; letter-spacing: .14em; color: var(--cyan); text-transform: uppercase; }
+        .s-line { flex: 1; max-width: 60px; height: 1px; background: linear-gradient(90deg,var(--cyan),transparent); }
+        .s-title { font-family: 'Syne',sans-serif; font-size: clamp(2rem,4vw,2.8rem); font-weight: 800; letter-spacing: -.03em; margin-bottom: 14px; }
+        .s-sub { color: var(--g2); font-size: 1.05rem; font-weight: 300; max-width: 560px; margin-bottom: 64px; line-height: 1.8; }
 
-        /* ─── ABOUT ─── */
+        /* ABOUT */
         #about { background: var(--navy-2); }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-        .about-text p {
-            color: var(--gray-2);
-            margin-bottom: 18px;
-            font-size: 1.02rem;
-            font-weight: 300;
-            line-height: 1.8;
-        }
+        .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 72px; align-items: start; }
+        .about-text p { color: var(--g2); margin-bottom: 20px; font-size: 1.02rem; font-weight: 300; line-height: 1.85; }
         .about-text p strong { color: var(--white); font-weight: 500; }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-        .stat-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 28px 24px;
-            transition: border-color 0.25s;
-        }
-        .stat-card:hover { border-color: rgba(34,211,238,0.25); }
-        .stat-num {
-            font-family: 'Syne', sans-serif;
-            font-size: 2.6rem;
-            font-weight: 800;
-            color: var(--cyan);
-            letter-spacing: -0.04em;
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-        .stat-label { color: var(--gray-2); font-size: 0.88rem; font-weight: 400; }
+        .about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+        .a-tag { background: rgba(0,212,255,.06); border: 1px solid rgba(0,212,255,.15); color: var(--cyan-d); padding: 5px 13px; border-radius: 6px; font-family: 'JetBrains Mono',monospace; font-size: .76rem; }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 28px 24px; transition: all .3s; position: relative; overflow: hidden; }
+        .stat-card::before { content:''; position:absolute; top:0;left:0;right:0; height:2px; background:linear-gradient(90deg,var(--cyan),transparent); opacity:0; transition:opacity .3s; }
+        .stat-card:hover { border-color: rgba(0,212,255,.2); transform: translateY(-3px); }
+        .stat-card:hover::before { opacity: 1; }
+        .stat-num { font-family: 'Syne',sans-serif; font-size: 2.8rem; font-weight: 800; color: var(--cyan); letter-spacing: -.05em; line-height: 1; margin-bottom: 6px; }
+        .stat-lbl { color: var(--g2); font-size: .84rem; }
 
-        /* ─── SKILLS ─── */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 20px;
-        }
-        .skill-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 24px;
-            transition: all 0.25s;
-        }
-        .skill-card:hover { border-color: rgba(29,108,232,0.4); transform: translateY(-3px); }
-        .skill-card h3 {
-            font-family: 'Syne', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 14px;
-            color: var(--white);
-        }
-        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-        .skill-tag {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            color: var(--gray-2);
-            padding: 4px 10px;
-            border-radius: 5px;
-            font-size: 0.82rem;
-            font-weight: 400;
-        }
+        /* SKILLS */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 16px; }
+        .sk-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; transition: all .3s; }
+        .sk-card:hover { border-color: rgba(29,108,232,.3); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+        .sk-icon { font-size: 1.4rem; margin-bottom: 10px; display: block; }
+        .sk-card h3 { font-family: 'Syne',sans-serif; font-size: .84rem; font-weight: 700; margin-bottom: 14px; color: var(--g1); text-transform: uppercase; letter-spacing: .05em; }
+        .sk-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+        .sk-tag { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); color: var(--g2); padding: 3px 9px; border-radius: 5px; font-size: .79rem; }
 
-        /* ─── PROJECTS ─── */
+        /* PROJECTS */
         #projects { background: var(--navy-2); }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-            gap: 24px;
-        }
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 14px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.3s;
-        }
-        .project-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-        .project-card.new-project {
-            border-color: rgba(249,115,22,0.4);
-            box-shadow: 0 0 0 1px rgba(249,115,22,0.15), 0 0 30px rgba(249,115,22,0.06);
-        }
-        .project-card.new-project:hover { border-color: var(--orange); box-shadow: 0 20px 40px rgba(249,115,22,0.2); }
 
-        .project-stripe {
-            height: 4px;
-        }
-        .stripe-orange  { background: linear-gradient(90deg, var(--orange), #fb923c); }
-        .stripe-blue    { background: linear-gradient(90deg, var(--blue), var(--cyan)); }
-        .stripe-purple  { background: linear-gradient(90deg, var(--purple), #a78bfa); }
-        .stripe-green   { background: linear-gradient(90deg, var(--green), #34d399); }
-        .stripe-amber   { background: linear-gradient(90deg, var(--amber), #fbbf24); }
-        .stripe-pink    { background: linear-gradient(90deg, var(--pink), #f472b6); }
-        .stripe-cyan    { background: linear-gradient(90deg, var(--cyan), #67e8f9); }
+        /* STAR CARD — DocMind */
+        .star-card { background: var(--card); border: 1px solid rgba(0,212,255,.2); border-radius: 20px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 0 60px rgba(0,212,255,.06),0 40px 80px rgba(0,0,0,.5); transition: all .4s; }
+        .star-card:hover { border-color: rgba(0,212,255,.38); box-shadow: 0 0 80px rgba(0,212,255,.1),0 40px 80px rgba(0,0,0,.5); transform: translateY(-4px); }
+        .star-bar { height: 3px; background: linear-gradient(90deg,var(--cyan),var(--blue-lt),var(--purple)); }
+        .star-inner { display: grid; grid-template-columns: 1fr 1fr; }
+        .star-left  { padding: 44px 48px; border-right: 1px solid var(--border); }
+        .star-right { padding: 44px 48px; background: rgba(0,212,255,.02); }
+        .star-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+        .sb { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 100px; font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+        .sb-star { background: rgba(0,212,255,.12); color: var(--cyan); border: 1px solid rgba(0,212,255,.3); }
+        .sb-llm  { background: rgba(157,124,255,.12); color: var(--purple); border: 1px solid rgba(157,124,255,.3); }
+        .sb-off  { background: rgba(0,212,138,.1); color: var(--green); border: 1px solid rgba(0,212,138,.3); }
+        .star-title { font-family: 'Syne',sans-serif; font-size: 1.7rem; font-weight: 800; letter-spacing: -.03em; line-height: 1.2; margin-bottom: 14px; }
+        .star-desc { color: var(--g2); font-size: .97rem; line-height: 1.8; margin-bottom: 24px; font-weight: 300; }
+        .star-techs { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 28px; }
+        .st { background: rgba(0,212,255,.06); border: 1px solid rgba(0,212,255,.15); color: var(--cyan-d); padding: 4px 11px; border-radius: 5px; font-family: 'JetBrains Mono',monospace; font-size: .76rem; }
+        .star-btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: .9rem; background: var(--cyan); color: var(--navy); transition: all .25s; }
+        .star-btn:hover { background: transparent; color: var(--cyan); border: 1px solid var(--cyan); box-shadow: 0 0 20px rgba(0,212,255,.25); }
 
-        .project-header {
-            padding: 22px 24px 16px;
-            border-bottom: 1px solid var(--card-border);
-        }
-        .project-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        .badge-new     { background: rgba(249,115,22,0.15); color: var(--orange); border: 1px solid rgba(249,115,22,0.3); }
-        .badge-prod    { background: rgba(16,185,129,0.15); color: var(--green);  border: 1px solid rgba(16,185,129,0.3); }
-        .badge-ml      { background: rgba(29,108,232,0.15); color: var(--blue-lt); border: 1px solid rgba(29,108,232,0.3); }
-        .badge-dl      { background: rgba(139,92,246,0.15); color: #a78bfa;       border: 1px solid rgba(139,92,246,0.3); }
-        .badge-bi      { background: rgba(245,158,11,0.15); color: var(--amber);  border: 1px solid rgba(245,158,11,0.3); }
-        .badge-fs      { background: rgba(236,72,153,0.15); color: var(--pink);   border: 1px solid rgba(236,72,153,0.3); }
-        .badge-nlp     { background: rgba(34,211,238,0.15); color: var(--cyan);   border: 1px solid rgba(34,211,238,0.3); }
-        .badge-stat    { background: rgba(148,163,184,0.15); color: var(--gray-1); border: 1px solid rgba(148,163,184,0.3); }
+        .arch { background: var(--navy); border-radius: 14px; border: 1px solid var(--border); padding: 26px; margin-bottom: 24px; font-family: 'JetBrains Mono',monospace; font-size: .77rem; color: var(--g3); line-height: 2; position: relative; }
+        .arch::before { content: '// pipeline RAG'; position: absolute; top: 10px; right: 14px; font-size: .66rem; opacity: .45; }
+        .an { color: var(--cyan-d); }
+        .al { color: var(--purple); }
+        .aa { color: var(--g3); }
+        .star-metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+        .sm { background: var(--navy); border: 1px solid var(--border); border-radius: 10px; padding: 16px 12px; text-align: center; }
+        .sm-val { font-family: 'Syne',sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--cyan); margin-bottom: 4px; }
+        .sm-lbl { font-size: .68rem; color: var(--g3); text-transform: uppercase; letter-spacing: .06em; }
 
-        .project-header h3 {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--white);
-            line-height: 1.35;
-        }
-        .project-content { padding: 20px 24px 24px; flex-grow: 1; display: flex; flex-direction: column; }
-        .project-content p { color: var(--gray-2); font-size: 0.92rem; margin-bottom: 16px; font-weight: 300; flex-grow: 1; }
-        .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
-        .tag {
-            background: rgba(255,255,255,0.05);
-            color: var(--gray-1);
-            padding: 3px 9px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-        }
-        .metrics { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
-        .metric { font-size: 0.82rem; color: var(--gray-3); }
-        .project-link {
-            display: block;
-            text-align: center;
-            padding: 10px;
-            background: rgba(29,108,232,0.1);
-            border: 1px solid rgba(29,108,232,0.25);
-            color: var(--blue-lt);
-            text-decoration: none;
-            border-radius: 7px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-        .project-link:hover { background: rgba(29,108,232,0.2); border-color: var(--blue-lt); }
-        .project-link.link-orange { background: rgba(249,115,22,0.1); border-color: rgba(249,115,22,0.3); color: var(--orange); }
-        .project-link.link-orange:hover { background: rgba(249,115,22,0.2); border-color: var(--orange); }
+        /* project grid */
+        .p-divider { font-family: 'JetBrains Mono',monospace; font-size: .7rem; color: var(--g3); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 28px; display: flex; align-items: center; gap: 16px; }
+        .p-divider::before,.p-divider::after { content:''; flex:1; height:1px; background: var(--border); }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(360px,1fr)); gap: 20px; }
+        .p-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: all .3s; }
+        .p-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,.4); border-color: rgba(100,140,220,.2); }
+        .p-stripe { height: 3px; }
+        .s-ora { background: linear-gradient(90deg,#ff6b35,#ff8f5e); }
+        .s-blu { background: linear-gradient(90deg,var(--blue),var(--blue-lt)); }
+        .s-pur { background: linear-gradient(90deg,var(--purple),#c4b5fd); }
+        .s-grn { background: linear-gradient(90deg,var(--green),#6ee7b7); }
+        .s-amb { background: linear-gradient(90deg,var(--amber),#fcd34d); }
+        .s-pnk { background: linear-gradient(90deg,var(--pink),#fb7bb0); }
+        .s-cyn { background: linear-gradient(90deg,var(--cyan),#67e8f9); }
+        .p-header { padding: 22px 24px 16px; }
+        .p-badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 4px; font-size: .68rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 10px; }
+        .b-prod { background:rgba(0,212,138,.1);  color:var(--green);   border:1px solid rgba(0,212,138,.25); }
+        .b-ml   { background:rgba(29,108,232,.1); color:var(--blue-lt); border:1px solid rgba(29,108,232,.25); }
+        .b-dl   { background:rgba(157,124,255,.1);color:var(--purple);  border:1px solid rgba(157,124,255,.25); }
+        .b-bi   { background:rgba(245,183,49,.1); color:var(--amber);   border:1px solid rgba(245,183,49,.25); }
+        .b-fs   { background:rgba(255,77,141,.1); color:var(--pink);    border:1px solid rgba(255,77,141,.25); }
+        .b-rt   { background:rgba(255,107,53,.1); color:var(--orange);  border:1px solid rgba(255,107,53,.25); }
+        .b-stat { background:rgba(136,153,187,.1);color:var(--g1);      border:1px solid rgba(136,153,187,.25); }
+        .p-header h3 { font-family:'Syne',sans-serif; font-size:1.05rem; font-weight:700; color:var(--white); line-height:1.35; }
+        .p-body { padding:16px 24px 24px; flex-grow:1; display:flex; flex-direction:column; border-top:1px solid var(--border); }
+        .p-body p { color:var(--g2); font-size:.9rem; margin-bottom:16px; font-weight:300; flex-grow:1; line-height:1.75; }
+        .tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px; }
+        .tag { background:rgba(255,255,255,.04); color:var(--g2); padding:3px 8px; border-radius:4px; font-size:.77rem; border:1px solid rgba(255,255,255,.06); }
+        .mets { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:16px; }
+        .met { font-size:.79rem; color:var(--g3); }
+        .p-link { display:block; text-align:center; padding:10px; background:rgba(255,255,255,.03); border:1px solid var(--border); color:var(--g2); text-decoration:none; border-radius:7px; font-size:.85rem; font-weight:500; transition:all .2s; }
+        .p-link:hover { background:rgba(0,212,255,.06); border-color:rgba(0,212,255,.25); color:var(--cyan); }
 
-        /* ─── MORE PROJECTS ─── */
+        /* MORE */
         #more-projects { background: var(--navy); }
-        .more-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 16px;
-        }
-        .mini-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 20px 22px;
-            transition: all 0.25s;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .mini-card:hover { border-color: rgba(29,108,232,0.3); transform: translateY(-3px); }
-        .mini-card h4 { font-family: 'Syne', sans-serif; font-size: 0.97rem; font-weight: 700; color: var(--white); }
-        .mini-card p  { font-size: 0.87rem; color: var(--gray-2); font-weight: 300; flex-grow: 1; }
-        .mini-link {
-            display: inline-block;
-            font-size: 0.82rem;
-            color: var(--blue-lt);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .mini-link:hover { text-decoration: underline; }
+        .more-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap: 14px; }
+        .mini { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:20px 22px; transition:all .25s; display:flex; flex-direction:column; gap:10px; }
+        .mini:hover { border-color:rgba(0,212,255,.18); transform:translateY(-3px); background:var(--card2); }
+        .mini h4 { font-family:'Syne',sans-serif; font-size:.93rem; font-weight:700; color:var(--white); }
+        .mini p { font-size:.85rem; color:var(--g2); font-weight:300; flex-grow:1; line-height:1.7; }
+        .mini-link { display:inline-flex; align-items:center; gap:5px; font-size:.8rem; color:var(--blue-lt); text-decoration:none; font-weight:500; transition:color .2s; }
+        .mini-link:hover { color:var(--cyan); }
 
-        /* ─── CERTIFICATIONS ─── */
+        /* CERTS */
         #certifications { background: var(--navy-2); }
-        .cert-section { margin-bottom: 48px; }
-        .cert-section-title {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--cyan);
-            margin-bottom: 16px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--card-border);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .cert-grid { display: flex; flex-direction: column; gap: 10px; }
-        .cert-item {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 14px 18px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            transition: border-color 0.2s;
-        }
-        .cert-item:hover { border-color: rgba(255,255,255,0.12); }
-        .cert-item.cert-new {
-            border-left: 3px solid var(--orange);
-            border-color: rgba(249,115,22,0.3);
-        }
-        .cert-item.cert-new:hover { border-color: var(--orange); }
-        .cert-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-        .dot-blue   { background: var(--blue-lt); }
-        .dot-cyan   { background: var(--cyan); }
-        .dot-green  { background: var(--green); }
-        .dot-orange { background: var(--orange); }
-        .dot-purple { background: var(--purple); }
-        .dot-amber  { background: var(--amber); }
-        .dot-pink   { background: var(--pink); }
-        .dot-gray   { background: var(--gray-2); }
-        .cert-info { flex-grow: 1; }
-        .cert-info strong { color: var(--white); font-size: 0.92rem; font-weight: 500; display: block; }
-        .cert-info span { color: var(--gray-2); font-size: 0.82rem; }
-        .cert-date { color: var(--gray-3); font-size: 0.8rem; white-space: nowrap; }
-        .new-tag {
-            background: rgba(249,115,22,0.15);
-            color: var(--orange);
-            border: 1px solid rgba(249,115,22,0.3);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            flex-shrink: 0;
-        }
+        .cert-sec { margin-bottom: 44px; }
+        .cert-head { font-family:'Syne',sans-serif; font-size:.88rem; font-weight:700; color:var(--cyan-d); margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:10px; text-transform:uppercase; letter-spacing:.06em; }
+        .cert-list { display:flex; flex-direction:column; gap:8px; }
+        .cert { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:13px 18px; display:flex; align-items:center; gap:16px; transition:all .2s; }
+        .cert:hover { border-color:rgba(0,212,255,.12); background:var(--card2); }
+        .cert.new { border-left:2px solid var(--cyan); border-color:rgba(0,212,255,.2); }
+        .cert.new:hover { border-color:rgba(0,212,255,.4); }
+        .cdot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+        .d-b { background:var(--blue-lt); }
+        .d-c { background:var(--cyan); box-shadow:0 0 6px var(--cyan); }
+        .d-g { background:var(--green); }
+        .d-o { background:var(--orange); }
+        .d-p { background:var(--purple); }
+        .d-a { background:var(--amber); }
+        .d-pk{ background:var(--pink); }
+        .d-gr{ background:var(--g2); }
+        .cinfo { flex-grow:1; }
+        .cinfo strong { color:var(--white); font-size:.9rem; font-weight:500; display:block; }
+        .cinfo span { color:var(--g3); font-size:.79rem; }
+        .cdate { color:var(--g3); font-size:.76rem; white-space:nowrap; font-family:'JetBrains Mono',monospace; }
+        .ntag { background:rgba(0,212,255,.08); color:var(--cyan); border:1px solid rgba(0,212,255,.25); padding:2px 8px; border-radius:4px; font-size:.66rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; flex-shrink:0; }
 
-        /* ─── CONTACT ─── */
+        /* CONTACT */
         #contact { background: var(--navy); }
-        .contact-box {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 60px;
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-        .contact-box::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 50%; transform: translateX(-50%);
-            width: 60%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-        }
-        .contact-box h3 {
-            font-family: 'Syne', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 14px;
-            letter-spacing: -0.03em;
-        }
-        .contact-box p { color: var(--gray-2); margin-bottom: 36px; font-weight: 300; font-size: 1.05rem; }
-        .contact-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-        .contact-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.92rem;
-            transition: all 0.25s;
-        }
-        .contact-link.linkedin { background: rgba(10,102,194,0.2); color: #60a5fa; border: 1px solid rgba(10,102,194,0.4); }
-        .contact-link.linkedin:hover { background: rgba(10,102,194,0.35); transform: translateY(-2px); }
-        .contact-link.github { background: rgba(255,255,255,0.07); color: var(--gray-1); border: 1px solid var(--card-border); }
-        .contact-link.github:hover { background: rgba(255,255,255,0.12); transform: translateY(-2px); }
-        .contact-link.email { background: rgba(249,115,22,0.15); color: var(--orange); border: 1px solid rgba(249,115,22,0.3); }
-        .contact-link.email:hover { background: rgba(249,115,22,0.25); transform: translateY(-2px); }
+        .cbox { background:var(--card); border:1px solid rgba(0,212,255,.12); border-radius:24px; padding:70px 60px; text-align:center; max-width:720px; margin:0 auto; position:relative; overflow:hidden; }
+        .cbox::before { content:''; position:absolute; top:0; left:20%;right:20%; height:1px; background:linear-gradient(90deg,transparent,var(--cyan),transparent); }
+        .cbox h3 { font-family:'Syne',sans-serif; font-size:2.2rem; font-weight:800; margin-bottom:14px; letter-spacing:-.03em; }
+        .cbox p { color:var(--g2); margin-bottom:40px; font-weight:300; font-size:1.05rem; line-height:1.8; }
+        .clinks { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+        .cl { display:inline-flex; align-items:center; gap:9px; padding:13px 26px; border-radius:8px; text-decoration:none; font-weight:600; font-size:.9rem; transition:all .25s; }
+        .cl.li { background:rgba(10,102,194,.12); color:#60a5fa; border:1px solid rgba(10,102,194,.3); }
+        .cl.li:hover { background:rgba(10,102,194,.25); transform:translateY(-2px); }
+        .cl.gh { background:rgba(255,255,255,.05); color:var(--g1); border:1px solid var(--border); }
+        .cl.gh:hover { background:rgba(255,255,255,.1); transform:translateY(-2px); }
+        .cl.em { background:rgba(0,212,255,.08); color:var(--cyan); border:1px solid rgba(0,212,255,.25); }
+        .cl.em:hover { background:rgba(0,212,255,.15); transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,212,255,.15); }
 
-        /* ─── FOOTER ─── */
-        footer {
-            background: var(--navy-2);
-            border-top: 1px solid var(--card-border);
-            padding: 32px 24px;
-            text-align: center;
-        }
-        footer p { color: var(--gray-3); font-size: 0.88rem; }
-        footer span { color: var(--gray-2); }
+        /* FOOTER */
+        footer { background:var(--navy-2); border-top:1px solid var(--border); padding:32px 24px; text-align:center; }
+        footer p { color:var(--g3); font-size:.84rem; font-family:'JetBrains Mono',monospace; }
+        footer span { color:var(--g2); }
 
-        /* ─── RESPONSIVE ─── */
-        @media (max-width: 900px) {
-            nav { padding: 16px 20px; }
-            .nav-links { display: none; }
-            .about-grid { grid-template-columns: 1fr; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .contact-box { padding: 40px 24px; }
-        }
-        @media (max-width: 600px) {
-            section { padding: 70px 20px; }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .more-grid { grid-template-columns: 1fr; }
-        }
+        /* RESPONSIVE */
+        @media(max-width:1024px){ .star-inner{grid-template-columns:1fr} .star-left{border-right:none;border-bottom:1px solid var(--border)} }
+        @media(max-width:900px){ nav{padding:0 20px} .nav-links{display:none} .about-grid{grid-template-columns:1fr;gap:48px} .projects-grid{grid-template-columns:1fr} .cbox{padding:48px 28px} .star-left,.star-right{padding:32px 28px} }
+        @media(max-width:600px){ section{padding:80px 20px} .stats-grid{grid-template-columns:1fr 1fr} .more-grid{grid-template-columns:1fr} .star-metrics{grid-template-columns:1fr} }
     </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-    <div class="nav-logo">Diego Vallejo</div>
+    <div class="nav-logo"><span class="logo-dot"></span>Diego Vallejo</div>
     <ul class="nav-links">
         <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#skills">Stack</a></li>
         <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#certifications">Certificaciones</a></li>
+        <li><a href="#certifications">Certs</a></li>
         <li><a href="#contact">Contacto</a></li>
     </ul>
 </nav>
@@ -556,18 +271,16 @@
 <header>
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
+    <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
     <div class="hero-content">
-        <div class="hero-badge">
-            <span class="dot"></span>
-            Disponible para colaboraciones
-        </div>
-        <h1>Diego <span class="name-accent">Vallejo</span></h1>
-        <h2>Ingeniero Informático · Magíster en Data Science</h2>
-        <p>Especialista en Machine Learning, Data Engineering y BI. Transformo datos en decisiones estratégicas mediante soluciones innovadoras y escalables.</p>
+        <div class="hero-badge"><span class="dot"></span>Disponible para colaboraciones</div>
+        <h1>Diego<span class="name-accent">Vallejo</span></h1>
+        <h2><span class="br">[</span> Ingeniero Informático &amp; Magíster en Data Science <span class="br">]</span></h2>
+        <p>Especialista en Machine Learning, Data Engineering, LLMs y BI. Transformo datos en decisiones estratégicas mediante soluciones innovadoras, seguras y escalables.</p>
         <div class="hero-cta">
-            <a href="#projects" class="btn-primary">Ver Proyectos</a>
-            <a href="https://linkedin.com/in/ing-diego-vallejo" target="_blank" class="btn-outline">LinkedIn →</a>
-            <a href="https://github.com/davallejo?tab=repositories" target="_blank" class="btn-outline">GitHub →</a>
+            <a href="#projects" class="btn-p">Ver Proyectos</a>
+            <a href="https://linkedin.com/in/ing-diego-vallejo" target="_blank" class="btn-o">LinkedIn →</a>
+            <a href="https://github.com/davallejo?tab=repositories" target="_blank" class="btn-o">GitHub →</a>
         </div>
     </div>
 </header>
@@ -575,34 +288,26 @@
 <!-- ABOUT -->
 <section id="about">
     <div class="container">
-        <div class="section-label">Perfil</div>
+        <div class="eyebrow"><span class="s-label">Perfil</span><span class="s-line"></span></div>
         <div class="about-grid">
             <div class="about-text">
-                <h2 class="section-title">Sobre mí</h2>
+                <h2 class="s-title">Sobre mí</h2>
                 <p>Magíster en Sistemas de Información con mención en <strong>Data Science</strong>, con sólida formación en analítica avanzada, machine learning e inteligencia artificial aplicada a la toma de decisiones gerenciales.</p>
                 <p>Experiencia integral en procesos <strong>ETL/ELT</strong>, creación de dashboards ejecutivos y gobernanza de datos basada en el marco <strong>DAMA</strong>. Dominio de Pentaho PDI, Python, R, SQL, Power BI, Tableau, Hadoop, Hive, Spark, Databricks y Apache Airflow.</p>
-                <p>Amplio manejo de bases de datos <strong>relacionales</strong> (PostgreSQL, SQL Server, MySQL, Oracle) y <strong>NoSQL</strong> (MongoDB, Redis, Cassandra, CouchDB, ChromaDB) en entornos Windows y Linux.</p>
-                <p>Certificado en <strong>Agile Project Management Scrum</strong> (AICAD, 2026) y <strong>Liderazgo con IA</strong> (Universidad Santander, 2025). Enfoque en trabajo colaborativo bajo metodologías Scrum y Kanban para la entrega de valor continuo.</p>
-            </div>
-            <div>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-num">28+</div>
-                        <div class="stat-label">Proyectos Completados</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-num">55+</div>
-                        <div class="stat-label">Certificaciones</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-num">7+</div>
-                        <div class="stat-label">Sectores de Industria</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-num">5+</div>
-                        <div class="stat-label">Años de Experiencia</div>
-                    </div>
+                <p>Amplio manejo de bases de datos <strong>relacionales</strong> (PostgreSQL, SQL Server, MySQL, Oracle) y <strong>NoSQL</strong> (MongoDB, Redis, Cassandra, ChromaDB). Experiencia en arquitecturas <strong>RAG con LLMs locales</strong> open-source.</p>
+                <p>Certificado en <strong>Agile Project Management Scrum</strong> (AICAD, 2026) y <strong>Liderazgo con IA</strong> (Universidad Santander, 2025).</p>
+                <div class="about-tags">
+                    <span class="a-tag">Python</span><span class="a-tag">LLMs</span><span class="a-tag">RAG</span>
+                    <span class="a-tag">MLOps</span><span class="a-tag">FastAPI</span><span class="a-tag">Spark</span>
+                    <span class="a-tag">Airflow</span><span class="a-tag">Power BI</span><span class="a-tag">Tableau</span>
+                    <span class="a-tag">Big Data</span><span class="a-tag">Data Science</span><span class="a-tag">Data Governance</span>
                 </div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-num">28+</div><div class="stat-lbl">Proyectos Completados</div></div>
+                <div class="stat-card"><div class="stat-num">55+</div><div class="stat-lbl">Certificaciones</div></div>
+                <div class="stat-card"><div class="stat-num">7+</div><div class="stat-lbl">Sectores de Industria</div></div>
+                <div class="stat-card"><div class="stat-num">10+</div><div class="stat-lbl">Años de Experiencia</div></div>
             </div>
         </div>
     </div>
@@ -611,456 +316,143 @@
 <!-- SKILLS -->
 <section id="skills">
     <div class="container">
-        <div class="section-label">Tecnologías</div>
-        <h2 class="section-title">Stack Técnico</h2>
-        <p class="section-sub">Dominio end-to-end desde la ingesta de datos hasta la visualización y el despliegue en producción.</p>
+        <div class="eyebrow"><span class="s-label">Tecnologías</span><span class="s-line"></span></div>
+        <h2 class="s-title">Stack Técnico</h2>
+        <p class="s-sub">Dominio end-to-end desde la ingesta de datos hasta el despliegue en producción, incluyendo LLMs locales y sistemas RAG.</p>
         <div class="skills-grid">
-            <div class="skill-card">
-                <h3>💻 Lenguajes</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">R</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">PHP</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>🤖 ML & Deep Learning</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Scikit-learn</span>
-                    <span class="skill-tag">TensorFlow</span>
-                    <span class="skill-tag">Keras</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">NumPy</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>🔧 Data Engineering</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Apache Airflow</span>
-                    <span class="skill-tag">Apache Spark</span>
-                    <span class="skill-tag">Hadoop</span>
-                    <span class="skill-tag">Databricks</span>
-                    <span class="skill-tag">Pentaho PDI</span>
-                    <span class="skill-tag">Microsoft Fabric</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>🗄️ Bases de Datos</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">Redis</span>
-                    <span class="skill-tag">Cassandra</span>
-                    <span class="skill-tag">Oracle</span>
-                    <span class="skill-tag">ChromaDB</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>📊 Business Intelligence</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Power BI</span>
-                    <span class="skill-tag">Tableau</span>
-                    <span class="skill-tag">DAX</span>
-                    <span class="skill-tag">Recharts</span>
-                    <span class="skill-tag">D3.js</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>⚛️ Frontend & Full Stack</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Angular</span>
-                    <span class="skill-tag">Vue.js</span>
-                    <span class="skill-tag">Spring Boot</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">.NET</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>☁️ Cloud & DevOps</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Google Cloud</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Kubernetes</span>
-                    <span class="skill-tag">Jenkins</span>
-                    <span class="skill-tag">GitHub Actions</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>🔒 Ciberseguridad</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Ethical Hacking</span>
-                    <span class="skill-tag">ISO 27001</span>
-                    <span class="skill-tag">Forense Digital</span>
-                    <span class="skill-tag">Endpoint Security</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>🤝 Metodologías</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Scrum</span>
-                    <span class="skill-tag">Kanban</span>
-                    <span class="skill-tag">DAMA</span>
-                    <span class="skill-tag">CI/CD</span>
-                    <span class="skill-tag">TDD</span>
-                </div>
-            </div>
+            <div class="sk-card"><span class="sk-icon">💻</span><h3>Lenguajes</h3><div class="sk-tags"><span class="sk-tag">Python</span><span class="sk-tag">R</span><span class="sk-tag">SQL</span><span class="sk-tag">Java</span><span class="sk-tag">JavaScript</span><span class="sk-tag">PHP</span></div></div>
+            <div class="sk-card"><span class="sk-icon">🤖</span><h3>ML &amp; Deep Learning</h3><div class="sk-tags"><span class="sk-tag">Scikit-learn</span><span class="sk-tag">TensorFlow</span><span class="sk-tag">Keras</span><span class="sk-tag">Pandas</span><span class="sk-tag">NumPy</span></div></div>
+            <div class="sk-card"><span class="sk-icon">🧠</span><h3>LLMs &amp; RAG</h3><div class="sk-tags"><span class="sk-tag">Ollama</span><span class="sk-tag">llama3.2</span><span class="sk-tag">Mistral</span><span class="sk-tag">ChromaDB</span><span class="sk-tag">sentence-transformers</span><span class="sk-tag">PyMuPDF</span></div></div>
+            <div class="sk-card"><span class="sk-icon">🔧</span><h3>Data Engineering</h3><div class="sk-tags"><span class="sk-tag">Apache Airflow</span><span class="sk-tag">Apache Spark</span><span class="sk-tag">Hadoop</span><span class="sk-tag">Databricks</span><span class="sk-tag">Pentaho PDI</span><span class="sk-tag">Microsoft Fabric</span></div></div>
+            <div class="sk-card"><span class="sk-icon">🗄️</span><h3>Bases de Datos</h3><div class="sk-tags"><span class="sk-tag">PostgreSQL</span><span class="sk-tag">MongoDB</span><span class="sk-tag">MySQL</span><span class="sk-tag">Redis</span><span class="sk-tag">Cassandra</span><span class="sk-tag">Oracle</span><span class="sk-tag">ChromaDB</span></div></div>
+            <div class="sk-card"><span class="sk-icon">📊</span><h3>Business Intelligence</h3><div class="sk-tags"><span class="sk-tag">Power BI</span><span class="sk-tag">Tableau</span><span class="sk-tag">DAX</span><span class="sk-tag">Recharts</span><span class="sk-tag">D3.js</span></div></div>
+            <div class="sk-card"><span class="sk-icon">⚛️</span><h3>APIs &amp; Full Stack</h3><div class="sk-tags"><span class="sk-tag">FastAPI</span><span class="sk-tag">React</span><span class="sk-tag">Angular</span><span class="sk-tag">Vue.js</span><span class="sk-tag">Spring Boot</span><span class="sk-tag">Node.js</span></div></div>
+            <div class="sk-card"><span class="sk-icon">☁️</span><h3>Cloud &amp; DevOps</h3><div class="sk-tags"><span class="sk-tag">AWS</span><span class="sk-tag">Google Cloud</span><span class="sk-tag">Docker</span><span class="sk-tag">Kubernetes</span><span class="sk-tag">Jenkins</span><span class="sk-tag">GitHub Actions</span></div></div>
+            <div class="sk-card"><span class="sk-icon">🔒</span><h3>Ciberseguridad</h3><div class="sk-tags"><span class="sk-tag">Ethical Hacking</span><span class="sk-tag">ISO 27001</span><span class="sk-tag">Forense Digital</span><span class="sk-tag">Endpoint Security</span></div></div>
         </div>
     </div>
 </section>
 
-<!-- FEATURED PROJECTS -->
+<!-- PROJECTS -->
 <section id="projects">
     <div class="container">
-        <div class="section-label">Portafolio</div>
-        <h2 class="section-title">Proyectos Destacados</h2>
-        <p class="section-sub">Proyectos de nivel producción con impacto real en organizaciones y sectores clave.</p>
+        <div class="eyebrow"><span class="s-label">Portafolio</span><span class="s-line"></span></div>
+        <h2 class="s-title">Proyectos Destacados</h2>
+        <p class="s-sub">Proyectos de nivel producción que demuestran dominio técnico en IA, Data Engineering, ML y desarrollo de software.</p>
+
+        <!-- DOCMIND STAR -->
+        <div class="star-card">
+            <div class="star-bar"></div>
+            <div class="star-inner">
+                <div class="star-left">
+                    <div class="star-badges">
+                        <span class="sb sb-star">✦ Proyecto Estrella</span>
+                        <span class="sb sb-llm">LLM · RAG</span>
+                        <span class="sb sb-off">🔒 100% Offline</span>
+                    </div>
+                    <h3 class="star-title">🧠 DocMind — RAG Agent 100% Local</h3>
+                    <p class="star-desc">Agente conversacional sobre documentos PDF completamente offline. Sube cualquier PDF y hazle preguntas en lenguaje natural. Sin APIs externas, sin envío de datos a la nube — privacidad total con Ollama y modelos open-source. Arquitectura production-ready con monitoreo en tiempo real.</p>
+                    <div class="star-techs">
+                        <span class="st">FastAPI</span><span class="st">Ollama</span><span class="st">llama3.2</span>
+                        <span class="st">ChromaDB</span><span class="st">sentence-transformers</span>
+                        <span class="st">PyMuPDF</span><span class="st">Python</span><span class="st">Uvicorn</span>
+                    </div>
+                    <a href="https://github.com/davallejo/rag-agent-fastapi-chromadb" target="_blank" class="star-btn">Ver Repositorio →</a>
+                </div>
+                <div class="star-right">
+                    <div class="arch">
+                        <span class="an">PDF</span> <span class="aa">→</span> <span class="al">PyMuPDF</span> <span class="aa">→</span> <span class="an">Chunking</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="aa">↓</span><br>
+                        <span class="an">Query</span> <span class="aa">→</span> <span class="al">SentenceTransformer</span> <span class="aa">→</span> <span class="an">Vector</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="aa">↓</span><br>
+                        <span class="al">ChromaDB</span> <span class="aa">(cosine similarity)</span> <span class="aa">→</span> <span class="an">Top-K</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="aa">↓</span><br>
+                        <span class="an">Context</span> <span class="aa">→</span> <span class="al">Prompt</span> <span class="aa">→</span> <span class="al">Ollama LLM</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="aa">↓</span><br>
+                        <span class="an">Response</span> <span class="aa">+</span> <span class="an">Sources</span> <span class="aa">→</span> <span class="al">FastAPI</span>
+                    </div>
+                    <div class="star-metrics">
+                        <div class="sm"><div class="sm-val">6</div><div class="sm-lbl">Endpoints API</div></div>
+                        <div class="sm"><div class="sm-val">3+</div><div class="sm-lbl">Modelos LLM</div></div>
+                        <div class="sm"><div class="sm-val">0€</div><div class="sm-lbl">Costo tokens</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-divider">Otros proyectos destacados</div>
 
         <div class="projects-grid">
-
-            <!-- NEW: fraud_detect_real_time_bank -->
-            <div class="project-card new-project">
-                <div class="project-stripe stripe-orange"></div>
-                <div class="project-header">
-                    <span class="project-badge badge-new">⚡ NUEVO · Real-Time</span>
-                    <h3>🏦 Detección de Fraude Bancario en Tiempo Real</h3>
-                </div>
-                <div class="project-content">
-                    <p>Sistema distribuido de detección de fraude bancario que procesa miles de transacciones usando computación distribuida. Arquitectura orientada a baja latencia y alta disponibilidad para instituciones financieras.</p>
-                    <div class="tag-row">
-                        <span class="tag">Computación Distribuida</span>
-                        <span class="tag">Real-Time Processing</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">Python</span>
-                    </div>
-                    <div class="metrics">
-                        <span class="metric">⚡ Miles de transacciones/s</span>
-                        <span class="metric">🔐 Alta disponibilidad</span>
-                        <span class="metric">🏦 Sector financiero</span>
-                    </div>
-                    <a href="https://github.com/davallejo/fraud_detect_real_time_bank" target="_blank" class="project-link link-orange">Ver Repositorio →</a>
-                </div>
+            <div class="p-card">
+                <div class="p-stripe s-ora"></div>
+                <div class="p-header"><span class="p-badge b-rt">⚡ Real-Time</span><h3>🏦 Detección de Fraude Bancario en Tiempo Real</h3></div>
+                <div class="p-body"><p>Sistema distribuido de detección de fraude bancario que procesa miles de transacciones usando computación distribuida. Arquitectura orientada a baja latencia y alta disponibilidad.</p><div class="tags"><span class="tag">Computación Distribuida</span><span class="tag">Real-Time</span><span class="tag">Python</span></div><div class="mets"><span class="met">⚡ Miles de transacciones/s</span><span class="met">🏦 Sector financiero</span></div><a href="https://github.com/davallejo/fraud_detect_real_time_bank" target="_blank" class="p-link">Ver Repositorio →</a></div>
             </div>
-
-            <!-- telco-churn-dashboard -->
-            <div class="project-card">
-                <div class="project-stripe stripe-pink"></div>
-                <div class="project-header">
-                    <span class="project-badge badge-fs">Full-Stack</span>
-                    <h3>📱 Dashboard Telco Churn Analytics</h3>
-                </div>
-                <div class="project-content">
-                    <p>Dashboard ejecutivo en React para análisis de fuga de clientes en telecomunicaciones. KPIs en tiempo real, filtros avanzados, visualizaciones interactivas y exportación de datos.</p>
-                    <div class="tag-row">
-                        <span class="tag">React</span>
-                        <span class="tag">Tailwind CSS</span>
-                        <span class="tag">Recharts</span>
-                        <span class="tag">PapaParse</span>
-                    </div>
-                    <div class="metrics">
-                        <span class="metric">📊 KPIs ejecutivos</span>
-                        <span class="metric">📱 Responsive</span>
-                    </div>
-                    <a href="https://github.com/davallejo/telco-churn-dashboard" target="_blank" class="project-link">Ver Repositorio →</a>
-                </div>
+            <div class="p-card">
+                <div class="p-stripe s-pnk"></div>
+                <div class="p-header"><span class="p-badge b-fs">Full-Stack</span><h3>📱 Dashboard Telco Churn Analytics</h3></div>
+                <div class="p-body"><p>Dashboard ejecutivo en React para análisis de fuga de clientes en telecomunicaciones. KPIs en tiempo real, filtros avanzados y visualizaciones interactivas.</p><div class="tags"><span class="tag">React</span><span class="tag">Tailwind CSS</span><span class="tag">Recharts</span><span class="tag">PapaParse</span></div><div class="mets"><span class="met">📊 KPIs ejecutivos</span><span class="met">📱 Responsive</span></div><a href="https://github.com/davallejo/telco-churn-dashboard" target="_blank" class="p-link">Ver Repositorio →</a></div>
             </div>
-
-            <!-- metaltronic-data-airflow-pipeline -->
-            <div class="project-card">
-                <div class="project-stripe stripe-blue"></div>
-                <div class="project-header">
-                    <span class="project-badge badge-prod">Producción</span>
-                    <h3>🏭 Pipeline ETL Industrial con Airflow</h3>
-                </div>
-                <div class="project-content">
-                    <p>Sistema de pipeline ETL para procesamiento de datos industriales de empresa metalmecánica. Automatiza extracción, transformación y carga de datos de ventas, inventario y logs operacionales.</p>
-                    <div class="tag-row">
-                        <span class="tag">Apache Airflow</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                    <div class="metrics">
-                        <span class="metric">⚡ &lt;15 min procesamiento</span>
-                        <span class="metric">📊 1K-5K registros/día</span>
-                    </div>
-                    <a href="https://github.com/davallejo/metaltronic-data-airflow-pipeline" target="_blank" class="project-link">Ver Repositorio →</a>
-                </div>
+            <div class="p-card">
+                <div class="p-stripe s-blu"></div>
+                <div class="p-header"><span class="p-badge b-prod">Producción</span><h3>🏭 Pipeline ETL Industrial con Airflow</h3></div>
+                <div class="p-body"><p>Sistema de pipeline ETL para procesamiento de datos industriales de empresa metalmecánica. Automatiza extracción, transformación y carga de datos de ventas, inventario y logs operacionales.</p><div class="tags"><span class="tag">Apache Airflow</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span></div><div class="mets"><span class="met">⚡ &lt;15 min procesamiento</span><span class="met">📊 1K-5K registros/día</span></div><a href="https://github.com/davallejo/metaltronic-data-airflow-pipeline" target="_blank" class="p-link">Ver Repositorio →</a></div>
             </div>
-
-            <!-- etl-ventas-spark-airflow -->
-            <div class="project-card">
-                <div class="project-stripe stripe-cyan"></div>
-                <div class="project-header">
-                    <span class="project-badge badge-prod">Big Data</span>
-                    <h3>⚡ ETL E-commerce con Spark + Airflow</h3>
-                </div>
-                <div class="project-content">
-                    <p>Proceso ETL distribuido para consolidación de datos de ventas utilizando Apache Spark como motor de procesamiento y Airflow para orquestación. Integra múltiples fuentes de datos.</p>
-                    <div class="tag-row">
-                        <span class="tag">Apache Spark</span>
-                        <span class="tag">Airflow</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Docker Compose</span>
-                    </div>
-                    <div class="metrics">
-                        <span class="metric">🚀 Procesamiento distribuido</span>
-                        <span class="metric">📈 Escalable</span>
-                    </div>
-                    <a href="https://github.com/davallejo/etl-ventas-spark-airflow" target="_blank" class="project-link">Ver Repositorio →</a>
-                </div>
+            <div class="p-card">
+                <div class="p-stripe s-cyn"></div>
+                <div class="p-header"><span class="p-badge b-prod">Big Data</span><h3>⚡ ETL E-commerce con Spark + Airflow</h3></div>
+                <div class="p-body"><p>Proceso ETL distribuido para consolidación de datos de ventas utilizando Apache Spark como motor de procesamiento y Airflow para orquestación. Integra múltiples fuentes de datos.</p><div class="tags"><span class="tag">Apache Spark</span><span class="tag">Airflow</span><span class="tag">Python</span><span class="tag">Docker Compose</span></div><div class="mets"><span class="met">🚀 Procesamiento distribuido</span><span class="met">📈 Escalable</span></div><a href="https://github.com/davallejo/etl-ventas-spark-airflow" target="_blank" class="p-link">Ver Repositorio →</a></div>
             </div>
-
-            <!-- CreditCardFraudDetection -->
-            <div class="project-card">
-                <div class="project-stripe stripe-blue"></div>
-                <div class="project-header">
-                    <span class="project-badge badge-ml">Machine Learning</span>
-                    <h3>🔍 Detección de Fraude en Tarjetas de Crédito</h3>
-                </div>
-                <div class="project-content">
-                    <p>Modelo predictivo para identificar transacciones fraudulentas. Manejo de datos altamente desbalanceados con técnicas avanzadas de muestreo y optimización de Recall.</p>
-                    <div class="tag-row">
-                        <span class="tag">Scikit-learn</span>
-                        <span class="tag">SMOTE</span>
-                        <span class="tag">Imbalanced Data</span>
-                        <span class="tag">Jupyter</span>
-                    </div>
-                    <div class="metrics">
-                        <span class="metric">🎯 Accuracy: 99.2%</span>
-                        <span class="metric">✅ Recall: 95.8%</span>
-                    </div>
-                    <a href="https://github.com/davallejo/CreditCardFraudDetection" target="_blank" class="project-link">Ver Repositorio →</a>
-                </div>
+            <div class="p-card">
+                <div class="p-stripe s-blu"></div>
+                <div class="p-header"><span class="p-badge b-ml">Machine Learning</span><h3>🔍 Detección de Fraude en Tarjetas de Crédito</h3></div>
+                <div class="p-body"><p>Modelo predictivo para identificar transacciones fraudulentas. Manejo de datos altamente desbalanceados con técnicas avanzadas de muestreo y optimización de Recall.</p><div class="tags"><span class="tag">Scikit-learn</span><span class="tag">SMOTE</span><span class="tag">Imbalanced Data</span><span class="tag">Jupyter</span></div><div class="mets"><span class="met">🎯 Accuracy: 99.2%</span><span class="met">✅ Recall: 95.8%</span></div><a href="https://github.com/davallejo/CreditCardFraudDetection" target="_blank" class="p-link">Ver Repositorio →</a></div>
             </div>
-
-            <!-- Prediccion-de-Banca-Rota -->
-            <div class="project-card">
-                <div class="project-stripe stripe-purple"></div>
-                <div class="project-header">
-                    <span class="project-badge badge-dl">Deep Learning</span>
-                    <h3>🏢 Predicción de Bancarrota con Redes Neuronales</h3>
-                </div>
-                <div class="project-content">
-                    <p>Deep Learning para predecir quiebra empresarial usando indicadores financieros. Desarrollado para la Superintendencia de Compañías para detección temprana de riesgos.</p>
-                    <div class="tag-row">
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">Neural Networks</span>
-                        <span class="tag">Finance</span>
-                        <span class="tag">Jupyter</span>
-                    </div>
-                    <div class="metrics">
-                        <span class="metric">📊 Accuracy: 96.5%</span>
-                        <span class="metric">⚠️ Early Warning</span>
-                    </div>
-                    <a href="https://github.com/davallejo/Prediccion-de-Banca-Rota-Machine-Learning-Red-Neuronal-Diego-Vallejo" target="_blank" class="project-link">Ver Repositorio →</a>
-                </div>
+            <div class="p-card">
+                <div class="p-stripe s-pur"></div>
+                <div class="p-header"><span class="p-badge b-dl">Deep Learning</span><h3>🏢 Predicción de Bancarrota con Redes Neuronales</h3></div>
+                <div class="p-body"><p>Deep Learning para predecir quiebra empresarial usando indicadores financieros. Desarrollado para la Superintendencia de Compañías para detección temprana de riesgos.</p><div class="tags"><span class="tag">TensorFlow</span><span class="tag">Neural Networks</span><span class="tag">Finance</span><span class="tag">Jupyter</span></div><div class="mets"><span class="met">📊 Accuracy: 96.5%</span><span class="met">⚠️ Early Warning</span></div><a href="https://github.com/davallejo/Prediccion-de-Banca-Rota-Machine-Learning-Red-Neuronal-Diego-Vallejo" target="_blank" class="p-link">Ver Repositorio →</a></div>
             </div>
-
-            <!-- Informe-de-Ventas-con-PowerBI -->
-            <div class="project-card">
-                <div class="project-stripe stripe-amber"></div>
-                <div class="project-header">
-                    <span class="project-badge badge-bi">Business Intelligence</span>
-                    <h3>📊 Dashboard Ejecutivo Power BI</h3>
-                </div>
-                <div class="project-content">
-                    <p>Dashboard interactivo de análisis de ventas con visualizaciones dinámicas. Análisis multidimensional por región, producto, vendedor y canal con DAX avanzado.</p>
-                    <div class="tag-row">
-                        <span class="tag">Power BI</span>
-                        <span class="tag">DAX</span>
-                        <span class="tag">Modelado de Datos</span>
-                    </div>
-                    <div class="metrics">
-                        <span class="metric">💰 $73K analizado</span>
-                        <span class="metric">📈 4 dimensiones</span>
-                    </div>
-                    <a href="https://github.com/davallejo/Informe-de-Ventas-con-PowerBI" target="_blank" class="project-link">Ver Repositorio →</a>
-                </div>
+            <div class="p-card">
+                <div class="p-stripe s-amb"></div>
+                <div class="p-header"><span class="p-badge b-bi">Business Intelligence</span><h3>📊 Dashboard Ejecutivo Power BI</h3></div>
+                <div class="p-body"><p>Dashboard interactivo de análisis de ventas con visualizaciones dinámicas. Análisis multidimensional por región, producto, vendedor y canal con DAX avanzado.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Modelado de Datos</span></div><div class="mets"><span class="met">💰 $73K analizado</span><span class="met">📈 4 dimensiones</span></div><a href="https://github.com/davallejo/Informe-de-Ventas-con-PowerBI" target="_blank" class="p-link">Ver Repositorio →</a></div>
             </div>
-
-            <!-- Clasificacion-de-Imagenes -->
-            <div class="project-card">
-                <div class="project-stripe stripe-purple"></div>
-                <div class="project-header">
-                    <span class="project-badge badge-dl">Computer Vision</span>
-                    <h3>😷 Detección de Máscaras con CNN</h3>
-                </div>
-                <div class="project-content">
-                    <p>Clasificador de imágenes con Deep Learning para identificar uso correcto de máscaras faciales. Aplicación práctica en contexto de salud pública con detección en tiempo real.</p>
-                    <div class="tag-row">
-                        <span class="tag">Keras</span>
-                        <span class="tag">CNN</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">Jupyter</span>
-                    </div>
-                    <div class="metrics">
-                        <span class="metric">🎯 Accuracy: 98.1%</span>
-                        <span class="metric">⚡ Real-time</span>
-                    </div>
-                    <a href="https://github.com/davallejo/Clasificacion-de-Imagenes-de-Personas-Deep-Learning-Diego-Vallejo" target="_blank" class="project-link">Ver Repositorio →</a>
-                </div>
+            <div class="p-card">
+                <div class="p-stripe s-pur"></div>
+                <div class="p-header"><span class="p-badge b-dl">Computer Vision</span><h3>😷 Detección de Máscaras con CNN</h3></div>
+                <div class="p-body"><p>Clasificador de imágenes con Deep Learning para identificar uso correcto de máscaras faciales. Aplicación en salud pública con detección en tiempo real.</p><div class="tags"><span class="tag">Keras</span><span class="tag">CNN</span><span class="tag">OpenCV</span><span class="tag">Jupyter</span></div><div class="mets"><span class="met">🎯 Accuracy: 98.1%</span><span class="met">⚡ Real-time</span></div><a href="https://github.com/davallejo/Clasificacion-de-Imagenes-de-Personas-Deep-Learning-Diego-Vallejo" target="_blank" class="p-link">Ver Repositorio →</a></div>
             </div>
-
-            <!-- emergenciasuio -->
-            <div class="project-card">
-                <div class="project-stripe stripe-green"></div>
-                <div class="project-header">
-                    <span class="project-badge badge-prod">Full-Stack</span>
-                    <h3>🚒 Sistema de Emergencias — Bomberos</h3>
-                </div>
-                <div class="project-content">
-                    <p>Sistema de registro y gestión de emergencias para bomberos, desarrollado en Java con Spring Boot y PostgreSQL. Mejora en tiempos de respuesta y coordinación de recursos.</p>
-                    <div class="tag-row">
-                        <span class="tag">Java</span>
-                        <span class="tag">Spring Boot</span>
-                        <span class="tag">PostgreSQL</span>
-                    </div>
-                    <div class="metrics">
-                        <span class="metric">🔔 Gestión en tiempo real</span>
-                        <span class="metric">🏛️ Sector público</span>
-                    </div>
-                    <a href="https://github.com/davallejo/emergenciasuio" target="_blank" class="project-link">Ver Repositorio →</a>
-                </div>
+            <div class="p-card">
+                <div class="p-stripe s-grn"></div>
+                <div class="p-header"><span class="p-badge b-prod">Full-Stack</span><h3>🚒 Sistema de Emergencias — Bomberos</h3></div>
+                <div class="p-body"><p>Sistema de registro y gestión de emergencias para bomberos con Java, Spring Boot y PostgreSQL. Mejora en tiempos de respuesta y coordinación de recursos del sector público.</p><div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span></div><div class="mets"><span class="met">🔔 Gestión en tiempo real</span><span class="met">🏛️ Sector público</span></div><a href="https://github.com/davallejo/emergenciasuio" target="_blank" class="p-link">Ver Repositorio →</a></div>
             </div>
-
         </div>
     </div>
 </section>
 
-<!-- MORE PROJECTS -->
+<!-- MORE -->
 <section id="more-projects">
     <div class="container">
-        <div class="section-label">Más proyectos</div>
-        <h2 class="section-title">Portfolio Completo</h2>
-        <p class="section-sub">Proyectos adicionales de Machine Learning, análisis de datos y desarrollo de software.</p>
+        <div class="eyebrow"><span class="s-label">Más proyectos</span><span class="s-line"></span></div>
+        <h2 class="s-title">Portfolio Completo</h2>
+        <p class="s-sub">Proyectos adicionales de Machine Learning, análisis de datos y desarrollo de software.</p>
         <div class="more-grid">
-
-            <div class="mini-card">
-                <span class="project-badge badge-ml" style="width:fit-content">ML · Clustering</span>
-                <h4>👥 Predicción de Churn de Empleados</h4>
-                <p>Análisis predictivo para identificar empleados con alta probabilidad de abandono. Factores de riesgo y recomendaciones para RRHH.</p>
-                <div class="tag-row"><span class="tag">Random Forest</span><span class="tag">HR Analytics</span></div>
-                <a href="https://github.com/davallejo/Prediccion-Churn-de-Empleados-Machine-Learning-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-ml" style="width:fit-content">ML · Clustering</span>
-                <h4>🌍 Clustering de Solicitantes de Refugio</h4>
-                <p>Segmentación de solicitantes para el MREMH con impacto en políticas públicas. KMeans + PCA para identificar grupos vulnerables.</p>
-                <div class="tag-row"><span class="tag">KMeans</span><span class="tag">PCA</span><span class="tag">Social Impact</span></div>
-                <a href="https://github.com/davallejo/Clustering-Solicitantes-de-Refugio-Machine-Learning-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-ml" style="width:fit-content">ML · Clustering</span>
-                <h4>🎓 Clustering de Estudiantes Universitarios</h4>
-                <p>Segmentación de estudiantes de ciencias de la salud con ETL completo, EDA y clustering con método del codo y silhouette.</p>
-                <div class="tag-row"><span class="tag">KMeans</span><span class="tag">Silhouette</span><span class="tag">Education</span></div>
-                <a href="https://github.com/davallejo/Clustering-de-Estudiantes-Universitarios-Machine-Learning-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-ml" style="width:fit-content">ML · Predictive</span>
-                <h4>🚨 Predicción de Delitos</h4>
-                <p>Análisis predictivo de criminalidad para políticas públicas. Análisis basado en denuncias para prevención y asignación eficiente de recursos.</p>
-                <div class="tag-row"><span class="tag">Scikit-learn</span><span class="tag">Public Safety</span></div>
-                <a href="https://github.com/davallejo/PrediceDelito" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-dl" style="width:fit-content">DL · NLP</span>
-                <h4>📱 Clasificador de SMS con Redes Neuronales</h4>
-                <p>Clasificador de mensajes de texto con RNN para detección de spam. freeCodeCamp Machine Learning with Python.</p>
-                <div class="tag-row"><span class="tag">RNN</span><span class="tag">NLP</span><span class="tag">TensorFlow</span></div>
-                <a href="https://github.com/davallejo/Neural-Network-SMS-Text-Classifier" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-ml" style="width:fit-content">ML · Regression</span>
-                <h4>🏥 Calculadora de Costos Médicos</h4>
-                <p>Predicción de costos de atención médica con regresión lineal. Análisis de variables que impactan en gastos de salud.</p>
-                <div class="tag-row"><span class="tag">Linear Regression</span><span class="tag">Healthcare</span></div>
-                <a href="https://github.com/davallejo/Linear-Regression-Health-Costs-Calculator" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-ml" style="width:fit-content">ML · Recommender</span>
-                <h4>📚 Motor de Recomendación de Libros (KNN)</h4>
-                <p>Sistema de recomendaciones con KNN y filtrado colaborativo para sugerir libros según preferencias de usuarios similares.</p>
-                <div class="tag-row"><span class="tag">KNN</span><span class="tag">Collaborative Filtering</span></div>
-                <a href="https://github.com/davallejo/Book-Recommendation-Engine-using-KNN" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-dl" style="width:fit-content">DL · CNN</span>
-                <h4>🐱🐶 Clasificador Gatos vs Perros</h4>
-                <p>Clasificación binaria de imágenes con CNN usando TensorFlow 2.0 y Keras. Alta precisión en reconocimiento de animales.</p>
-                <div class="tag-row"><span class="tag">CNN</span><span class="tag">TensorFlow 2.0</span><span class="tag">Keras</span></div>
-                <a href="https://github.com/davallejo/Clasificador-de-imagenes-de-gatos-y-perros" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-stat" style="width:fit-content">Viz · Time Series</span>
-                <h4>🌊 Predictor del Nivel del Mar</h4>
-                <p>Análisis y predicción de series temporales para cambio climático en nivel del mar. Visualización de tendencias históricas ambientales.</p>
-                <div class="tag-row"><span class="tag">Time Series</span><span class="tag">Matplotlib</span><span class="tag">SciPy</span></div>
-                <a href="https://github.com/davallejo/Sea-Level-Predictor-by-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-stat" style="width:fit-content">Viz · Healthcare</span>
-                <h4>🏥 Visualizador de Datos Médicos</h4>
-                <p>EDA y visualización de datos médicos. Identificación de correlaciones entre variables de salud y factores de riesgo.</p>
-                <div class="tag-row"><span class="tag">Seaborn</span><span class="tag">EDA</span><span class="tag">Healthcare</span></div>
-                <a href="https://github.com/davallejo/Medical-Data-Visualizer-by-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-stat" style="width:fit-content">Viz · Time Series</span>
-                <h4>📈 Visualizador de Series Temporales de Páginas</h4>
-                <p>Herramienta de visualización para análisis temporal de tráfico web. Identificación de patrones y tendencias.</p>
-                <div class="tag-row"><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Time Series</span></div>
-                <a href="https://github.com/davallejo/Page-View-Time-Series-Visualizer-by-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-stat" style="width:fit-content">Analytics</span>
-                <h4>📊 Analizador de Datos Demográficos</h4>
-                <p>Análisis estadístico de datos demográficos con Pandas. Exploración de patrones socioeconómicos y educativos en poblaciones.</p>
-                <div class="tag-row"><span class="tag">Pandas</span><span class="tag">Statistics</span><span class="tag">Demographics</span></div>
-                <a href="https://github.com/davallejo/Demographic-Data-Analyzer-by-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-stat" style="width:fit-content">Statistics</span>
-                <h4>🔢 Calculadora Estadística con NumPy</h4>
-                <p>Calculadora de media, varianza y desviación estándar optimizada con NumPy para matrices multidimensionales.</p>
-                <div class="tag-row"><span class="tag">NumPy</span><span class="tag">Statistics</span></div>
-                <a href="https://github.com/davallejo/Mean-Variance-Standard-Deviation-Calculator-by-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-ml" style="width:fit-content">Game AI</span>
-                <h4>✊✋✌️ Piedra, Papel o Tijera con IA</h4>
-                <p>Algoritmo de IA adaptativa que aprende patrones de comportamiento del oponente para mejorar su estrategia de juego.</p>
-                <div class="tag-row"><span class="tag">Python</span><span class="tag">Game AI</span></div>
-                <a href="https://github.com/davallejo/Piedra-Papel-o-Tijera" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
-            <div class="mini-card">
-                <span class="project-badge badge-stat" style="width:fit-content">Assessment</span>
-                <h4>🎯 Prueba Técnica Presidencia</h4>
-                <p>Proyecto de evaluación técnica demostrando habilidades en análisis de datos y desarrollo de soluciones para el sector público.</p>
-                <div class="tag-row"><span class="tag">PHP</span><span class="tag">Data Analysis</span></div>
-                <a href="https://github.com/davallejo/prueba_presidencia" target="_blank" class="mini-link">Ver código →</a>
-            </div>
-
+            <div class="mini"><span class="p-badge b-ml" style="width:fit-content">ML · Clustering</span><h4>👥 Predicción de Churn de Empleados</h4><p>Análisis predictivo para identificar empleados con alta probabilidad de abandono. Factores de riesgo y recomendaciones para RRHH.</p><div class="tags"><span class="tag">Random Forest</span><span class="tag">HR Analytics</span></div><a href="https://github.com/davallejo/Prediccion-Churn-de-Empleados-Machine-Learning-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-ml" style="width:fit-content">ML · Clustering</span><h4>🌍 Clustering de Solicitantes de Refugio</h4><p>Segmentación para el MREMH con impacto en políticas públicas. KMeans + PCA para identificar grupos vulnerables.</p><div class="tags"><span class="tag">KMeans</span><span class="tag">PCA</span><span class="tag">Social Impact</span></div><a href="https://github.com/davallejo/Clustering-Solicitantes-de-Refugio-Machine-Learning-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-ml" style="width:fit-content">ML · Clustering</span><h4>🎓 Clustering de Estudiantes Universitarios</h4><p>Segmentación de estudiantes de ciencias de la salud con ETL completo, EDA y clustering con método del codo y silhouette.</p><div class="tags"><span class="tag">KMeans</span><span class="tag">Silhouette</span><span class="tag">Education</span></div><a href="https://github.com/davallejo/Clustering-de-Estudiantes-Universitarios-Machine-Learning-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-ml" style="width:fit-content">ML · Predictive</span><h4>🚨 Predicción de Delitos</h4><p>Análisis predictivo de criminalidad para políticas públicas y asignación eficiente de recursos de seguridad.</p><div class="tags"><span class="tag">Scikit-learn</span><span class="tag">Public Safety</span></div><a href="https://github.com/davallejo/PrediceDelito" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-dl" style="width:fit-content">DL · NLP</span><h4>📱 Clasificador de SMS con Redes Neuronales</h4><p>Clasificador de mensajes de texto con RNN para detección de spam. freeCodeCamp Machine Learning with Python.</p><div class="tags"><span class="tag">RNN</span><span class="tag">NLP</span><span class="tag">TensorFlow</span></div><a href="https://github.com/davallejo/Neural-Network-SMS-Text-Classifier" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-ml" style="width:fit-content">ML · Regression</span><h4>🏥 Calculadora de Costos Médicos</h4><p>Predicción de costos de atención médica con regresión lineal. Análisis de variables que impactan en gastos de salud.</p><div class="tags"><span class="tag">Linear Regression</span><span class="tag">Healthcare</span></div><a href="https://github.com/davallejo/Linear-Regression-Health-Costs-Calculator" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-ml" style="width:fit-content">ML · Recommender</span><h4>📚 Motor de Recomendación de Libros (KNN)</h4><p>Sistema de recomendaciones con KNN y filtrado colaborativo para sugerir libros según preferencias de usuarios similares.</p><div class="tags"><span class="tag">KNN</span><span class="tag">Collaborative Filtering</span></div><a href="https://github.com/davallejo/Book-Recommendation-Engine-using-KNN" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-dl" style="width:fit-content">DL · CNN</span><h4>🐱🐶 Clasificador Gatos vs Perros</h4><p>Clasificación binaria de imágenes con CNN usando TensorFlow 2.0 y Keras. Alta precisión en reconocimiento de animales.</p><div class="tags"><span class="tag">CNN</span><span class="tag">TensorFlow 2.0</span><span class="tag">Keras</span></div><a href="https://github.com/davallejo/Clasificador-de-imagenes-de-gatos-y-perros" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-stat" style="width:fit-content">Viz · Time Series</span><h4>🌊 Predictor del Nivel del Mar</h4><p>Análisis y predicción de series temporales para cambio climático. Visualización de tendencias históricas ambientales.</p><div class="tags"><span class="tag">Time Series</span><span class="tag">Matplotlib</span><span class="tag">SciPy</span></div><a href="https://github.com/davallejo/Sea-Level-Predictor-by-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-stat" style="width:fit-content">Viz · Healthcare</span><h4>🏥 Visualizador de Datos Médicos</h4><p>EDA y visualización de datos médicos. Identificación de correlaciones entre variables de salud y factores de riesgo.</p><div class="tags"><span class="tag">Seaborn</span><span class="tag">EDA</span><span class="tag">Healthcare</span></div><a href="https://github.com/davallejo/Medical-Data-Visualizer-by-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-stat" style="width:fit-content">Analytics</span><h4>📊 Analizador de Datos Demográficos</h4><p>Análisis estadístico de datos demográficos con Pandas. Exploración de patrones socioeconómicos y educativos en poblaciones.</p><div class="tags"><span class="tag">Pandas</span><span class="tag">Statistics</span><span class="tag">Demographics</span></div><a href="https://github.com/davallejo/Demographic-Data-Analyzer-by-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-stat" style="width:fit-content">Statistics</span><h4>🔢 Calculadora Estadística con NumPy</h4><p>Calculadora de media, varianza y desviación estándar optimizada con NumPy para matrices multidimensionales.</p><div class="tags"><span class="tag">NumPy</span><span class="tag">Statistics</span></div><a href="https://github.com/davallejo/Mean-Variance-Standard-Deviation-Calculator-by-Diego-Vallejo" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-ml" style="width:fit-content">Game AI</span><h4>✊✋✌️ Piedra, Papel o Tijera con IA</h4><p>Algoritmo de IA adaptativa que aprende patrones de comportamiento del oponente para mejorar su estrategia de juego.</p><div class="tags"><span class="tag">Python</span><span class="tag">Game AI</span></div><a href="https://github.com/davallejo/Piedra-Papel-o-Tijera" target="_blank" class="mini-link">Ver código →</a></div>
+            <div class="mini"><span class="p-badge b-stat" style="width:fit-content">Assessment</span><h4>🎯 Prueba Técnica Presidencia</h4><p>Proyecto de evaluación técnica demostrando habilidades en análisis de datos y desarrollo de soluciones para el sector público.</p><div class="tags"><span class="tag">PHP</span><span class="tag">Data Analysis</span></div><a href="https://github.com/davallejo/prueba_presidencia" target="_blank" class="mini-link">Ver código →</a></div>
         </div>
     </div>
 </section>
@@ -1068,400 +460,115 @@
 <!-- CERTIFICATIONS -->
 <section id="certifications">
     <div class="container">
-        <div class="section-label">Formación continua</div>
-        <h2 class="section-title">Certificaciones</h2>
-        <p class="section-sub">55+ certificaciones verificadas en Data Science, Ciberseguridad, Cloud, Liderazgo e Idiomas.</p>
+        <div class="eyebrow"><span class="s-label">Formación continua</span><span class="s-line"></span></div>
+        <h2 class="s-title">Certificaciones</h2>
+        <p class="s-sub">55+ certificaciones verificadas en Data Science, Ciberseguridad, Cloud, Liderazgo e Idiomas.</p>
 
-        <!-- Metodologías & Liderazgo -->
-        <div class="cert-section">
-            <div class="cert-section-title">🤝 Metodologías Ágiles & Liderazgo</div>
-            <div class="cert-grid">
-                <div class="cert-item cert-new">
-                    <span class="cert-dot dot-orange"></span>
-                    <div class="cert-info">
-                        <strong>Agile Project Management Scrum</strong>
-                        <span>AICAD Business School · ID: B.O.P.I. Nº 014874821</span>
-                    </div>
-                    <span class="cert-date">Ene 2026</span>
-                    <span class="new-tag">NUEVO</span>
-                </div>
-                <div class="cert-item cert-new">
-                    <span class="cert-dot dot-orange"></span>
-                    <div class="cert-info">
-                        <strong>Diplomado: Liderazgo y 114 Habilidades Gerenciales con IA</strong>
-                        <span>Universidad Santander · ID: ab0fb1fc8ed1f211d1be2bb9d2db0968</span>
-                    </div>
-                    <span class="cert-date">Dic 2025</span>
-                    <span class="new-tag">NUEVO</span>
-                </div>
+        <div class="cert-sec">
+            <div class="cert-head">🤝 Metodologías Ágiles &amp; Liderazgo</div>
+            <div class="cert-list">
+                <div class="cert new"><span class="cdot d-c"></span><div class="cinfo"><strong>Agile Project Management Scrum</strong><span>AICAD Business School · ID: B.O.P.I. Nº 014874821</span></div><span class="cdate">Ene 2026</span><span class="ntag">NUEVO</span></div>
+                <div class="cert new"><span class="cdot d-c"></span><div class="cinfo"><strong>Diplomado: Liderazgo y 114 Habilidades Gerenciales con IA</strong><span>Universidad Santander · ID: ab0fb1fc8ed1f211d1be2bb9d2db0968</span></div><span class="cdate">Dic 2025</span><span class="ntag">NUEVO</span></div>
             </div>
         </div>
 
-        <!-- AI & ML -->
-        <div class="cert-section">
-            <div class="cert-section-title">🤖 Inteligencia Artificial & Machine Learning</div>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Machine Learning with Python</strong>
-                        <span>freeCodeCamp · ID: fcc5a575ea5-7689-44b4-9e6c-fd4dbf3fd68a-mlwp</span>
-                    </div>
-                    <span class="cert-date">Jun 2025</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Inteligencia Artificial y Productividad</strong>
-                        <span>Santander Open Academy · Contenido: Microsoft Founderz · ID: OA-2025-0917001729531</span>
-                    </div>
-                    <span class="cert-date">Sep 2025</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Prompting responsable maximiza la IA en tu Negocio</strong>
-                        <span>Santander Open Academy · ID: OA-2025-0917001729532</span>
-                    </div>
-                    <span class="cert-date">Sep 2025</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Generative AI Fundamentals</strong>
-                        <span>Google · ID: 8126170</span>
-                    </div>
-                    <span class="cert-date">Feb 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Introduction to Generative AI</strong>
-                        <span>Google · ID: 8125971</span>
-                    </div>
-                    <span class="cert-date">Feb 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Introduction to Large Language Models</strong>
-                        <span>Google · ID: 8126095</span>
-                    </div>
-                    <span class="cert-date">Feb 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Introduction to Responsible AI</strong>
-                        <span>Google · ID: 8126124</span>
-                    </div>
-                    <span class="cert-date">Feb 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Responsible AI: Applying AI Principles with Google Cloud</strong>
-                        <span>Google Cloud · ID: 8126206</span>
-                    </div>
-                    <span class="cert-date">Feb 2024</span>
-                </div>
+        <div class="cert-sec">
+            <div class="cert-head">🤖 Inteligencia Artificial &amp; Machine Learning</div>
+            <div class="cert-list">
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Machine Learning with Python</strong><span>freeCodeCamp · ID: fcc5a575ea5-7689-44b4-9e6c-fd4dbf3fd68a-mlwp</span></div><span class="cdate">Jun 2025</span></div>
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Inteligencia Artificial y Productividad</strong><span>Santander Open Academy · Microsoft Founderz · ID: OA-2025-0917001729531</span></div><span class="cdate">Sep 2025</span></div>
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Prompting responsable maximiza la IA en tu Negocio</strong><span>Santander Open Academy · ID: OA-2025-0917001729532</span></div><span class="cdate">Sep 2025</span></div>
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Generative AI Fundamentals</strong><span>Google · ID: 8126170</span></div><span class="cdate">Feb 2024</span></div>
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Introduction to Generative AI</strong><span>Google · ID: 8125971</span></div><span class="cdate">Feb 2024</span></div>
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Introduction to Large Language Models</strong><span>Google · ID: 8126095</span></div><span class="cdate">Feb 2024</span></div>
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Introduction to Responsible AI</strong><span>Google · ID: 8126124</span></div><span class="cdate">Feb 2024</span></div>
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Responsible AI: Applying AI Principles with Google Cloud</strong><span>Google Cloud · ID: 8126206</span></div><span class="cdate">Feb 2024</span></div>
             </div>
         </div>
 
-        <!-- Data Science -->
-        <div class="cert-section">
-            <div class="cert-section-title">📊 Data Science & Analytics</div>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <span class="cert-dot dot-cyan"></span>
-                    <div class="cert-info">
-                        <strong>Data Analysis with Python</strong>
-                        <span>freeCodeCamp · NumPy, Pandas, Jupyter, Visualizations</span>
-                    </div>
-                    <span class="cert-date">Ene 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-cyan"></span>
-                    <div class="cert-info">
-                        <strong>Analista de Datos</strong>
-                        <span>Fundación Carlos Slim · ID: 56A6BAFA-61C4-45C5-9124-507A1104D78D</span>
-                    </div>
-                    <span class="cert-date">Abr 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-cyan"></span>
-                    <div class="cert-info">
-                        <strong>Data Science 101</strong>
-                        <span>IBM · ID: dfcfcf9b16504fc6a36035a4c34d0345</span>
-                    </div>
-                    <span class="cert-date">Nov 2023</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-cyan"></span>
-                    <div class="cert-info">
-                        <strong>Data Analysis Using Python</strong>
-                        <span>IBM · ID: 16301e0f90084ce1b78ba1922e4475c6</span>
-                    </div>
-                    <span class="cert-date">Oct 2023</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-cyan"></span>
-                    <div class="cert-info">
-                        <strong>Data Visualization Using Python</strong>
-                        <span>IBM · ID: 769a6ceb98c9499ebb971ae11ffeec10</span>
-                    </div>
-                    <span class="cert-date">Nov 2023</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-cyan"></span>
-                    <div class="cert-info">
-                        <strong>Data Analytics Essentials</strong>
-                        <span>Cisco</span>
-                    </div>
-                    <span class="cert-date">Oct 2023</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-cyan"></span>
-                    <div class="cert-info">
-                        <strong>Introducción a las habilidades profesionales en análisis de datos</strong>
-                        <span>LinkedIn · ID: AfnTLGBr2Iwz_XvQoiuvHdB0dniS</span>
-                    </div>
-                    <span class="cert-date">Feb 2023</span>
-                </div>
+        <div class="cert-sec">
+            <div class="cert-head">📊 Data Science &amp; Analytics</div>
+            <div class="cert-list">
+                <div class="cert"><span class="cdot d-c"></span><div class="cinfo"><strong>Data Analysis with Python</strong><span>freeCodeCamp · NumPy, Pandas, Jupyter, Visualizations</span></div><span class="cdate">Ene 2024</span></div>
+                <div class="cert"><span class="cdot d-c"></span><div class="cinfo"><strong>Analista de Datos</strong><span>Fundación Carlos Slim · ID: 56A6BAFA-61C4-45C5-9124-507A1104D78D</span></div><span class="cdate">Abr 2024</span></div>
+                <div class="cert"><span class="cdot d-c"></span><div class="cinfo"><strong>Data Science 101</strong><span>IBM · ID: dfcfcf9b16504fc6a36035a4c34d0345</span></div><span class="cdate">Nov 2023</span></div>
+                <div class="cert"><span class="cdot d-c"></span><div class="cinfo"><strong>Data Analysis Using Python</strong><span>IBM · ID: 16301e0f90084ce1b78ba1922e4475c6</span></div><span class="cdate">Oct 2023</span></div>
+                <div class="cert"><span class="cdot d-c"></span><div class="cinfo"><strong>Data Visualization Using Python</strong><span>IBM · ID: 769a6ceb98c9499ebb971ae11ffeec10</span></div><span class="cdate">Nov 2023</span></div>
+                <div class="cert"><span class="cdot d-c"></span><div class="cinfo"><strong>Data Analytics Essentials</strong><span>Cisco</span></div><span class="cdate">Oct 2023</span></div>
+                <div class="cert"><span class="cdot d-c"></span><div class="cinfo"><strong>Introducción a las habilidades profesionales en análisis de datos</strong><span>LinkedIn · ID: AfnTLGBr2Iwz_XvQoiuvHdB0dniS</span></div><span class="cdate">Feb 2023</span></div>
             </div>
         </div>
 
-        <!-- Cloud & Big Data -->
-        <div class="cert-section">
-            <div class="cert-section-title">☁️ Cloud Computing & Big Data</div>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Diplomado: Técnico en Big Data</strong>
-                        <span>Fundación Carlos Slim · ID: A9600530-DFFF-4B68-96BE-BA83B8351759</span>
-                    </div>
-                    <span class="cert-date">—</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Getting Started with Amazon EMR</strong>
-                        <span>Amazon Web Services · EMR, S3, Spark, Hive, Flink, IAM</span>
-                    </div>
-                    <span class="cert-date">Feb 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-blue"></span>
-                    <div class="cert-info">
-                        <strong>Spark: PySpark</strong>
-                        <span>Great Learning</span>
-                    </div>
-                    <span class="cert-date">Feb 2024</span>
-                </div>
+        <div class="cert-sec">
+            <div class="cert-head">☁️ Cloud Computing &amp; Big Data</div>
+            <div class="cert-list">
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Diplomado: Técnico en Big Data</strong><span>Fundación Carlos Slim · ID: A9600530-DFFF-4B68-96BE-BA83B8351759</span></div><span class="cdate">—</span></div>
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Getting Started with Amazon EMR</strong><span>Amazon Web Services · EMR, S3, Spark, Hive, Flink, IAM</span></div><span class="cdate">Feb 2024</span></div>
+                <div class="cert"><span class="cdot d-b"></span><div class="cinfo"><strong>Spark: PySpark</strong><span>Great Learning</span></div><span class="cdate">Feb 2024</span></div>
             </div>
         </div>
 
-        <!-- Programación -->
-        <div class="cert-section">
-            <div class="cert-section-title">💻 Programación</div>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <span class="cert-dot dot-green"></span>
-                    <div class="cert-info">
-                        <strong>Python for Data Science</strong>
-                        <span>IBM · ID: 702433e775a24e819e387788b4037e36</span>
-                    </div>
-                    <span class="cert-date">Oct 2023</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-green"></span>
-                    <div class="cert-info">
-                        <strong>Python Essentials 2</strong>
-                        <span>Cisco</span>
-                    </div>
-                    <span class="cert-date">Oct 2023</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-green"></span>
-                    <div class="cert-info">
-                        <strong>Python Essentials 1</strong>
-                        <span>Cisco</span>
-                    </div>
-                    <span class="cert-date">Sep 2023</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-green"></span>
-                    <div class="cert-info">
-                        <strong>TestDome Python Test – Top 10%</strong>
-                        <span>TestDome · Mejor que el 90% de participantes</span>
-                    </div>
-                    <span class="cert-date">Dic 2019</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-green"></span>
-                    <div class="cert-info">
-                        <strong>Desarrollo de Apps Móviles</strong>
-                        <span>Google Actívate · ID: G5D NBF WLC</span>
-                    </div>
-                    <span class="cert-date">Jul 2022</span>
-                </div>
+        <div class="cert-sec">
+            <div class="cert-head">💻 Programación</div>
+            <div class="cert-list">
+                <div class="cert"><span class="cdot d-g"></span><div class="cinfo"><strong>Python for Data Science</strong><span>IBM · ID: 702433e775a24e819e387788b4037e36</span></div><span class="cdate">Oct 2023</span></div>
+                <div class="cert"><span class="cdot d-g"></span><div class="cinfo"><strong>Python Essentials 2</strong><span>Cisco</span></div><span class="cdate">Oct 2023</span></div>
+                <div class="cert"><span class="cdot d-g"></span><div class="cinfo"><strong>Python Essentials 1</strong><span>Cisco</span></div><span class="cdate">Sep 2023</span></div>
+                <div class="cert"><span class="cdot d-g"></span><div class="cinfo"><strong>TestDome Python Test – Top 10%</strong><span>TestDome · Mejor que el 90% de participantes</span></div><span class="cdate">Dic 2019</span></div>
+                <div class="cert"><span class="cdot d-g"></span><div class="cinfo"><strong>Desarrollo de Apps Móviles</strong><span>Google Actívate · ID: G5D NBF WLC</span></div><span class="cdate">Jul 2022</span></div>
             </div>
         </div>
 
-        <!-- Ciberseguridad -->
-        <div class="cert-section">
-            <div class="cert-section-title">🔒 Ciberseguridad & Seguridad de la Información</div>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <span class="cert-dot dot-pink"></span>
-                    <div class="cert-info">
-                        <strong>Peritaje e Informática Forense</strong>
-                        <span>HackerMentor · ID: e6468598-bc46-4293-ae47-05efd855a182</span>
-                    </div>
-                    <span class="cert-date">Mar 2025</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-pink"></span>
-                    <div class="cert-info">
-                        <strong>Gobierno y Gestión de la Seguridad de la Información</strong>
-                        <span>ProFuturo Ecuador (Fundación Telefónica Movistar) · ID: 6baa7694-ac64-4516-a8ca-a3863ef6cefe</span>
-                    </div>
-                    <span class="cert-date">Sep 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-pink"></span>
-                    <div class="cert-info">
-                        <strong>Ethical Hacker</strong>
-                        <span>Cisco · ID: 7f6b08e2-a4a2-43fc-8fcd-1b38776ce05f</span>
-                    </div>
-                    <span class="cert-date">Ago 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-pink"></span>
-                    <div class="cert-info">
-                        <strong>Cyber Threat Management</strong>
-                        <span>Cisco</span>
-                    </div>
-                    <span class="cert-date">Jun 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-pink"></span>
-                    <div class="cert-info">
-                        <strong>Network Support and Security</strong>
-                        <span>Cisco</span>
-                    </div>
-                    <span class="cert-date">Jun 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-pink"></span>
-                    <div class="cert-info">
-                        <strong>Endpoint Security</strong>
-                        <span>Cisco Networking Academy</span>
-                    </div>
-                    <span class="cert-date">Feb 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-pink"></span>
-                    <div class="cert-info">
-                        <strong>WORKSHOP ISO 27001</strong>
-                        <span>HackerMentor · ID: 05a32ff4-3b90-435f-a646-8c85cb54aedb</span>
-                    </div>
-                    <span class="cert-date">May 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-pink"></span>
-                    <div class="cert-info">
-                        <strong>Ley de Protección de datos personales</strong>
-                        <span>HackerMentor · ID: 5a4097a4-fb76-488c-be90-6b7eefdc9535</span>
-                    </div>
-                    <span class="cert-date">Jun 2024</span>
-                </div>
+        <div class="cert-sec">
+            <div class="cert-head">🔒 Ciberseguridad &amp; Seguridad de la Información</div>
+            <div class="cert-list">
+                <div class="cert"><span class="cdot d-pk"></span><div class="cinfo"><strong>Peritaje e Informática Forense</strong><span>HackerMentor · ID: e6468598-bc46-4293-ae47-05efd855a182</span></div><span class="cdate">Mar 2025</span></div>
+                <div class="cert"><span class="cdot d-pk"></span><div class="cinfo"><strong>Gobierno y Gestión de la Seguridad de la Información</strong><span>ProFuturo Ecuador (Fundación Telefónica Movistar)</span></div><span class="cdate">Sep 2024</span></div>
+                <div class="cert"><span class="cdot d-pk"></span><div class="cinfo"><strong>Ethical Hacker</strong><span>Cisco · ID: 7f6b08e2-a4a2-43fc-8fcd-1b38776ce05f</span></div><span class="cdate">Ago 2024</span></div>
+                <div class="cert"><span class="cdot d-pk"></span><div class="cinfo"><strong>Cyber Threat Management</strong><span>Cisco</span></div><span class="cdate">Jun 2024</span></div>
+                <div class="cert"><span class="cdot d-pk"></span><div class="cinfo"><strong>Network Support and Security</strong><span>Cisco</span></div><span class="cdate">Jun 2024</span></div>
+                <div class="cert"><span class="cdot d-pk"></span><div class="cinfo"><strong>Endpoint Security</strong><span>Cisco Networking Academy</span></div><span class="cdate">Feb 2024</span></div>
+                <div class="cert"><span class="cdot d-pk"></span><div class="cinfo"><strong>WORKSHOP ISO 27001</strong><span>HackerMentor · ID: 05a32ff4-3b90-435f-a646-8c85cb54aedb</span></div><span class="cdate">May 2024</span></div>
+                <div class="cert"><span class="cdot d-pk"></span><div class="cinfo"><strong>Ley de Protección de datos personales</strong><span>HackerMentor · ID: 5a4097a4-fb76-488c-be90-6b7eefdc9535</span></div><span class="cdate">Jun 2024</span></div>
             </div>
         </div>
 
-        <!-- Bases de Datos -->
-        <div class="cert-section">
-            <div class="cert-section-title">🗄️ Bases de Datos</div>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <span class="cert-dot dot-amber"></span>
-                    <div class="cert-info">
-                        <strong>Databases for Developers</strong>
-                        <span>Oracle · Oracle Database, Oracle SQL Developer</span>
-                    </div>
-                    <span class="cert-date">Feb 2024</span>
-                </div>
+        <div class="cert-sec">
+            <div class="cert-head">🗄️ Bases de Datos</div>
+            <div class="cert-list">
+                <div class="cert"><span class="cdot d-a"></span><div class="cinfo"><strong>Databases for Developers</strong><span>Oracle · Oracle Database, Oracle SQL Developer</span></div><span class="cdate">Feb 2024</span></div>
             </div>
         </div>
 
-        <!-- Idiomas -->
-        <div class="cert-section">
-            <div class="cert-section-title">🌐 Idiomas</div>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <span class="cert-dot dot-purple"></span>
-                    <div class="cert-info">
-                        <strong>English for Career Development</strong>
-                        <span>U.S. Department of State — OPEN Program · ID: 683df87322e40e3c59b7d8c8</span>
-                    </div>
-                    <span class="cert-date">Jun 2025</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-purple"></span>
-                    <div class="cert-info">
-                        <strong>English for IT 2</strong>
-                        <span>Cisco · Nivel CEFR B2</span>
-                    </div>
-                    <span class="cert-date">Dic 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-purple"></span>
-                    <div class="cert-info">
-                        <strong>English for IT 1</strong>
-                        <span>Cisco</span>
-                    </div>
-                    <span class="cert-date">Nov 2024</span>
-                </div>
+        <div class="cert-sec">
+            <div class="cert-head">🌐 Idiomas</div>
+            <div class="cert-list">
+                <div class="cert"><span class="cdot d-p"></span><div class="cinfo"><strong>English for Career Development</strong><span>U.S. Department of State — OPEN Program · ID: 683df87322e40e3c59b7d8c8</span></div><span class="cdate">Jun 2025</span></div>
+                <div class="cert"><span class="cdot d-p"></span><div class="cinfo"><strong>English for IT 2</strong><span>Cisco · Nivel CEFR B2</span></div><span class="cdate">Dic 2024</span></div>
+                <div class="cert"><span class="cdot d-p"></span><div class="cinfo"><strong>English for IT 1</strong><span>Cisco</span></div><span class="cdate">Nov 2024</span></div>
             </div>
         </div>
 
-        <!-- Educación y Desarrollo -->
-        <div class="cert-section">
-            <div class="cert-section-title">🎓 Educación & Desarrollo Profesional</div>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <span class="cert-dot dot-gray"></span>
-                    <div class="cert-info">
-                        <strong>Certificación Profesional en Diseño de MOOC</strong>
-                        <span>PUCE · ID: 65c14500-cbac-4c13-ace4-302c0a0808c3 · Moodle, Aulas Virtuales</span>
-                    </div>
-                    <span class="cert-date">Feb 2024</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-dot dot-gray"></span>
-                    <div class="cert-info">
-                        <strong>Operador del Sistema Nacional de Contratación Pública</strong>
-                        <span>SERCOP Ecuador · ID: rY4GZ1b3UV · Vigente hasta may. 2026</span>
-                    </div>
-                    <span class="cert-date">May 2024</span>
-                </div>
+        <div class="cert-sec">
+            <div class="cert-head">🎓 Educación &amp; Desarrollo Profesional</div>
+            <div class="cert-list">
+                <div class="cert"><span class="cdot d-gr"></span><div class="cinfo"><strong>Certificación Profesional en Diseño de MOOC</strong><span>PUCE · ID: 65c14500-cbac-4c13-ace4-302c0a0808c3 · Moodle, Aulas Virtuales</span></div><span class="cdate">Feb 2024</span></div>
+                <div class="cert"><span class="cdot d-gr"></span><div class="cinfo"><strong>Operador del Sistema Nacional de Contratación Pública</strong><span>SERCOP Ecuador · ID: rY4GZ1b3UV · Vigente hasta may. 2026</span></div><span class="cdate">May 2024</span></div>
             </div>
         </div>
-
     </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
     <div class="container">
-        <div class="contact-box">
+        <div class="cbox">
             <h3>¿Hablamos?</h3>
-            <p>Abierto a colaboraciones en Data Science, Machine Learning, Data Engineering y proyectos de innovación con impacto real.</p>
-            <div class="contact-links">
-                <a href="https://linkedin.com/in/ing-diego-vallejo" target="_blank" class="contact-link linkedin">🔗 LinkedIn</a>
-                <a href="https://github.com/davallejo?tab=repositories" target="_blank" class="contact-link github">💻 GitHub</a>
-                <a href="mailto:dievaluio@hotmail.com" class="contact-link email">📧 Email</a>
+            <p>Abierto a colaboraciones en Data Science, Machine Learning, LLMs, Data Engineering y proyectos de innovación con impacto real.</p>
+            <div class="clinks">
+                <a href="https://linkedin.com/in/ing-diego-vallejo" target="_blank" class="cl li">🔗 LinkedIn</a>
+                <a href="https://github.com/davallejo?tab=repositories" target="_blank" class="cl gh">💻 GitHub</a>
+                <a href="mailto:dievaluio@hotmail.com" class="cl em">📧 Email</a>
             </div>
         </div>
     </div>
