@@ -9,7 +9,7 @@
 
 ## 🎯 Perfil Ejecutivo
 
-Magíster en Sistemas de Información con mención en **Data Science**, con sólida formación en **analítica avanzada, machine learning e inteligencia artificial** aplicado a la toma de decisiones gerenciales. 
+Magíster en Sistemas de Información con mención en **Data Science**, con sólida formación en **analítica avanzada, machine learning e inteligencia artificial** aplicado a la toma de decisiones gerenciales.
 
 Especialista en el diseño e implementación de soluciones de **Data Engineering, Business Intelligence y Gobernanza de Datos** con enfoque en la generación de valor para el negocio. Experiencia comprobada en la **orquestación de pipelines ETL/ELT**, desarrollo de dashboards ejecutivos y análisis predictivo para optimización de procesos empresariales.
 
@@ -33,7 +33,7 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 ### 🗄️ Bases de Datos & Big Data
 - **Relacionales:** PostgreSQL, SQL Server, MySQL, Oracle
-- **NoSQL:** MongoDB, CouchDB, Redis, Cassandra
+- **NoSQL:** MongoDB, CouchDB, Redis, Cassandra, ChromaDB
 - **Big Data:** Hadoop, Hive, Spark
 - **Cloud:** Amazon EMR, S3, AWS IAM
 
@@ -66,7 +66,7 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 - **Protección:** Endpoint Security, Network Security
 
 ### 🤝 Metodologías Ágiles
-- **Scrum:** Product Owner, Scrum Master, Sprint Planning
+- **Scrum:** Product Owner, Scrum Master, Sprint Planning — Certificado AICAD Business School
 - **Kanban:** Gestión visual de flujo de trabajo
 - **DevOps Culture:** Integración continua y entrega continua
 
@@ -131,6 +131,17 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 ## 🎯 Proyectos Destacados
 
+### 🔴 Real-Time & Detección de Fraude
+
+#### [fraud_detect_real_time_bank](https://github.com/davallejo/fraud_detect_real_time_bank) ⭐ 🆕
+**Sistema de detección de fraude bancario en tiempo real con computación distribuida**
+- **Tech Stack:** Python, Apache Spark, Kafka, Machine Learning, Docker
+- **Características:** Procesamiento de miles de transacciones en tiempo real mediante computación distribuida
+- **Impacto:** Detección proactiva de fraude con baja latencia para instituciones financieras
+- **Actualizado:** Feb 2026
+
+---
+
 ### 🔵 Data Engineering & ETL
 
 #### [metaltronic-data-airflow-pipeline](https://github.com/davallejo/metaltronic-data-airflow-pipeline) ⭐
@@ -141,7 +152,7 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 #### [etl-ventas-spark-airflow](https://github.com/davallejo/etl-ventas-spark-airflow) ⭐
 **Proceso ETL para datos de ventas con procesamiento distribuido**
-- **Tech Stack:** Python, Apache Airflow, Apache Spark
+- **Tech Stack:** Python, Apache Airflow, Apache Spark, Docker Compose
 - **Características:** Procesamiento distribuido de grandes volúmenes de datos de ventas
 - **Beneficios:** Escalabilidad y performance optimizada
 
@@ -165,21 +176,21 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 ### 🤖 Machine Learning & Deep Learning
 
-#### [CatsVsDogsClassifier](https://github.com/davallejo/CatsVsDogsClassifier) ⭐
-**Clasificador basado en CNN para distinguir imágenes**
+#### [Clasificador-de-imagenes-de-gatos-y-perros](https://github.com/davallejo/Clasificador-de-imagenes-de-gatos-y-perros) ⭐
+**Clasificador basado en CNN para distinguir imágenes de gatos y perros**
 - **Tech Stack:** Python, TensorFlow 2.0, Keras
 - **Modelo:** Red Neuronal Convolucional
 - **Precisión:** Alta tasa de clasificación correcta
 
-#### [face_mask_detector](https://github.com/davallejo/face_mask_detector) ⭐
+#### [Clasificacion-de-Imagenes-de-Personas-Deep-Learning-Diego-Vallejo](https://github.com/davallejo/Clasificacion-de-Imagenes-de-Personas-Deep-Learning-Diego-Vallejo) ⭐
 **Sistema de detección de mascarillas faciales mediante Deep Learning**
-- **Tech Stack:** Python, TensorFlow, OpenCV
+- **Tech Stack:** Python, TensorFlow, OpenCV, Jupyter Notebook
 - **Aplicación:** Detección en tiempo real para control de bioseguridad
 - **Impacto:** Automatización del control sanitario
 
 #### [CreditCardFraudDetection](https://github.com/davallejo/CreditCardFraudDetection) ⭐
 **Modelo de predicción de fraude para instituciones financieras**
-- **Tech Stack:** Python, Machine Learning, Scikit-learn
+- **Tech Stack:** Python, Machine Learning, Scikit-learn, Jupyter Notebook
 - **Características:** Análisis de patrones anómalos en transacciones
 - **Valor:** Reducción de pérdidas por fraude
 
@@ -191,6 +202,42 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 ---
 
+### 🎓 Proyectos freeCodeCamp — Machine Learning with Python
+
+#### [Neural-Network-SMS-Text-Classifier](https://github.com/davallejo/Neural-Network-SMS-Text-Classifier) ⭐
+**Clasificador de mensajes SMS con redes neuronales**
+- **Tech Stack:** Python, TensorFlow, Keras, Jupyter Notebook
+
+#### [Linear-Regression-Health-Costs-Calculator](https://github.com/davallejo/Linear-Regression-Health-Costs-Calculator) ⭐
+**Predicción de costos de salud con regresión lineal**
+- **Tech Stack:** Python, TensorFlow, Pandas, Jupyter Notebook
+
+#### [Book-Recommendation-Engine-using-KNN](https://github.com/davallejo/Book-Recommendation-Engine-using-KNN) ⭐
+**Motor de recomendación de libros con K-Nearest Neighbors**
+- **Tech Stack:** Python, Scikit-learn, Pandas, Jupyter Notebook
+
+#### [Sea-Level-Predictor-by-Diego-Vallejo](https://github.com/davallejo/Sea-Level-Predictor-by-Diego-Vallejo) ⭐
+**Predicción del nivel del mar con análisis de series temporales**
+- **Tech Stack:** Python, Pandas, Matplotlib, SciPy
+
+#### [Page-View-Time-Series-Visualizer-by-Diego-Vallejo](https://github.com/davallejo/Page-View-Time-Series-Visualizer-by-Diego-Vallejo) ⭐
+**Visualización de series temporales de vistas de página**
+- **Tech Stack:** Python, Pandas, Matplotlib, Seaborn
+
+#### [Medical-Data-Visualizer-by-Diego-Vallejo](https://github.com/davallejo/Medical-Data-Visualizer-by-Diego-Vallejo) ⭐
+**Visualización y análisis de datos médicos**
+- **Tech Stack:** Python, Pandas, Seaborn, Matplotlib
+
+#### [Demographic-Data-Analyzer-by-Diego-Vallejo](https://github.com/davallejo/Demographic-Data-Analyzer-by-Diego-Vallejo) ⭐
+**Analizador de datos demográficos**
+- **Tech Stack:** Python, Pandas, NumPy
+
+#### [Mean-Variance-Standard-Deviation-Calculator-by-Diego-Vallejo](https://github.com/davallejo/Mean-Variance-Standard-Deviation-Calculator-by-Diego-Vallejo) ⭐
+**Calculadora estadística de media, varianza y desviación estándar**
+- **Tech Stack:** Python, NumPy
+
+---
+
 ### 🏢 Proyectos Empresariales
 
 #### [emergenciasuio](https://github.com/davallejo/emergenciasuio) ⭐
@@ -199,73 +246,75 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 - **Características:** Gestión integral de información de emergencias
 - **Impacto:** Mejora en tiempos de respuesta y coordinación
 
-#### [ControlActvidadesDocentes](https://github.com/davallejo/ControlActvidadesDocentes)
-**Sistema de control de actividades docentes**
-- **Tech Stack:** HTML, JavaScript, PHP
-- **Contexto:** Proyecto de Tesis - Universidad Central del Ecuador
-- **Funcionalidad:** Gestión académica y seguimiento de actividades
-
 ---
 
 ### 📊 Análisis de Datos & Soluciones Predictivas
 
-#### [analisis-estudiantes-salud](https://github.com/davallejo/analisis-estudiantes-salud)
+#### [Clustering-de-Estudiantes-Universitarios-Machine-Learning-Diego-Vallejo](https://github.com/davallejo/Clustering-de-Estudiantes-Universitarios-Machine-Learning-Diego-Vallejo)
 **Análisis de datos de estudiantes de ciencias de la salud con clustering**
-- **Tech Stack:** Python, KMeans, Pandas
+- **Tech Stack:** Python, KMeans, Pandas, Jupyter Notebook
 - **Proceso:** ETL completo, EDA, clustering con método del codo y silhouette
 - **Resultados:** Segmentación de perfiles estudiantiles
 
-#### [prediccion-rotacion-empleados](https://github.com/davallejo/prediccion-rotacion-empleados)
+#### [Prediccion-Churn-de-Empleados-Machine-Learning-Diego-Vallejo](https://github.com/davallejo/Prediccion-Churn-de-Empleados-Machine-Learning-Diego-Vallejo)
 **Modelo predictivo de rotación de empleados**
-- **Tech Stack:** Python, Machine Learning
+- **Tech Stack:** Python, Machine Learning, Jupyter Notebook
 - **Objetivo:** Identificar factores críticos de deserción laboral
 - **Aplicación:** Retención de talento y mejora del clima organizacional
 
-#### [segmentacion-solicitantes-mremh](https://github.com/davallejo/segmentacion-solicitantes-mremh)
+#### [Clustering-Solicitantes-de-Refugio-Machine-Learning-Diego-Vallejo](https://github.com/davallejo/Clustering-Solicitantes-de-Refugio-Machine-Learning-Diego-Vallejo)
 **Identificación de grupos de solicitantes para el MREMH**
-- **Tech Stack:** Python, Clustering
+- **Tech Stack:** Python, Clustering, Jupyter Notebook
 - **Finalidad:** Segmentación para políticas públicas
 - **Impacto:** Toma de decisiones basada en datos
 
-#### [prediccion-bancarrota](https://github.com/davallejo/prediccion-bancarrota)
+#### [Prediccion-de-Banca-Rota-Machine-Learning-Red-Neuronal-Diego-Vallejo](https://github.com/davallejo/Prediccion-de-Banca-Rota-Machine-Learning-Red-Neuronal-Diego-Vallejo)
 **Sistema de predicción de bancarrota empresarial**
-- **Tech Stack:** Python, Machine Learning
+- **Tech Stack:** Python, Machine Learning, Redes Neuronales, Jupyter Notebook
 - **Objetivo:** Análisis predictivo financiero para la Superintendencia de Compañías
 - **Valor:** Detección temprana de riesgo financiero
 
 ---
 
-## 📜 Certificaciones y Cursos (50+)
+## 📜 Certificaciones y Cursos (55+)
+
+### 🤝 Metodologías Ágiles & Liderazgo
+
+| Certificación | Institución | Fecha | ID |
+|--------------|-------------|-------|-----|
+| Agile Project Management Scrum 🆕 | AICAD Business School | Ene 2026 | B.O.P.I. Nº 014874821 |
+| Diplomado: Liderazgo y 114 Habilidades Gerenciales con IA 🆕 | Universidad Santander | Dic 2025 | ab0fb1fc8ed1f211d1be2bb9d2db0968 |
 
 ### 🤖 Inteligencia Artificial & Machine Learning
 
 | Certificación | Institución | Fecha | ID |
 |--------------|-------------|-------|-----|
 | Machine Learning with Python | freeCodeCamp | Jun 2025 | fcc5a575ea5-7689-44b4-9e6c-fd4dbf3fd68a-mlwp |
+| Inteligencia Artificial y Productividad | Santander Open Academy | Sep 2025 | OA-2025-0917001729531 |
+| Prompting responsable maximiza la IA | Santander Open Academy | Sep 2025 | OA-2025-0917001729532 |
 | Generative AI Fundamentals | Google | Feb 2024 | 8126170 |
 | Introduction to Generative AI | Google | Feb 2024 | 8125971 |
 | Introduction to Large Language Models | Google | Feb 2024 | 8126095 |
 | Introduction to Responsible AI | Google | Feb 2024 | 8126124 |
 | Responsible AI: Applying AI Principles | Google Cloud | Feb 2024 | 8126206 |
-| Inteligencia Artificial y Productividad | Santander Open Academy | Sep 2025 | OA-2025-0917001729531 |
-| Prompting responsable maximiza la IA | Santander Open Academy | Sep 2025 | OA-2025-0917001729532 |
 
 ### 📊 Data Science & Analytics
 
 | Certificación | Institución | Fecha | Detalles |
 |--------------|-------------|-------|----------|
 | Data Analysis with Python | freeCodeCamp | Ene 2024 | NumPy, Pandas, Jupyter, Visualizations |
+| Introducción a las habilidades profesionales en análisis de datos | LinkedIn | Feb 2023 | ID: AfnTLGBr2Iwz_XvQoiuvHdB0dniS |
 | Analista de Datos | Fundación Carlos Slim | Abr 2024 | ID: 56A6BAFA-61C4-45C5-9124-507A1104D78D |
 | Data Science 101 | IBM | Nov 2023 | ID: dfcfcf9b16504fc6a36035a4c34d0345 |
 | Data Analysis Using Python | IBM | Oct 2023 | ID: 16301e0f90084ce1b78ba1922e4475c6 |
 | Data Visualization Using Python | IBM | Nov 2023 | ID: 769a6ceb98c9499ebb971ae11ffeec10 |
-| Data Analytics Essentials | Cisco | Oct 2023 | - |
+| Data Analytics Essentials | Cisco | Oct 2023 | — |
 
 ### ☁️ Cloud Computing & Big Data
 
 | Certificación | Institución | Fecha | Tecnologías |
 |--------------|-------------|-------|-------------|
-| Diplomado: Técnico en Big Data | Fundación Carlos Slim | - | Hadoop, Spark, NoSQL |
+| Diplomado: Técnico en Big Data | Fundación Carlos Slim | — | Hadoop, Spark, NoSQL |
 | Getting Started with Amazon EMR | AWS | Feb 2024 | EMR, S3, Spark, Hive, Flink |
 | Spark: PySpark | Great Learning | Feb 2024 | Apache Spark, Python |
 
@@ -274,8 +323,8 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 | Certificación | Institución | Fecha | Logro |
 |--------------|-------------|-------|-------|
 | Python for Data Science | IBM | Oct 2023 | ID: 702433e775a24e819e387788b4037e36 |
-| Python Essentials 2 | Cisco | Oct 2023 | - |
-| Python Essentials 1 | Cisco | Sep 2023 | - |
+| Python Essentials 2 | Cisco | Oct 2023 | — |
+| Python Essentials 1 | Cisco | Sep 2023 | — |
 | TestDome Python Test – Top 10% | TestDome | Dic 2019 | **Mejor que el 90% de participantes** |
 | Desarrollo de Apps Móviles | Google Actívate | Jul 2022 | ID: G5D NBF WLC |
 
@@ -283,14 +332,14 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 | Certificación | Institución | Fecha | Especialización |
 |--------------|-------------|-------|-----------------|
-| Peritaje e Informática Forense | HackerMentor | Mar 2025 | Análisis forense digital |
-| Gobierno y Gestión de Seguridad de la Información | Profuturo Ecuador | Sep 2024 | ISO 27001 |
-| Ethical Hacker | Cisco | Ago 2024 | Pentesting, vulnerabilidades |
+| Peritaje e Informática Forense | HackerMentor | Mar 2025 | ID: e6468598-bc46-4293-ae47-05efd855a182 |
+| Gobierno y Gestión de Seguridad de la Información | Profuturo Ecuador | Sep 2024 | ID: 6baa7694-ac64-4516-a8ca-a3863ef6cefe |
+| Ethical Hacker | Cisco | Ago 2024 | ID: 7f6b08e2-a4a2-43fc-8fcd-1b38776ce05f |
 | Cyber Threat Management | Cisco | Jun 2024 | Gestión de amenazas |
 | Network Support and Security | Cisco | Jun 2024 | Seguridad de redes |
 | Endpoint Security | Cisco Networking Academy | Feb 2024 | Antimalware, IPS |
-| WORKSHOP ISO 27001 | HackerMentor | May 2024 | Estándar ISO 27001 |
-| Ley de Protección de datos personales | HackerMentor | Jun 2024 | Compliance legal |
+| WORKSHOP ISO 27001 | HackerMentor | May 2024 | ID: 05a32ff4-3b90-435f-a646-8c85cb54aedb |
+| Ley de Protección de datos personales | HackerMentor | Jun 2024 | ID: 5a4097a4-fb76-488c-be90-6b7eefdc9535 |
 
 ### 🗄️ Bases de Datos
 
@@ -333,12 +382,14 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 - 🎓 **Magíster en Sistemas de Información** - Mención en Data Science
 - 🏅 **Top 10% Python** - TestDome Certificate (Mejor que el 90% de participantes)
-- 📚 **50+ Certificaciones** en Data Science, Machine Learning, Cloud Computing y Ciberseguridad
-- 🚀 **25+ Proyectos** en producción y portafolio público
+- 📚 **55+ Certificaciones** en Data Science, Machine Learning, Cloud Computing, Liderazgo y Ciberseguridad
+- 🚀 **28+ Proyectos** en producción y portafolio público
 - 🌟 **Especialista en Gobernanza de Datos** con framework DAMA
 - 🔒 **Ethical Hacker Certificado** por Cisco
 - ☁️ **AWS & Google Cloud** Certified Professional
 - 📊 **Power BI & Tableau** Expert
+- 🤝 **Agile Scrum Certificado** por AICAD Business School
+- 🧠 **Diplomado en Liderazgo y Habilidades Gerenciales con IA** - Universidad Santander
 
 ---
 
@@ -353,7 +404,7 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 - 🌐 **Versatilidad Tecnológica:** Experiencia en múltiples lenguajes, frameworks y plataformas
 - 🔒 **Seguridad Integral:** Incorporación de mejores prácticas de ciberseguridad en todas las soluciones
 - 📈 **Orientación a Resultados:** Enfoque en KPIs medibles y valor agregado para el negocio
-- 🤝 **Trabajo Colaborativo:** Experiencia liderando equipos multidisciplinarios con metodologías ágiles
+- 🤝 **Trabajo Colaborativo:** Liderazgo ágil de equipos multidisciplinarios con metodologías Scrum y Kanban
 
 ---
 
@@ -375,7 +426,7 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 - ETL/ELT con Pentaho, Airflow
 - Big Data con Hadoop, Spark
 - Data Lakes & Data Warehouses
-- Stream Processing
+- Stream Processing & Real-Time
 
 ### 📊 Business Intelligence
 - Power BI & Tableau
@@ -406,6 +457,12 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 - Informática Forense
 - Security by Design
 - Compliance Legal
+
+### 🤝 Liderazgo & Gestión
+- Agile Project Management (Scrum)
+- 114 Habilidades Gerenciales con IA
+- Trabajo Colaborativo Multidisciplinario
+- Mejora Continua
 
 </td>
 </tr>
@@ -444,7 +501,7 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 ## 📚 Metodologías de Trabajo
 
 ### Ágiles
-- ✅ **Scrum:** Sprints, Daily Standups, Retrospectivas
+- ✅ **Scrum:** Sprints, Daily Standups, Retrospectivas — *Certificado AICAD Business School*
 - ✅ **Kanban:** Gestión visual de flujo de trabajo
 - ✅ **DevOps:** CI/CD, Automatización, Monitoreo continuo
 
@@ -463,17 +520,17 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 ## 🌟 Filosofía de Trabajo
 
 > ### 🎯 Mi Enfoque
-> 
+>
 > **Pasión:** Resolver problemas complejos con datos  
 > **Foco:** Generar valor de negocio tangible  
-> **Metodología:** Trabajo ágil y colaborativo
-> 
+> **Metodología:** Trabajo ágil, colaborativo y orientado a resultados
+>
 > ### 💭 Mi Visión
-> 
+>
 > *"Los datos cuentan historias. Mi trabajo es escucharlas, comprenderlas y traducirlas en acciones estratégicas que impulsen el crecimiento y la innovación."*
-> 
+>
 > ### 🔄 Mi Proceso
-> 
+>
 > 1. **Extraer y Transformar:** Convertir datos crudos en información estructurada
 > 2. **Analizar y Modelar:** Descubrir insights y patrones ocultos
 > 3. **Desplegar y Monitorear:** Implementar soluciones en producción
@@ -491,6 +548,6 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 ⭐️ **Si encuentras valor en mis proyectos, considera darles una estrella en GitHub**
 
-*Última actualización: Noviembre 2025*
+*Última actualización: Febrero 2026*
 
 </div>
