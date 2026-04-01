@@ -9,11 +9,13 @@
 
 ## 🎯 Perfil Ejecutivo
 
-Magíster en Sistemas de Información con mención en **Data Science**, con sólida formación en **analítica avanzada, machine learning e inteligencia artificial** aplicado a la toma de decisiones gerenciales.
+Magíster en Sistemas de Información con mención en **Data Science**, con experiencia comprobada en el diseño e implementación de soluciones de **alto impacto** para analítica avanzada, inteligencia artificial y arquitecturas de datos en organizaciones públicas y privadas de Ecuador y Latinoamérica.
 
-Especialista en el diseño e implementación de soluciones de **Data Engineering, Business Intelligence y Gobernanza de Datos** con enfoque en la generación de valor para el negocio. Experiencia comprobada en la **orquestación de pipelines ETL/ELT**, desarrollo de dashboards ejecutivos y análisis predictivo para optimización de procesos empresariales.
+Especialista en **Machine Learning, Data Engineering, Data Science y Business Intelligence** con dominio en herramientas de vanguardia: **Python, Databricks, Microsoft Fabric, Pentaho, Apache Airflow, Apache Spark, Power BI y Tableau**. Experiencia end-to-end en construcción de pipelines ETL/ELT robustos, dashboards ejecutivos interactivos y modelos predictivos en producción, bajo el marco de gobernanza **DAMA** y estándares ISO 27001.
 
-Profesional orientado al trabajo colaborativo con equipos multidisciplinarios bajo metodologías **Scrum y Kanban**, enfocado en el desarrollo de soluciones **innovadoras, escalables y alineadas a objetivos de negocio** para la mejora continua.
+Desarrollador con habilidades full-stack que van desde la ingesta de datos hasta arquitecturas **RAG con LLMs locales** (Ollama, ChromaDB, FastAPI), incluyendo el dominio de **Claude Code** para acelerar el desarrollo de software con IA — avalado por la certificación *Claude Code in Action* de **Anthropic (2026)**.
+
+Con **58+ certificaciones verificadas** y **32+ proyectos** en portafolio público (incluyendo 4 dashboards Power BI con casos reales de Ecuador y Brasil), metodologías Agile Scrum y experiencia liderando equipos multidisciplinarios, soy el profesional que **convierte datos complejos en ventajas competitivas reales** para el negocio.
 
 ---
 
@@ -27,20 +29,23 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 ### 🏗️ Data Engineering & ETL
 - **Orquestación:** Apache Airflow, Databricks, Jenkins
-- **Procesamiento Distribuido:** Apache Spark, Hadoop, Hive
+- **Procesamiento Distribuido:** Apache Spark, PySpark, Hadoop, Hive
 - **ETL/ELT:** Pentaho PDI, diseño de pipelines de datos
+- **Cloud:** Microsoft Fabric, Amazon EMR
 - **Streaming:** Real-time data processing
 
 ### 🗄️ Bases de Datos & Big Data
-- **Relacionales:** PostgreSQL, SQL Server, MySQL, Oracle
-- **NoSQL:** MongoDB, CouchDB, Redis, Cassandra, ChromaDB
+- **Relacionales:** SQL Server, PostgreSQL, SQLite, MySQL, Oracle
+- **Cloud / Analytics:** Snowflake, BigQuery
+- **NoSQL:** MongoDB, Redis, Cassandra, Elasticsearch, ChromaDB
 - **Big Data:** Hadoop, Hive, Spark
 - **Cloud:** Amazon EMR, S3, AWS IAM
 
 ### 📈 Business Intelligence & Visualización
-- **Herramientas BI:** Power BI, Tableau
+- **Herramientas BI:** Power BI + IA, Tableau
 - **Dashboards:** Diseño de tableros ejecutivos y reportes interactivos
 - **KPIs & Métricas:** Análisis de churn, ventas, fraude, ROI
+- **Microsoft Fabric:** Data Engineering en la nube con Fabric
 
 ### 🎨 Gobernanza de Datos
 - **Framework:** DAMA (Data Management Body of Knowledge)
@@ -48,8 +53,9 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 - **Compliance:** ISO 27001, protección de datos personales
 
 ### 💻 Desarrollo Full Stack
-- **Backend:** Java (Spring Boot), .NET, Python (Django/Flask), Node.js
-- **Frontend:** React, Angular, Vue.js, JavaScript
+- **Backend:** Java (Spring Boot), .NET (C#), Python (Django/Flask), Node.js
+- **Frontend:** React, Angular, Vue.js, JavaScript, TypeScript
+- **Lenguajes Adicionales:** Scala (Spark), PHP
 - **UI Frameworks:** Bootstrap, Tailwind CSS
 - **APIs:** REST, GraphQL
 
@@ -79,6 +85,9 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![Scala](https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
@@ -100,15 +109,21 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 ![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)
 ![Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apache-hadoop&logoColor=black)
 ![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
+![Microsoft Fabric](https://img.shields.io/badge/Microsoft_Fabric-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
 ![Pentaho](https://img.shields.io/badge/Pentaho-0080FF?style=for-the-badge&logo=pentaho&logoColor=white)
 
 ### Bases de Datos
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)
+![BigQuery](https://img.shields.io/badge/BigQuery-4285F4?style=for-the-badge&logo=googlebigquery&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
 ![Cassandra](https://img.shields.io/badge/Cassandra-1287B1?style=for-the-badge&logo=apache-cassandra&logoColor=white)
-![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
 
 ### Business Intelligence
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
@@ -171,6 +186,42 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 - **Tech Stack:** Power BI, DAX
 - **Características:** Análisis multidimensional del desempeño comercial
 - **KPIs:** Ventas, margen, cumplimiento de objetivos
+
+---
+
+### 📊 Power BI Dashboards — Business Intelligence (Nuevos 2026)
+
+#### [retail-financial-powerbi-data-analytics-dashboard](https://github.com/davallejo/retail-financial-powerbi-data-analytics-dashboard) ⭐ 🆕
+**Solución integral de BI para análisis financiero de red de tiendas comerciales — Ecuador**
+- **Tech Stack:** Power BI, DAX, Power Query
+- **Descripción:** Transforma datos transaccionales brutos en información estratégica para el seguimiento financiero de una cadena de tiendas en Ecuador
+- **Valor de Negocio:** KPIs financieros en tiempo real, análisis de rentabilidad por tienda y canal de venta
+- **Sector:** Retail · Finanzas · Ecuador 🇪🇨
+- **Actualizado:** Abr 2026
+
+#### [traffic-accidents-powerbi-data-analysis](https://github.com/davallejo/traffic-accidents-powerbi-data-analysis) ⭐ 🆕
+**Panel operativo de análisis de accidentes viales — Carreteras federales, Brasil**
+- **Tech Stack:** Power BI, DAX, Power Query
+- **Descripción:** Dashboard operativo para el análisis de accidentalidad en carreteras federales del sudeste de Brasil, como solución analítica para apoyar la expansión logística
+- **Valor de Negocio:** Identificación de zonas de riesgo, patrones temporales y soporte a decisiones de seguridad vial y logística
+- **Sector:** Transporte · Logística · Brasil 🇧🇷
+- **Actualizado:** Abr 2026
+
+#### [talent-performance-powerbi-data-analysis](https://github.com/davallejo/talent-performance-powerbi-data-analysis) ⭐ 🆕
+**Solución analítica avanzada de Talento y Desempeño — HR Analytics**
+- **Tech Stack:** Power BI, DAX, Power Query
+- **Descripción:** Centraliza y transforma datos crudos de RRHH en insights accionables sobre estructura de la fuerza laboral, distribución salarial y métricas de desempeño
+- **Valor de Negocio:** People Analytics para decisiones de retención, equidad salarial y productividad organizacional
+- **Sector:** Recursos Humanos · People Analytics
+- **Actualizado:** Abr 2026
+
+#### [call-center-powerbi-data-analysis](https://github.com/davallejo/call-center-powerbi-data-analysis) ⭐ 🆕
+**Dashboard operativo de Call Center con Data Storytelling**
+- **Tech Stack:** Power BI, DAX, Power Query
+- **Descripción:** Dashboard para call center que permite a supervisores realizar data storytelling efectivo con segmentación en tiempo real por agente, área y temporalidad
+- **Valor de Negocio:** Monitoreo de SLAs, eficiencia de agentes, análisis de carga operativa y tendencias de atención al cliente
+- **Sector:** Telecomunicaciones · Customer Service
+- **Actualizado:** Abr 2026
 
 ---
 
@@ -276,7 +327,7 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 ---
 
-## 📜 Certificaciones y Cursos (55+)
+## 📜 Certificaciones y Cursos (58+)
 
 ### 🤝 Metodologías Ágiles & Liderazgo
 
@@ -289,6 +340,7 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 | Certificación | Institución | Fecha | ID |
 |--------------|-------------|-------|-----|
+| **Claude Code in Action** 🆕 | **Anthropic** | **Abr 2026** | **q67fy5t98v4m** |
 | Machine Learning with Python | freeCodeCamp | Jun 2025 | fcc5a575ea5-7689-44b4-9e6c-fd4dbf3fd68a-mlwp |
 | Inteligencia Artificial y Productividad | Santander Open Academy | Sep 2025 | OA-2025-0917001729531 |
 | Prompting responsable maximiza la IA | Santander Open Academy | Sep 2025 | OA-2025-0917001729532 |
@@ -310,10 +362,17 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 | Data Visualization Using Python | IBM | Nov 2023 | ID: 769a6ceb98c9499ebb971ae11ffeec10 |
 | Data Analytics Essentials | Cisco | Oct 2023 | — |
 
-### ☁️ Cloud Computing & Big Data
+### 📊 Business Intelligence & Power BI
+
+| Certificación | Institución | Fecha | Detalles |
+|--------------|-------------|-------|----------|
+| **Acelerador de Carrera con Power BI + IA** 🆕 | **Daxus Latam** | **Mar 2026** | Finalizado Exitosamente |
+
+### ☁️ Cloud Computing, Big Data & Data Engineering
 
 | Certificación | Institución | Fecha | Tecnologías |
 |--------------|-------------|-------|-------------|
+| **Bootcamp Ingeniero de Datos en Fabric** 🆕 | **Código Facilito** | **Mar 2026** | **ID: 8ccd874a-e37f-43c6-88ca-0b5b322b652f** |
 | Diplomado: Técnico en Big Data | Fundación Carlos Slim | — | Hadoop, Spark, NoSQL |
 | Getting Started with Amazon EMR | AWS | Feb 2024 | EMR, S3, Spark, Hive, Flink |
 | Spark: PySpark | Great Learning | Feb 2024 | Apache Spark, Python |
@@ -382,12 +441,13 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 - 🎓 **Magíster en Sistemas de Información** - Mención en Data Science
 - 🏅 **Top 10% Python** - TestDome Certificate (Mejor que el 90% de participantes)
-- 📚 **55+ Certificaciones** en Data Science, Machine Learning, Cloud Computing, Liderazgo y Ciberseguridad
-- 🚀 **28+ Proyectos** en producción y portafolio público
+- 📚 **58+ Certificaciones** en Data Science, Machine Learning, BI, Cloud Computing, Liderazgo y Ciberseguridad
+- 🚀 **32+ Proyectos** en producción y portafolio público — incluyendo **4 nuevos dashboards Power BI** (Retail, Vialidad, RRHH, Call Center)
 - 🌟 **Especialista en Gobernanza de Datos** con framework DAMA
 - 🔒 **Ethical Hacker Certificado** por Cisco
 - ☁️ **AWS & Google Cloud** Certified Professional
-- 📊 **Power BI & Tableau** Expert
+- 📊 **Power BI & Tableau** Expert + **Power BI + IA** (Daxus Latam, 2026)
+- 🤖 **Claude Code in Action** — Certificado por Anthropic (2026)
 - 🤝 **Agile Scrum Certificado** por AICAD Business School
 - 🧠 **Diplomado en Liderazgo y Habilidades Gerenciales con IA** - Universidad Santander
 
@@ -424,13 +484,14 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 ### 🏗️ Data Engineering
 - Diseño de Data Pipelines
 - ETL/ELT con Pentaho, Airflow
-- Big Data con Hadoop, Spark
-- Data Lakes & Data Warehouses
+- **Microsoft Fabric** & **Databricks**
+- Big Data con Hadoop, Spark, **PySpark**
+- Data Lakes, Data Warehouses, Snowflake, BigQuery
 - Stream Processing & Real-Time
 
 ### 📊 Business Intelligence
-- Power BI & Tableau
-- Dashboards Ejecutivos
+- **Power BI + IA** & Tableau
+- Dashboards Ejecutivos (Retail, RRHH, Vialidad, Call Center)
 - KPIs & Métricas de Negocio
 - Reportería Automatizada
 - Data Storytelling
@@ -446,8 +507,9 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 - Lifecycle Management
 
 ### 💻 Full Stack Development
-- Backend: Java, .NET, Python, Node.js
-- Frontend: React, Angular, Vue.js
+- Backend: Java, .NET (C#), Python, Node.js
+- Frontend: React, Angular, Vue.js, TypeScript
+- Scala (procesamiento distribuido con Spark)
 - APIs REST & GraphQL
 - Microservicios
 
@@ -477,7 +539,6 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ing-diego-vallejo/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/davallejo)
 [![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://davallejo.github.io)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:djdavmayumy@hotmail.com)
 
 </div>
 
@@ -486,8 +547,10 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 ## 📈 Intereses Profesionales
 
 - 🧠 Generative AI y Large Language Models (LLMs)
+- 🤖 **Claude Code** y desarrollo de software acelerado con IA
 - 🔮 Deep Learning y Neural Networks avanzadas
-- ⚡ Big Data & Distributed Computing (Spark, Databricks)
+- ⚡ Big Data & Distributed Computing (Spark, **PySpark**, Databricks, **Microsoft Fabric**)
+- ☁️ Cloud Data Warehousing (Snowflake, BigQuery)
 - 🔐 Ciberseguridad ofensiva y defensiva
 - 🚀 MLOps y despliegue de modelos en producción
 - ☁️ Cloud Computing (AWS, Google Cloud, Azure)
@@ -548,6 +611,6 @@ Profesional orientado al trabajo colaborativo con equipos multidisciplinarios ba
 
 ⭐️ **Si encuentras valor en mis proyectos, considera darles una estrella en GitHub**
 
-*Última actualización: Febrero 2026*
+*Última actualización: Abril 2026 · 32+ proyectos · 58+ certificaciones*
 
 </div>
