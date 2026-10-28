@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -120,12 +119,13 @@
         .stat-num { font-family: 'Syne',sans-serif; font-size: 2.8rem; font-weight: 800; color: var(--cyan); letter-spacing: -.05em; line-height: 1; margin-bottom: 6px; }
         .stat-lbl { color: var(--g2); font-size: .84rem; }
 
-        /* TECH LOGOS MARQUEE SECTION */
+        /* TECH LOGOS MARQUEE SECTION (FLUIDE WITH SVG IMAGES) */
         .tech-marquee-section {
             background: var(--navy);
-            padding: 50px 0;
+            padding: 40px 0;
             position: relative;
             overflow: hidden;
+            border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
         .tech-marquee-container {
@@ -140,7 +140,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 150px;
+            width: 140px;
             z-index: 2;
             pointer-events: none;
         }
@@ -154,9 +154,9 @@
         }
         .tech-track {
             display: flex;
-            gap: 60px;
+            gap: 40px;
             width: max-content;
-            animation: scrollMarquee 35s linear infinite;
+            animation: scrollMarquee 30s linear infinite;
             will-change: transform;
         }
         .tech-track:hover {
@@ -168,10 +168,10 @@
             gap: 12px;
             background: var(--card);
             border: 1px solid var(--border);
-            padding: 12px 24px;
+            padding: 10px 22px;
             border-radius: 12px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--g1);
             white-space: nowrap;
             transition: all 0.3s ease;
@@ -182,16 +182,14 @@
             box-shadow: 0 4px 20px rgba(0, 212, 255, 0.15);
             color: var(--cyan);
         }
-        .tech-item i {
-            font-size: 1.8rem;
+        .tech-item img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
         }
         @keyframes scrollMarquee {
-            0% {
-                transform: translate3d(0, 0, 0);
-            }
-            100% {
-                transform: translate3d(-50%, 0, 0);
-            }
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
         }
 
         /* SKILLS */
@@ -396,41 +394,39 @@
     </div>
 </section>
 
-<!-- TECH STACK ANIMATED MARQUEE SECTION -->
+<!-- TECH LOGOS MARQUEE SECTION (FLUIDE WITH GUARANTEED SVG IMAGES) -->
 <div class="tech-marquee-section">
     <div class="tech-marquee-container">
         <div class="tech-track">
-            <!-- First Set -->
-            <div class="tech-item"><i class="devicon-python-plain colored"></i> Python</div>
-            <div class="tech-item"><i class="devicon-databricks-plain colored"></i> Databricks</div>
-            <div class="tech-item"><i class="devicon-apachespark-original colored"></i> Apache Spark</div>
-            <div class="tech-item"><i class="devicon-apacheairflow-plain colored"></i> Apache Airflow</div>
-            <div class="tech-item"><i class="devicon-fastapi-plain colored"></i> FastAPI</div>
-            <div class="tech-item"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
-            <div class="tech-item"><i class="devicon-docker-plain colored"></i> Docker</div>
-            <div class="tech-item"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</div>
-            <div class="tech-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
-            <div class="tech-item"><i class="devicon-googlecloud-plain colored"></i> Google Cloud</div>
-            <div class="tech-item"><i class="devicon-tensorflow-original colored"></i> TensorFlow</div>
-            <div class="tech-item"><i class="devicon-react-original colored"></i> React</div>
-            <div class="tech-item"><i class="devicon-pandas-original colored"></i> Pandas</div>
-            <div class="tech-item"><i class="devicon-git-plain colored"></i> Git</div>
+            <!-- Set 1 -->
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/databricks/databricks-original.svg" alt="Databricks"> Databricks</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" alt="Spark"> Apache Spark</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="Airflow"> Airflow</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"> FastAPI</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> PostgreSQL</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"> Docker</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"> Kubernetes</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"> AWS</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"> Google Cloud</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"> TensorFlow</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"> Pandas</div>
             
-            <!-- Duplicated Set for Infinite Loop Seamlessly -->
-            <div class="tech-item"><i class="devicon-python-plain colored"></i> Python</div>
-            <div class="tech-item"><i class="devicon-databricks-plain colored"></i> Databricks</div>
-            <div class="tech-item"><i class="devicon-apachespark-original colored"></i> Apache Spark</div>
-            <div class="tech-item"><i class="devicon-apacheairflow-plain colored"></i> Apache Airflow</div>
-            <div class="tech-item"><i class="devicon-fastapi-plain colored"></i> FastAPI</div>
-            <div class="tech-item"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
-            <div class="tech-item"><i class="devicon-docker-plain colored"></i> Docker</div>
-            <div class="tech-item"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</div>
-            <div class="tech-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
-            <div class="tech-item"><i class="devicon-googlecloud-plain colored"></i> Google Cloud</div>
-            <div class="tech-item"><i class="devicon-tensorflow-original colored"></i> TensorFlow</div>
-            <div class="tech-item"><i class="devicon-react-original colored"></i> React</div>
-            <div class="tech-item"><i class="devicon-pandas-original colored"></i> Pandas</div>
-            <div class="tech-item"><i class="devicon-git-plain colored"></i> Git</div>
+            <!-- Duplicated Set for Seamless Infinite Loop -->
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/databricks/databricks-original.svg" alt="Databricks"> Databricks</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" alt="Spark"> Apache Spark</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="Airflow"> Airflow</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"> FastAPI</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> PostgreSQL</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"> Docker</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"> Kubernetes</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"> AWS</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"> Google Cloud</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"> TensorFlow</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React</div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"> Pandas</div>
         </div>
     </div>
 </div>
