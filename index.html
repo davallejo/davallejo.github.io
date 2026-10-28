@@ -122,7 +122,7 @@
         /* TECH LOGOS MARQUEE SECTION (FLUIDE WITH SVG IMAGES) */
         .tech-marquee-section {
             background: var(--navy);
-            padding: 40px 0;
+            padding: 40px 24px;
             position: relative;
             overflow: hidden;
             border-top: 1px solid var(--border);
@@ -131,6 +131,8 @@
         .tech-marquee-container {
             display: flex;
             width: 100%;
+            max-width: 1200px; /* mismo ancho que .container (Sobre mí / Proyectos destacados) */
+            margin: 0 auto;
             overflow: hidden;
             position: relative;
         }
@@ -329,7 +331,7 @@
         /* RESPONSIVE */
         @media(max-width:1024px){ .star-inner{grid-template-columns:1fr} .star-left{border-right:none;border-bottom:1px solid var(--border)} }
         @media(max-width:900px){ nav{padding:0 20px} .nav-links{display:none} .about-grid{grid-template-columns:1fr;gap:48px} .projects-grid{grid-template-columns:1fr} .cbox{padding:48px 28px} .star-left,.star-right{padding:32px 28px} }
-        @media(max-width:600px){ section{padding:80px 20px} .stats-grid{grid-template-columns:1fr 1fr} .more-grid{grid-template-columns:1fr} .star-metrics{grid-template-columns:1fr} }
+        @media(max-width:600px){ section{padding:80px 20px} .tech-marquee-section{padding:40px 20px} .stats-grid{grid-template-columns:1fr 1fr} .more-grid{grid-template-columns:1fr} .star-metrics{grid-template-columns:1fr} }
     </style>
 </head>
 <body>
