@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -119,6 +120,80 @@
         .stat-num { font-family: 'Syne',sans-serif; font-size: 2.8rem; font-weight: 800; color: var(--cyan); letter-spacing: -.05em; line-height: 1; margin-bottom: 6px; }
         .stat-lbl { color: var(--g2); font-size: .84rem; }
 
+        /* TECH LOGOS MARQUEE SECTION */
+        .tech-marquee-section {
+            background: var(--navy);
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+        .tech-marquee-container {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .tech-marquee-container::before,
+        .tech-marquee-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 150px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .tech-marquee-container::before {
+            left: 0;
+            background: linear-gradient(90deg, var(--navy), transparent);
+        }
+        .tech-marquee-container::after {
+            right: 0;
+            background: linear-gradient(270deg, var(--navy), transparent);
+        }
+        .tech-track {
+            display: flex;
+            gap: 60px;
+            width: max-content;
+            animation: scrollMarquee 35s linear infinite;
+            will-change: transform;
+        }
+        .tech-track:hover {
+            animation-play-state: paused;
+        }
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--g1);
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        .tech-item:hover {
+            border-color: rgba(0, 212, 255, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.15);
+            color: var(--cyan);
+        }
+        .tech-item i {
+            font-size: 1.8rem;
+        }
+        @keyframes scrollMarquee {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+
         /* SKILLS */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 16px; }
         .sk-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; transition: all .3s; }
@@ -131,7 +206,7 @@
         /* PROJECTS */
         #projects { background: var(--navy-2); }
 
-        /* DATABRICKS STAR CARD (Priority 1) */
+        /* DATABRICKS MEDALLION STAR CARD (Priority 1) */
         .star-card-db { background: var(--card); border: 1px solid rgba(0,212,255,.25); border-radius: 20px; overflow: hidden; margin-bottom: 30px; box-shadow: 0 0 60px rgba(0,212,255,.08),0 40px 80px rgba(0,0,0,.5); transition: all .4s; }
         .star-card-db:hover { border-color: rgba(0,212,255,.45); box-shadow: 0 0 80px rgba(0,212,255,.15),0 40px 80px rgba(0,0,0,.5); transform: translateY(-4px); }
         .star-bar-db { height: 3px; background: linear-gradient(90deg,var(--orange),var(--cyan),var(--blue-lt)); }
@@ -320,6 +395,45 @@
         </div>
     </div>
 </section>
+
+<!-- TECH STACK ANIMATED MARQUEE SECTION -->
+<div class="tech-marquee-section">
+    <div class="tech-marquee-container">
+        <div class="tech-track">
+            <!-- First Set -->
+            <div class="tech-item"><i class="devicon-python-plain colored"></i> Python</div>
+            <div class="tech-item"><i class="devicon-databricks-plain colored"></i> Databricks</div>
+            <div class="tech-item"><i class="devicon-apachespark-original colored"></i> Apache Spark</div>
+            <div class="tech-item"><i class="devicon-apacheairflow-plain colored"></i> Apache Airflow</div>
+            <div class="tech-item"><i class="devicon-fastapi-plain colored"></i> FastAPI</div>
+            <div class="tech-item"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
+            <div class="tech-item"><i class="devicon-docker-plain colored"></i> Docker</div>
+            <div class="tech-item"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</div>
+            <div class="tech-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
+            <div class="tech-item"><i class="devicon-googlecloud-plain colored"></i> Google Cloud</div>
+            <div class="tech-item"><i class="devicon-tensorflow-original colored"></i> TensorFlow</div>
+            <div class="tech-item"><i class="devicon-react-original colored"></i> React</div>
+            <div class="tech-item"><i class="devicon-pandas-original colored"></i> Pandas</div>
+            <div class="tech-item"><i class="devicon-git-plain colored"></i> Git</div>
+            
+            <!-- Duplicated Set for Infinite Loop Seamlessly -->
+            <div class="tech-item"><i class="devicon-python-plain colored"></i> Python</div>
+            <div class="tech-item"><i class="devicon-databricks-plain colored"></i> Databricks</div>
+            <div class="tech-item"><i class="devicon-apachespark-original colored"></i> Apache Spark</div>
+            <div class="tech-item"><i class="devicon-apacheairflow-plain colored"></i> Apache Airflow</div>
+            <div class="tech-item"><i class="devicon-fastapi-plain colored"></i> FastAPI</div>
+            <div class="tech-item"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
+            <div class="tech-item"><i class="devicon-docker-plain colored"></i> Docker</div>
+            <div class="tech-item"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</div>
+            <div class="tech-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
+            <div class="tech-item"><i class="devicon-googlecloud-plain colored"></i> Google Cloud</div>
+            <div class="tech-item"><i class="devicon-tensorflow-original colored"></i> TensorFlow</div>
+            <div class="tech-item"><i class="devicon-react-original colored"></i> React</div>
+            <div class="tech-item"><i class="devicon-pandas-original colored"></i> Pandas</div>
+            <div class="tech-item"><i class="devicon-git-plain colored"></i> Git</div>
+        </div>
+    </div>
+</div>
 
 <!-- SKILLS -->
 <section id="skills">
