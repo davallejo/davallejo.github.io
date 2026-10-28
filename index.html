@@ -156,9 +156,8 @@
         }
         .tech-track {
             display: flex;
-            gap: 40px;
             width: max-content;
-            animation: scrollMarquee 30s linear infinite;
+            animation: scrollMarquee 170s linear infinite;
             will-change: transform;
         }
         .tech-track:hover {
@@ -167,13 +166,15 @@
         .tech-item {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
+            flex-shrink: 0;
+            margin-right: 24px; /* margen en vez de gap: el bucle (-50%) queda exacto */
             background: var(--card);
             border: 1px solid var(--border);
-            padding: 10px 22px;
-            border-radius: 12px;
+            padding: 14px 28px;
+            border-radius: 14px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
+            font-size: 1rem;
             color: var(--g1);
             white-space: nowrap;
             transition: all 0.3s ease;
@@ -185,9 +186,26 @@
             color: var(--cyan);
         }
         .tech-item img {
-            width: 28px;
-            height: 28px;
+            width: 42px;
+            height: 42px;
             object-fit: contain;
+            flex-shrink: 0;
+        }
+        /* logos de respaldo (multicolor/oscuros) sobre fondo claro para que siempre se vean */
+        .tech-item img.on-light {
+            background: #f0f4ff;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        /* monograma de último recurso si ningún logo carga */
+        .tech-badge {
+            width: 42px; height: 42px; flex-shrink: 0;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 10px;
+            border: 1.5px solid var(--bc, var(--cyan));
+            color: var(--bc, var(--cyan));
+            background: rgba(255,255,255,.04);
+            font-family: 'Syne', sans-serif; font-weight: 800; font-size: .78rem; letter-spacing: -.02em;
         }
         @keyframes scrollMarquee {
             0% { transform: translate3d(0, 0, 0); }
@@ -396,39 +414,148 @@
     </div>
 </section>
 
-<!-- TECH LOGOS MARQUEE SECTION (FLUIDE WITH GUARANTEED SVG IMAGES) -->
+<!-- TECH LOGOS MARQUEE SECTION -->
 <div class="tech-marquee-section">
     <div class="tech-marquee-container">
         <div class="tech-track">
             <!-- Set 1 -->
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/databricks/databricks-original.svg" alt="Databricks"> Databricks</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" alt="Spark"> Apache Spark</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="Airflow"> Airflow</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"> FastAPI</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> PostgreSQL</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"> Docker</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"> Kubernetes</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"> AWS</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"> Google Cloud</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"> TensorFlow</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"> Pandas</div>
-            
-            <!-- Duplicated Set for Seamless Infinite Loop -->
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/databricks/databricks-original.svg" alt="Databricks"> Databricks</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" alt="Spark"> Apache Spark</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="Airflow"> Airflow</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"> FastAPI</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> PostgreSQL</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"> Docker</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"> Kubernetes</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"> AWS</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"> Google Cloud</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"> TensorFlow</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React</div>
-            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"> Pandas</div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/python/4B8BBE" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" data-ini="Py" data-col="#4B8BBE" alt="Python" decoding="async" onerror="techFb(this)"><span>Python</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/ollama/FFFFFF" data-fb="" data-ini="Ol" data-col="#ffffff" alt="Ollama" decoding="async" onerror="techFb(this)"><span>Ollama</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/langchain/2BB5A0" data-fb="" data-ini="LC" data-col="#2BB5A0" alt="LangChain" decoding="async" onerror="techFb(this)"><span>LangChain</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/langgraph/2BB5A0" data-fb="https://cdn.simpleicons.org/langchain/2BB5A0" data-ini="LG" data-col="#2BB5A0" alt="LangGraph" decoding="async" onerror="techFb(this)"><span>LangGraph</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/chroma/FFDE2D" data-fb="" data-ini="Ch" data-col="#FFC21A" alt="ChromaDB" decoding="async" onerror="techFb(this)"><span>ChromaDB</span></div>
+            <div class="tech-item"><span class="tech-badge" style="--bc:#4A9BEB">FA</span><span>FAISS</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" data-fb="" data-ini="HF" data-col="#FFD21E" alt="Hugging Face" decoding="async" onerror="techFb(this)"><span>Hugging Face</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/claude/D97757" data-fb="https://cdn.simpleicons.org/anthropic/D97757" data-ini="Cl" data-col="#D97757" alt="Claude" decoding="async" onerror="techFb(this)"><span>Claude</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/openai/FFFFFF" data-fb="" data-ini="AI" data-col="#ffffff" alt="OpenAI" decoding="async" onerror="techFb(this)"><span>OpenAI</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/modelcontextprotocol/FFFFFF" data-fb="" data-ini="MCP" data-col="#ffffff" alt="MCP" decoding="async" onerror="techFb(this)"><span>MCP</span></div>
+            <div class="tech-item"><span class="tech-badge" style="--bc:#FFD21E">ST</span><span>Sentence Transformers</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" data-ini="TF" data-col="#FF6F00" alt="TensorFlow" decoding="async" onerror="techFb(this)"><span>TensorFlow</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/keras/FF4B4B" data-fb="" data-ini="Ke" data-col="#FF4B4B" alt="Keras" decoding="async" onerror="techFb(this)"><span>Keras</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" data-ini="PT" data-col="#EE4C2C" alt="PyTorch" decoding="async" onerror="techFb(this)"><span>PyTorch</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" data-ini="SK" data-col="#F7931E" alt="Scikit-learn" decoding="async" onerror="techFb(this)"><span>Scikit-learn</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/xgboost/FFFFFF" data-fb="" data-ini="XG" data-col="#4A9BEB" alt="XGBoost" decoding="async" onerror="techFb(this)"><span>XGBoost</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/opencv/7B61FF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" data-ini="CV" data-col="#7B61FF" alt="OpenCV" decoding="async" onerror="techFb(this)"><span>OpenCV</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/paddlepaddle/2932E1" data-fb="" data-ini="PO" data-col="#4D6BFF" alt="PaddleOCR" decoding="async" onerror="techFb(this)"><span>PaddleOCR</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/pandas/FFFFFF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" data-ini="Pd" data-col="#ffffff" alt="Pandas" decoding="async" onerror="techFb(this)"><span>Pandas</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/numpy/4DABCF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" data-ini="Np" data-col="#4DABCF" alt="NumPy" decoding="async" onerror="techFb(this)"><span>NumPy</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/jupyter/F37626" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" data-ini="Jp" data-col="#F37626" alt="Jupyter" decoding="async" onerror="techFb(this)"><span>Jupyter</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/databricks/FF3621" data-fb="data:image/svg+xml;utf8,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 24 24&#x27;&gt;&lt;g fill=&#x27;%23ff3621&#x27;&gt;&lt;polygon points=&#x27;12,2 22,7.5 12,13 2,7.5&#x27;/&gt;&lt;polygon points=&#x27;2,10 12,15.5 22,10 22,12.5 12,18 2,12.5&#x27;/&gt;&lt;polygon points=&#x27;2,15 12,20.5 22,15 22,17.5 12,23 2,17.5&#x27;/&gt;&lt;/g&gt;&lt;/svg&gt;" data-ini="Db" data-col="#FF3621" alt="Databricks" decoding="async" onerror="techFb(this)"><span>Databricks</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/apachespark/E25A1C" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" data-ini="Sp" data-col="#E25A1C" alt="Apache Spark" decoding="async" onerror="techFb(this)"><span>Apache Spark</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/apachespark/E25A1C" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" data-ini="PS" data-col="#E25A1C" alt="PySpark" decoding="async" onerror="techFb(this)"><span>PySpark</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/apacheairflow/017CEE" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" data-ini="Af" data-col="#017CEE" alt="Apache Airflow" decoding="async" onerror="techFb(this)"><span>Apache Airflow</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/apachehadoop/66CCFF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hadoop/hadoop-original.svg" data-ini="Hd" data-col="#66CCFF" alt="Apache Hadoop" decoding="async" onerror="techFb(this)"><span>Apache Hadoop</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/apachehive/FDEE21" data-fb="" data-ini="Hv" data-col="#FDEE21" alt="Apache Hive" decoding="async" onerror="techFb(this)"><span>Apache Hive</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/pentaho/00A0D6" data-fb="" data-ini="PDI" data-col="#00A0D6" alt="Pentaho Data Integration (PDI)" decoding="async" onerror="techFb(this)"><span>Pentaho Data Integration (PDI)</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/deltalake/00ADD4" data-fb="https://cdn.simpleicons.org/delta/00ADD4" data-ini="Δ" data-col="#00ADD4" alt="Delta Lake" decoding="async" onerror="techFb(this)"><span>Delta Lake</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/apachekafka/FFFFFF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" data-ini="Kf" data-col="#ffffff" alt="Apache Kafka" decoding="async" onerror="techFb(this)"><span>Apache Kafka</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/postgresql/4EA8E0" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" data-ini="Pg" data-col="#4EA8E0" alt="PostgreSQL" decoding="async" onerror="techFb(this)"><span>PostgreSQL</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/microsoftsqlserver/CC2927" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" data-ini="SQL" data-col="#CC2927" alt="Microsoft SQL Server" decoding="async" onerror="techFb(this)"><span>Microsoft SQL Server</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/mysql/4DA2D6" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" data-ini="My" data-col="#4DA2D6" alt="MySQL" decoding="async" onerror="techFb(this)"><span>MySQL</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/oracle/F80000" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" data-ini="Or" data-col="#F80000" alt="Oracle Database" decoding="async" onerror="techFb(this)"><span>Oracle Database</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/mongodb/47A248" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" data-ini="Mg" data-col="#47A248" alt="MongoDB" decoding="async" onerror="techFb(this)"><span>MongoDB</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/apachecouchdb/E42528" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/couchdb/couchdb-original.svg" data-ini="Cb" data-col="#E42528" alt="Apache CouchDB" decoding="async" onerror="techFb(this)"><span>Apache CouchDB</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/redis/FF4438" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" data-ini="Rd" data-col="#FF4438" alt="Redis" decoding="async" onerror="techFb(this)"><span>Redis</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/apachecassandra/4FC3E8" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cassandra/cassandra-original.svg" data-ini="Cs" data-col="#4FC3E8" alt="Apache Cassandra" decoding="async" onerror="techFb(this)"><span>Apache Cassandra</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/sqlite/55AEE6" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" data-ini="Sq" data-col="#55AEE6" alt="SQLite" decoding="async" onerror="techFb(this)"><span>SQLite</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" data-fb="data:image/svg+xml;utf8,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 48 48&#x27;&gt;&lt;text x=&#x27;24&#x27; y=&#x27;24&#x27; text-anchor=&#x27;middle&#x27; font-family=&#x27;Arial,Helvetica,sans-serif&#x27; font-weight=&#x27;700&#x27; font-size=&#x27;20&#x27; fill=&#x27;%23ffffff&#x27;&gt;aws&lt;/text&gt;&lt;path d=&#x27;M8 32 Q24 42 40 32&#x27; fill=&#x27;none&#x27; stroke=&#x27;%23ff9900&#x27; stroke-width=&#x27;3.2&#x27; stroke-linecap=&#x27;round&#x27;/&gt;&lt;path d=&#x27;M40 32 l-6 -1 M40 32 l-1 -6&#x27; stroke=&#x27;%23ff9900&#x27; stroke-width=&#x27;3.2&#x27; stroke-linecap=&#x27;round&#x27;/&gt;&lt;/svg&gt;" data-ini="aws" data-col="#FF9900" alt="AWS" decoding="async" onerror="techFb(this)"><span>AWS</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" data-ini="GC" data-col="#4285F4" alt="Google Cloud" decoding="async" onerror="techFb(this)"><span>Google Cloud</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/docker/2496ED" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" data-ini="Dk" data-col="#2496ED" alt="Docker" decoding="async" onerror="techFb(this)"><span>Docker</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/kubernetes/5B8DEF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" data-ini="K8" data-col="#5B8DEF" alt="Kubernetes" decoding="async" onerror="techFb(this)"><span>Kubernetes</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/git/F05032" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" data-ini="Gt" data-col="#F05032" alt="Git" decoding="async" onerror="techFb(this)"><span>Git</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/github/FFFFFF" data-fb="" data-ini="GH" data-col="#ffffff" alt="GitHub" decoding="async" onerror="techFb(this)"><span>GitHub</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/githubactions/2088FF" data-fb="" data-ini="GA" data-col="#2088FF" alt="GitHub Actions" decoding="async" onerror="techFb(this)"><span>GitHub Actions</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/linux/FCC624" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" data-ini="Lx" data-col="#FCC624" alt="Linux" decoding="async" onerror="techFb(this)"><span>Linux</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/gnubash/4EAA25" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" data-ini="$_" data-col="#4EAA25" alt="Bash" decoding="async" onerror="techFb(this)"><span>Bash</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/fastapi/05C3AB" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" data-ini="FA" data-col="#05C3AB" alt="FastAPI" decoding="async" onerror="techFb(this)"><span>FastAPI</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" data-ini="No" data-col="#5FA04E" alt="Node.js" decoding="async" onerror="techFb(this)"><span>Node.js</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/openjdk/ED8B00" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" data-ini="Jv" data-col="#ED8B00" alt="Java" decoding="async" onerror="techFb(this)"><span>Java</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/dotnet/8A63FF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" data-ini=".N" data-col="#8A63FF" alt=".NET" decoding="async" onerror="techFb(this)"><span>.NET</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" data-ini="JS" data-col="#F7DF1E" alt="JavaScript" decoding="async" onerror="techFb(this)"><span>JavaScript</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/typescript/4A9BEB" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" data-ini="TS" data-col="#4A9BEB" alt="TypeScript" decoding="async" onerror="techFb(this)"><span>TypeScript</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/react/61DAFB" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" data-ini="Re" data-col="#61DAFB" alt="React" decoding="async" onerror="techFb(this)"><span>React</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/angular/FF3B4E" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" data-ini="Ng" data-col="#FF3B4E" alt="Angular" decoding="async" onerror="techFb(this)"><span>Angular</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" data-ini="Vu" data-col="#4FC08D" alt="Vue.js" decoding="async" onerror="techFb(this)"><span>Vue.js</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/html5/E34F26" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" data-ini="H5" data-col="#E34F26" alt="HTML5" decoding="async" onerror="techFb(this)"><span>HTML5</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/css3/3AA0E8" data-fb="https://cdn.simpleicons.org/css/3AA0E8|https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" data-ini="C3" data-col="#3AA0E8" alt="CSS3" decoding="async" onerror="techFb(this)"><span>CSS3</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/r/5B9BE0" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" data-ini="R" data-col="#5B9BE0" alt="R" decoding="async" onerror="techFb(this)"><span>R</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/rstudioide/75AADB" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg" data-ini="RS" data-col="#75AADB" alt="RStudio" decoding="async" onerror="techFb(this)"><span>RStudio</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/shiny/75AADB" data-fb="" data-ini="Sh" data-col="#75AADB" alt="Shiny" decoding="async" onerror="techFb(this)"><span>Shiny</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/powerbi/F2C811" data-fb="" data-ini="BI" data-col="#F2C811" alt="Power BI" decoding="async" onerror="techFb(this)"><span>Power BI</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/tableau/E97627" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg" data-ini="Tb" data-col="#E97627" alt="Tableau" decoding="async" onerror="techFb(this)"><span>Tableau</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/streamlit/FF4B4B" data-fb="" data-ini="St" data-col="#FF4B4B" alt="Streamlit" decoding="async" onerror="techFb(this)"><span>Streamlit</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/anaconda/44A833" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" data-ini="An" data-col="#44A833" alt="Anaconda" decoding="async" onerror="techFb(this)"><span>Anaconda</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/bizagi/00A3E0" data-fb="" data-ini="Bz" data-col="#00A3E0" alt="Bizagi" decoding="async" onerror="techFb(this)"><span>Bizagi</span></div>
+            <div class="tech-item"><img src="https://cdn.simpleicons.org/automationanywhere/F26722" data-fb="" data-ini="AA" data-col="#F26722" alt="Automation Anywhere" decoding="async" onerror="techFb(this)"><span>Automation Anywhere</span></div>
+            <!-- Set 2 (duplicado para bucle infinito sin cortes) -->
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/python/4B8BBE" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" data-ini="Py" data-col="#4B8BBE" alt="" decoding="async" onerror="techFb(this)"><span>Python</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/ollama/FFFFFF" data-fb="" data-ini="Ol" data-col="#ffffff" alt="" decoding="async" onerror="techFb(this)"><span>Ollama</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/langchain/2BB5A0" data-fb="" data-ini="LC" data-col="#2BB5A0" alt="" decoding="async" onerror="techFb(this)"><span>LangChain</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/langgraph/2BB5A0" data-fb="https://cdn.simpleicons.org/langchain/2BB5A0" data-ini="LG" data-col="#2BB5A0" alt="" decoding="async" onerror="techFb(this)"><span>LangGraph</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/chroma/FFDE2D" data-fb="" data-ini="Ch" data-col="#FFC21A" alt="" decoding="async" onerror="techFb(this)"><span>ChromaDB</span></div>
+            <div class="tech-item" aria-hidden="true"><span class="tech-badge" style="--bc:#4A9BEB">FA</span><span>FAISS</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" data-fb="" data-ini="HF" data-col="#FFD21E" alt="" decoding="async" onerror="techFb(this)"><span>Hugging Face</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/claude/D97757" data-fb="https://cdn.simpleicons.org/anthropic/D97757" data-ini="Cl" data-col="#D97757" alt="" decoding="async" onerror="techFb(this)"><span>Claude</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/openai/FFFFFF" data-fb="" data-ini="AI" data-col="#ffffff" alt="" decoding="async" onerror="techFb(this)"><span>OpenAI</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/modelcontextprotocol/FFFFFF" data-fb="" data-ini="MCP" data-col="#ffffff" alt="" decoding="async" onerror="techFb(this)"><span>MCP</span></div>
+            <div class="tech-item" aria-hidden="true"><span class="tech-badge" style="--bc:#FFD21E">ST</span><span>Sentence Transformers</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" data-ini="TF" data-col="#FF6F00" alt="" decoding="async" onerror="techFb(this)"><span>TensorFlow</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/keras/FF4B4B" data-fb="" data-ini="Ke" data-col="#FF4B4B" alt="" decoding="async" onerror="techFb(this)"><span>Keras</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" data-ini="PT" data-col="#EE4C2C" alt="" decoding="async" onerror="techFb(this)"><span>PyTorch</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" data-ini="SK" data-col="#F7931E" alt="" decoding="async" onerror="techFb(this)"><span>Scikit-learn</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/xgboost/FFFFFF" data-fb="" data-ini="XG" data-col="#4A9BEB" alt="" decoding="async" onerror="techFb(this)"><span>XGBoost</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/opencv/7B61FF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" data-ini="CV" data-col="#7B61FF" alt="" decoding="async" onerror="techFb(this)"><span>OpenCV</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/paddlepaddle/2932E1" data-fb="" data-ini="PO" data-col="#4D6BFF" alt="" decoding="async" onerror="techFb(this)"><span>PaddleOCR</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/pandas/FFFFFF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" data-ini="Pd" data-col="#ffffff" alt="" decoding="async" onerror="techFb(this)"><span>Pandas</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/numpy/4DABCF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" data-ini="Np" data-col="#4DABCF" alt="" decoding="async" onerror="techFb(this)"><span>NumPy</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/jupyter/F37626" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" data-ini="Jp" data-col="#F37626" alt="" decoding="async" onerror="techFb(this)"><span>Jupyter</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/databricks/FF3621" data-fb="data:image/svg+xml;utf8,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 24 24&#x27;&gt;&lt;g fill=&#x27;%23ff3621&#x27;&gt;&lt;polygon points=&#x27;12,2 22,7.5 12,13 2,7.5&#x27;/&gt;&lt;polygon points=&#x27;2,10 12,15.5 22,10 22,12.5 12,18 2,12.5&#x27;/&gt;&lt;polygon points=&#x27;2,15 12,20.5 22,15 22,17.5 12,23 2,17.5&#x27;/&gt;&lt;/g&gt;&lt;/svg&gt;" data-ini="Db" data-col="#FF3621" alt="" decoding="async" onerror="techFb(this)"><span>Databricks</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/apachespark/E25A1C" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" data-ini="Sp" data-col="#E25A1C" alt="" decoding="async" onerror="techFb(this)"><span>Apache Spark</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/apachespark/E25A1C" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" data-ini="PS" data-col="#E25A1C" alt="" decoding="async" onerror="techFb(this)"><span>PySpark</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/apacheairflow/017CEE" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" data-ini="Af" data-col="#017CEE" alt="" decoding="async" onerror="techFb(this)"><span>Apache Airflow</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/apachehadoop/66CCFF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hadoop/hadoop-original.svg" data-ini="Hd" data-col="#66CCFF" alt="" decoding="async" onerror="techFb(this)"><span>Apache Hadoop</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/apachehive/FDEE21" data-fb="" data-ini="Hv" data-col="#FDEE21" alt="" decoding="async" onerror="techFb(this)"><span>Apache Hive</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/pentaho/00A0D6" data-fb="" data-ini="PDI" data-col="#00A0D6" alt="" decoding="async" onerror="techFb(this)"><span>Pentaho Data Integration (PDI)</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/deltalake/00ADD4" data-fb="https://cdn.simpleicons.org/delta/00ADD4" data-ini="Δ" data-col="#00ADD4" alt="" decoding="async" onerror="techFb(this)"><span>Delta Lake</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/apachekafka/FFFFFF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" data-ini="Kf" data-col="#ffffff" alt="" decoding="async" onerror="techFb(this)"><span>Apache Kafka</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/postgresql/4EA8E0" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" data-ini="Pg" data-col="#4EA8E0" alt="" decoding="async" onerror="techFb(this)"><span>PostgreSQL</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/microsoftsqlserver/CC2927" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" data-ini="SQL" data-col="#CC2927" alt="" decoding="async" onerror="techFb(this)"><span>Microsoft SQL Server</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/mysql/4DA2D6" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" data-ini="My" data-col="#4DA2D6" alt="" decoding="async" onerror="techFb(this)"><span>MySQL</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/oracle/F80000" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" data-ini="Or" data-col="#F80000" alt="" decoding="async" onerror="techFb(this)"><span>Oracle Database</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/mongodb/47A248" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" data-ini="Mg" data-col="#47A248" alt="" decoding="async" onerror="techFb(this)"><span>MongoDB</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/apachecouchdb/E42528" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/couchdb/couchdb-original.svg" data-ini="Cb" data-col="#E42528" alt="" decoding="async" onerror="techFb(this)"><span>Apache CouchDB</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/redis/FF4438" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" data-ini="Rd" data-col="#FF4438" alt="" decoding="async" onerror="techFb(this)"><span>Redis</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/apachecassandra/4FC3E8" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cassandra/cassandra-original.svg" data-ini="Cs" data-col="#4FC3E8" alt="" decoding="async" onerror="techFb(this)"><span>Apache Cassandra</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/sqlite/55AEE6" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" data-ini="Sq" data-col="#55AEE6" alt="" decoding="async" onerror="techFb(this)"><span>SQLite</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" data-fb="data:image/svg+xml;utf8,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 48 48&#x27;&gt;&lt;text x=&#x27;24&#x27; y=&#x27;24&#x27; text-anchor=&#x27;middle&#x27; font-family=&#x27;Arial,Helvetica,sans-serif&#x27; font-weight=&#x27;700&#x27; font-size=&#x27;20&#x27; fill=&#x27;%23ffffff&#x27;&gt;aws&lt;/text&gt;&lt;path d=&#x27;M8 32 Q24 42 40 32&#x27; fill=&#x27;none&#x27; stroke=&#x27;%23ff9900&#x27; stroke-width=&#x27;3.2&#x27; stroke-linecap=&#x27;round&#x27;/&gt;&lt;path d=&#x27;M40 32 l-6 -1 M40 32 l-1 -6&#x27; stroke=&#x27;%23ff9900&#x27; stroke-width=&#x27;3.2&#x27; stroke-linecap=&#x27;round&#x27;/&gt;&lt;/svg&gt;" data-ini="aws" data-col="#FF9900" alt="" decoding="async" onerror="techFb(this)"><span>AWS</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" data-ini="GC" data-col="#4285F4" alt="" decoding="async" onerror="techFb(this)"><span>Google Cloud</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/docker/2496ED" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" data-ini="Dk" data-col="#2496ED" alt="" decoding="async" onerror="techFb(this)"><span>Docker</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/kubernetes/5B8DEF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" data-ini="K8" data-col="#5B8DEF" alt="" decoding="async" onerror="techFb(this)"><span>Kubernetes</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/git/F05032" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" data-ini="Gt" data-col="#F05032" alt="" decoding="async" onerror="techFb(this)"><span>Git</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/github/FFFFFF" data-fb="" data-ini="GH" data-col="#ffffff" alt="" decoding="async" onerror="techFb(this)"><span>GitHub</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/githubactions/2088FF" data-fb="" data-ini="GA" data-col="#2088FF" alt="" decoding="async" onerror="techFb(this)"><span>GitHub Actions</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/linux/FCC624" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" data-ini="Lx" data-col="#FCC624" alt="" decoding="async" onerror="techFb(this)"><span>Linux</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/gnubash/4EAA25" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" data-ini="$_" data-col="#4EAA25" alt="" decoding="async" onerror="techFb(this)"><span>Bash</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/fastapi/05C3AB" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" data-ini="FA" data-col="#05C3AB" alt="" decoding="async" onerror="techFb(this)"><span>FastAPI</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" data-ini="No" data-col="#5FA04E" alt="" decoding="async" onerror="techFb(this)"><span>Node.js</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/openjdk/ED8B00" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" data-ini="Jv" data-col="#ED8B00" alt="" decoding="async" onerror="techFb(this)"><span>Java</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/dotnet/8A63FF" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" data-ini=".N" data-col="#8A63FF" alt="" decoding="async" onerror="techFb(this)"><span>.NET</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" data-ini="JS" data-col="#F7DF1E" alt="" decoding="async" onerror="techFb(this)"><span>JavaScript</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/typescript/4A9BEB" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" data-ini="TS" data-col="#4A9BEB" alt="" decoding="async" onerror="techFb(this)"><span>TypeScript</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/react/61DAFB" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" data-ini="Re" data-col="#61DAFB" alt="" decoding="async" onerror="techFb(this)"><span>React</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/angular/FF3B4E" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" data-ini="Ng" data-col="#FF3B4E" alt="" decoding="async" onerror="techFb(this)"><span>Angular</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" data-ini="Vu" data-col="#4FC08D" alt="" decoding="async" onerror="techFb(this)"><span>Vue.js</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/html5/E34F26" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" data-ini="H5" data-col="#E34F26" alt="" decoding="async" onerror="techFb(this)"><span>HTML5</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/css3/3AA0E8" data-fb="https://cdn.simpleicons.org/css/3AA0E8|https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" data-ini="C3" data-col="#3AA0E8" alt="" decoding="async" onerror="techFb(this)"><span>CSS3</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/r/5B9BE0" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" data-ini="R" data-col="#5B9BE0" alt="" decoding="async" onerror="techFb(this)"><span>R</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/rstudioide/75AADB" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg" data-ini="RS" data-col="#75AADB" alt="" decoding="async" onerror="techFb(this)"><span>RStudio</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/shiny/75AADB" data-fb="" data-ini="Sh" data-col="#75AADB" alt="" decoding="async" onerror="techFb(this)"><span>Shiny</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/powerbi/F2C811" data-fb="" data-ini="BI" data-col="#F2C811" alt="" decoding="async" onerror="techFb(this)"><span>Power BI</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/tableau/E97627" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg" data-ini="Tb" data-col="#E97627" alt="" decoding="async" onerror="techFb(this)"><span>Tableau</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/streamlit/FF4B4B" data-fb="" data-ini="St" data-col="#FF4B4B" alt="" decoding="async" onerror="techFb(this)"><span>Streamlit</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/anaconda/44A833" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" data-ini="An" data-col="#44A833" alt="" decoding="async" onerror="techFb(this)"><span>Anaconda</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/bizagi/00A3E0" data-fb="" data-ini="Bz" data-col="#00A3E0" alt="" decoding="async" onerror="techFb(this)"><span>Bizagi</span></div>
+            <div class="tech-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/automationanywhere/F26722" data-fb="" data-ini="AA" data-col="#F26722" alt="" decoding="async" onerror="techFb(this)"><span>Automation Anywhere</span></div>
         </div>
     </div>
 </div>
@@ -787,5 +914,23 @@
     <p><span>Diego Vallejo</span> · Ingeniero Informático · Magíster en Data Science · Ecuador 🇪🇨</p>
     <p style="margin-top:8px">© 2026 · Última actualización: Abril 2026 · Todos los derechos reservados</p>
 </footer>
+<script>
+/* Respaldo de logos del marquee: Simple Icons -> Devicon / SVG inline -> monograma */
+function techFb(img){
+    var list = (img.dataset.fb || '').split('|').filter(Boolean);
+    if (list.length){
+        var next = list.shift();
+        img.dataset.fb = list.join('|');
+        img.classList.toggle('on-light', next.indexOf('devicon') !== -1);
+        img.src = next;
+        return;
+    }
+    var b = document.createElement('span');
+    b.className = 'tech-badge';
+    b.style.setProperty('--bc', img.dataset.col || '#00d4ff');
+    b.textContent = img.dataset.ini || '?';
+    img.replaceWith(b);
+}
+</script>
 </body>
 </html>
